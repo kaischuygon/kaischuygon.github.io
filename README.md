@@ -1,2 +1,2 @@
 # kaischuygon.github.io
-Personal / portfolio site
+My personal site that serves as my resume and portfolio
