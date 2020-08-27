@@ -105,3 +105,25 @@ a {
   color: #F015FF;
   text-decoration: none;
 }
+
+/* Custom scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #343434;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #232323;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #232323;
+}
