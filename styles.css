@@ -4,20 +4,24 @@ body {
   font-family: 'Consolas';
 }
 
-h2 {
-  color: #22B573;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #22B573, #F015FF);
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-footer {
-  background-color: #121212;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+.header-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 75%;
 }
+
 
 .button:link, .button:visited {
   border-style: solid;
@@ -43,24 +47,6 @@ footer {
   padding-top: 5%;
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-image: linear-gradient(to bottom right, #22B573, #F015FF);
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.header-image {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 75%;
-}
-
 .content {
   padding-top: 25%;
   margin-left: auto;
@@ -69,6 +55,24 @@ footer {
   width: 75%;
 }
 
+h2 {
+  color: #22B573;
+}
+
+.self-image {
+  float: left;
+  width: 100px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 50%;
+}
+
+.about {
+  padding-bottom: 25px;
+}
+
+.about-paragraph
+
 hr {
   height: 3px;
   background-image: linear-gradient(to right,#22B573,#F015FF);
@@ -76,11 +80,16 @@ hr {
   margin: 0px;
 }
 
-a {
-  color: #F015FF;
-  text-decoration: none;
+footer {
+  background-color: #121212;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
-
 .logo {
   float: left;
   width: 55px;
@@ -92,4 +101,9 @@ a {
   margin-right: auto;
   display:block;
   width: 277px;
+}
+
+a {
+  color: #F015FF;
+  text-decoration: none;
 }
