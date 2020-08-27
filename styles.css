@@ -68,10 +68,8 @@ h2 {
 }
 
 .about {
-  padding-bottom: 25px;
+  padding-bottom: 45px;
 }
-
-.about-paragraph
 
 hr {
   height: 3px;
@@ -92,7 +90,7 @@ footer {
 }
 .logo {
   float: left;
-  width: 55px;
+  width: 60px;
   padding-right: 10px;
 }
 
