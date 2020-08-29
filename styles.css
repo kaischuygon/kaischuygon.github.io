@@ -12,33 +12,33 @@ body {
 
 .header {
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
+  top: 0;
   width: 100%;
-  background-image: linear-gradient(to bottom right, #22B573, #F015FF);
-  padding-top: 2%;
-  padding-bottom: 2%;
+  background-image: linear-gradient(to bottom right, #3ab3b0, #55367d);
+  padding: 2% 0%;
 }
 
 .header-image {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: block;
-  width: 60%;
+  width: 95%;
 }
 
 
 .button:link, .button:visited {
+  float: left;
+  width: 93%;
+  margin-bottom: 5px;
   border-style: solid;
   border-width: 1px;
   background-color: rgba(24, 26, 27, 0.08);
   border-color: rgba(48, 52, 54, 0.1);
-  color: rgba(200,200,200,0.8);
+  color: rgba(225,225,225,0.25);
   padding: 0.5% 1%;
   margin-left: 10px;
   margin-right: 10px;
-  width: 60px;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
@@ -46,6 +46,7 @@ body {
 
 .button:hover {
   background-color: rgba(24, 26, 27, 0.1);
+  color: rgba(225,225,225,0.5);
   border-color: rgba(48, 52, 54, 0.08);
 }
 
@@ -57,16 +58,16 @@ body {
 }
 
 .content {
-  padding-top: 13%;
+  padding-top: 40%;
   margin-left: auto;
   margin-right: auto;
+  width: 95%;
   padding-bottom: 10%;
-  width: 60%;
   flex: 1 0 auto;
 }
 
 h2 {
-  color: #22B573;
+  color: #3ab3b0;
 }
 
 .self-image {
@@ -82,7 +83,7 @@ h2 {
 
 hr {
   height: 3px;
-  background-image: linear-gradient(to right,#22B573,#F015FF);
+  background-image: linear-gradient(to right,#3ab3b0,#55367d);
   border: none;
   margin: 0px;
 }
@@ -113,7 +114,7 @@ footer {
 }
 
 a {
-  color: #F015FF;
+  color: #55367d;
   text-decoration: none;
 }
 
@@ -139,21 +140,34 @@ a {
   background: #232323;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) { /* For Tablets, small screens */
   .content {
-    padding-top: 32%;
+    padding-top: 16%;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 80%;
   }
 
   .header-image {
-    width: 95%;
+    width: 80%;
   }
 
   .button:link, .button:visited {
-    float: left;
-    width: 94%;
-    margin-bottom: 5px;
+    float: none;
+    width: 60px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1000px) { /* For all other screens */
+  .content {
+    padding-top: 14%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+  .header-image {
+    width: 60%;
   }
 }
