@@ -1,16 +1,16 @@
 html, body {
+  background-color: #121212;
   height: 100%;
 }
 
 body {
-  background-color: #121212;
-  color:whitesmoke;
   font-family: 'Roboto';
+  color:whitesmoke;
   display: flex;
   flex-direction: column;
 }
 
-.header {
+header {
   position: absolute;
   left: 0;
   right: 0;
@@ -50,14 +50,14 @@ body {
   border-color: rgba(48, 52, 54, 0.08);
 }
 
-.links {
+nav {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: 2%;
 }
 
-.content {
+article {
   padding-top: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -118,30 +118,8 @@ a {
   text-decoration: none;
 }
 
-/* Custom scrollbar */
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #343434;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #232323;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #232323;
-}
-
 @media only screen and (min-width: 600px) { /* For Tablets, small screens */
-  .content {
+  article {
     padding-top: 16%;
     margin-left: auto;
     margin-right: auto;
@@ -160,7 +138,7 @@ a {
 }
 
 @media only screen and (min-width: 1000px) { /* For all other screens */
-  .content {
+  article {
     padding-top: 14%;
     margin-left: auto;
     margin-right: auto;
