@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        button.btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 10px;
+            float:right;
+        }
+    </style>
     <head>
         <title>About Me</title>
         <meta charset="utf-8">
@@ -10,6 +20,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="manage-cards.js"></script>
     </head>
 
     <nav class="navbar navbar-dark bg-info navbar-expand">
@@ -20,6 +31,12 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sign-up-modal/login.html">Sign Up Modal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tic-tac-toe/tic-tac-toe.html">Tic Tac Toe Game</a>
             </li>
         </ul>
         <div class="ml-auto">
@@ -44,14 +61,17 @@
             </div>
             <h2 class="mb-3">Interests <a href="form.html" class="btn btn-info ml-auto float-right" role="button">Add Interest</a> </h2>
             <div class="card-group text-light">
-                <div class="card bg-info">
+                <div class="card bg-info" id="interest1">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1505739616034-1fbcb08941a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="image of an f1 car">
                     <div class="card-body">
                         <h5 class="card-title">Motorsport</h5>
-                        <p class="card-text">I watch a lot of Formula 1. My favorite F1 team is McLaren.</p>
+                        <p class="card-text">
+                            I watch a lot of Formula 1. My favorite F1 team is McLaren.
+                        </p>
                     </div>
+                    <button onclick="addCard(interest1)" class="btn btn-dark m-1 mx">+</button>
                 </div>
-                <div class="card bg-info">
+                <div class="card bg-info" id="interest2">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1555864326-5cf22ef123cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1947&q=80" alt="image of a retro game console">
                     <div class="card-body">
                         <h5 class="card-title">Video Games</h5>
@@ -59,8 +79,9 @@
                             I like all sorts of games but I spend the most time playing Rocket League or Overwatch. My favorite game is Celeste.
                         </p>
                     </div>
+                    <button onclick="addCard(interest2)" class="btn btn-dark m-1">+</button>
                 </div>
-                <div class="card bg-info">
+                <div class="card bg-info" id="interest3">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="image of a film projector">
                     <div class="card-body">
                         <h5 class="card-title">Film</h5>
@@ -68,14 +89,9 @@
                             My favorite movie genres are Science Fiction and Horror. Some of my favorite movies are 2001: A Space Oddyssey and Blade Runner.
                         </p>
                     </div>
+                    <button onclick="addCard(interest3)" class="btn btn-dark m-1">+</button>
                 </div>
             </div>
         </div>
-
-        <footer class="p-2">
-            <a href="https://www.linkedin.com/in/kaischuyler/" target="_blank">
-                <img src="img/linkedin.svg" alt="" class="mx-auto d-block" height="25">
-            </a>
-        </footer>
     </body>
 </html>
