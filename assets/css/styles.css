@@ -99,14 +99,14 @@ article {
   border-bottom-right-radius: 10px;
 }
 
-#portfolio a {
+article a {
   text-decoration: none;
   color: var(--dark-grey);
   background-image: linear-gradient(to bottom right, var(--light-pink), var(--light-blue));
   padding: 10px;
 }
 
-#portfolio a:hover {
+article a:hover {
   opacity: 0.8;
 }
 
