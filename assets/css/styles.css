@@ -1,0 +1,182 @@
+:root {
+  --dark-blue: #1A0E3E;
+  --light-blue: #1F1A70;
+  --dark-pink: #DB488B;
+  --light-pink: #FF83F6;
+  --cyan: #3ED0EB;
+  --dark-grey: #121212;
+}
+
+body {
+  margin: 0px;
+  font-family: Quicksand;
+  width: 100%;
+}
+
+header { 
+  text-align: center;
+  background-image: linear-gradient(to bottom right, var(--light-pink), var(--light-blue));
+  padding: 10px;
+}
+
+header img {
+  max-width: 100%;
+}
+
+nav {
+  flex-direction: column;
+  display: flex;
+  background-color: var(--dark-blue);
+}
+
+nav a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: whitesmoke;
+  text-align: center;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  background-color: var(--light-blue);
+}
+
+nav a img {
+  height: 1em;
+  padding: 0 10px;
+}
+
+body {
+  background-color: var(--dark-grey);
+  color: whitesmoke;
+}
+
+article {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.center {
+  justify-content: center;
+}
+
+.box p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.box img {
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.border {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 10px;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: var(--dark-grey);
+  background-image: linear-gradient(to bottom right, var(--light-pink), var(--light-blue));
+  padding: 10px;
+}
+
+#portfolio a:hover {
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--dark-pink)
+}
+
+footer a:hover {
+  color: var(--light-pink);
+}
+
+footer hr {
+  height: 3px;
+  border: 0px;
+  background-image: linear-gradient(to bottom right, var(--light-pink), var(--light-blue));
+  width: 95vw;
+}
+
+@media only screen and (min-width: 600px) {
+  :root {
+    --page-width: 85vw;
+  }
+
+  header img {
+    width: var(--page-width);
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav a {
+    width: var(--page-width);
+    padding: 10px;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+
+  article {
+    width: var(--page-width);
+  }
+
+  .box {
+    margin-bottom: 10px;
+  }
+
+  .box p {
+    margin-left: 10px;
+    padding: 0 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    --page-width: 65vw;
+  }
+
+  header img {
+    width: var(--page-width);
+  }
+
+  article {
+    width: var(--page-width);
+  }
+}

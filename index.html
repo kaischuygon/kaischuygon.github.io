@@ -3,41 +3,80 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Kai Schuyler Gonzalez">
-        <meta name="description" content="Personal site for comp sci student Kai Schuyler Gonzalez">
+        <meta name="description" content="Personal / Portfolio site for Kai Schuyler Gonzalez">
         <title>Kai Schuyler Gonzalez</title>
-        <link rel='icon' href='assets/favicon.svg' type='image/x-icon'>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" href="assets/img/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     
     <body>
         <header>
-            <img src = "assets/header.png" class="header-image" alt="header image for the site">
-            <nav>
-                <a href="https://github.com/kaischuygon" class="button">GitHub</a>
-                <a href="assets/kai-schuyler_resume.pdf" class="button">Resume</a>
-                <a href="https://linkedin.com/in/kaischuyler/" class="button">LinkedIn</a>
-            </nav>
+            <img src = "assets/img/header.png" alt="site header image">
         </header>
 
+        <nav>
+            <a href="https://github.com/kaischuygon">
+                <img src="assets/img/github.svg" alt="">
+                GitHub
+            </a>
+            <a href="assets/kai-schuyler_resume.pdf">
+                <img src="assets/img/resume.svg" alt="">
+                Resume
+            </a>
+            <a href="https://linkedin.com/in/kaischuyler/">
+                <img src="assets/img/linkedin.svg" alt="">
+                LinkedIn
+            </a>
+        </nav>
+        
         <article>
-            <h2>About me</h2>
-                <img src="assets/picture-at-mt-rainier.jpg" class="self-image" alt="Me in front of a mountain.">
-                <p> 
-                    I am a 3rd year computer science student at CU Boulder minoring in Creative Technology and
-                    Design. I grew up in San Jose, Costa Rica and have been in the Boulder area for over 10 years.
-                    Lately, I have been spending my free time learning web and game development.
-                </p>
-            <h2>Portfolio</h2>
-            <iframe src="https://itch.io/embed/632038?bg_color=222222&amp;fg_color=eeeeee&amp;link_color=3AB3B0&amp;border_color=363636"></iframe>
+            <div id="about-me">
+                <h2>About me</h2>
+                <div class="flex">
+                    <div class="box flex-1">
+                        <img src="assets/img/kai-schuyler.jpg" alt="image of me" class="border">
+                    </div>
+                    <div class="box flex-2">
+                        <p>
+                            I am a 3rd year computer science student at CU Boulder minoring in Creative Technology and Design. I grew up in San Jose, Costa Rica and have been in the Boulder area for over 10 years. Lately, I have been spending my free time learning web and game development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio">
+                <h2>Portfolio</h2>
+                <section id="cosmos-pizza">
+                    <div class="flex">
+                        <div class="box flex-1">
+                            <img src="assets/img/cosmos-pizza.png" alt="image of me" class="border">
+                        </div>
+                    </div>
+                    <h3><a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="border">Cosmos Pizza</a></h3>
+                    <p>
+                        A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done in GBStudio.
+                    </p>
+                </section>
+                <section id="thing-on-skeld">
+                    <div class="flex">
+                        <div class="box flex-1">
+                            <img src="assets/img/the-thing-on-skeld.png" alt="image of me" class="border">
+                        </div>
+                    </div>
+                    <h3><a href="https://creative.colorado.edu/~kasc1637/web/hypertext-narrative/startup.html" class="border">The Thing on Skeld</a></h3>
+                    <p>
+                        An interactive short story based on the game Among Us. Done using HTML/CSS.
+                    </p>
+                </section>
+            </div>
         </article>
 
         <footer>
             <hr>
             <div class="footer-content">
-                <img src="assets/favicon.svg" class="logo" alt="site logo">
                 <p>© 2020 Copyright: <a href = "https://kaischuyler.com/">Kai Schuyler</p></a>
                 <a href="https://github.com/kaischuygon/kaischuygon.github.io">Deployed on GitHub Pages</a>
             </div>
