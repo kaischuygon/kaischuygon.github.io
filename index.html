@@ -1,87 +1,169 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- Google font -->
         <meta name="author" content="Kai Schuyler Gonzalez">
-        <meta name="description" content="Personal / Portfolio site for Kai Schuyler Gonzalez">
-        <title>Kai Schuyler Gonzalez</title>
-        <link rel="icon" href="assets/img/favicon.svg" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+        <meta name="description" content="my personal portfolio site">
+        <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg"> <!-- favicon from css-tricks.com -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for responsive sizing, googled this -->
+        <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
+        <title>Kai Schuyler Gonzalez's Portfolio</title>
     </head>
-    
+
     <body>
-        <header>
-            <img src = "assets/img/header.png" alt="site header image">
-        </header>
 
         <nav>
-            <a href="https://github.com/kaischuygon">
-                <img src="assets/img/github.svg" alt="">
-                GitHub
-            </a>
-            <a href="assets/docs/kai-schuyler_resume.pdf" target="_blank">
-                <img src="assets/img/resume.svg" alt="">
-                Resume
-            </a>
-            <a href="https://linkedin.com/in/kaischuyler/">
-                <img src="assets/img/linkedin.svg" alt="">
-                LinkedIn
-            </a>
+            <div class="nav-link left">
+                <a href="portfolio.html">
+                    <img src="portfolio/img/logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="nav-link hide-mobile">
+                <a href="#about">About</a>
+            </div>
+            <div class="nav-link hide-mobile">
+                <a href="#skills">Skills</a>
+            </div>
+            <div class="nav-link hide-mobile">
+                <a href="#portfolio">Portfolio</a>
+            </div>
+            <div class="nav-link">
+                <a href="assets/kai-schuyler_resume.pdf" target="_blank" class="button">Resume</a>
+            </div>
         </nav>
-        
+
         <article>
-            <div id="about-me">
-                <div class="flex">
-                    <div class="box flex-2 txt-left">
-                        <h2>About me</h2>
-                        <p>
-                            I am a 3rd year computer science student at CU Boulder minoring in Creative Technology and Design. I grew up in San Jose, Costa Rica and have been in the Boulder area for over 10 years. Lately, I have been learning web and game development.
-                        </p>
-                    </div>
-                    <div class="box flex-1">
-                        <img src="assets/img/kai-schuyler.jpg" alt="image of me" class="border">
+            <div id="welcome" class="full-screen d-flex align-items-center px">
+                <div class="box-1">
+                    <p class="text-xl text-darkprimary">I'm</p>
+                    <h1 id="banner" class="text-lightprimary">Kai Schuyler Gonzalez.</h1>
+                    <p class="text-xl text-darkprimary">A computer science student.</p>
+                    <div id="welcome-button">
+                        <a href="mailto:kai.schuyler@gmail.com" class="button">Contact me</a>
                     </div>
                 </div>
             </div>
-            <div id="portfolio">
-                <h2>Portfolio</h2>
-                <section id="cosmos-pizza">
-                    <div class="flex">
-                        <div class="box flex-2">
-                            <img src="assets/img/cosmos-pizza.png" alt="image of me" class="border">
-                        </div>
-                        <div class="box flex-1 txt-right">
-                            <h3><a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="border">Cosmos Pizza</a></h3>
-                            <p>
-                                A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done in GBStudio.
-                            </p>
-                        </div>
+
+            <div id="about" class="px">
+                <div class="section-header">
+                    <div class="section-title">About Me</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="d-grid halfs">
+                    <div class="grid-item" id="about-image">
+                        <img src="assets/img/image-of-me.jpg" alt="">
                     </div>
-                </section>
-                <section id="thing-on-skeld">
-                    <div class="flex">
-                        <div class="box flex-2">
-                            <img src="assets/img/the-thing-on-skeld.png" alt="image of me" class="border">
-                        </div>
-                        <div class="box flex-1 txt-right">
-                            <h3><a href="https://creative.colorado.edu/~kasc1637/web/hypertext-narrative/startup.html" class="border">The Thing on Skeld</a></h3>
-                            <p>
-                                An interactive short story based on the game Among Us. Done using HTML/CSS.
-                            </p>
-                        </div>
+                    <div class="grid-item text-lightgrey sans">
+                        <p>
+                            I am currently a junior at the <a href="https://www.colorado.edu/">University of Colorado at Boulder</a>.
+                        </p>
+                        <p>
+                            I am majoring computer science and minoring in <a href="https://www.colorado.edu/engineering/academics/degree-programs/creative-technology-design">Creative Technology and Design</a>. I grew up in San Jose, Costa Rica and have been in the Boulder, CO area since I was 10. I currently work in the Transportation department at the <a href="https://www.colorado.edu/ecenter/">CU Environmental Center</a>.
+                        </p>
+                        <p>
+                            Recently, I have been learning web design, full stack development and game development.
+                        </p>
                     </div>
-                </section>
+                </div>
+            </div>
+
+            <div id="skills" class="px">
+                <div class="section-header">
+                    <div class="section-title">Skills</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="d-grid thirds sans">
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">Programming Languages</h2>
+                        <ul class="text-lightgrey">
+                            <li>C/C++</li>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>Scala</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">Technologies</h2>
+                        <ul class="text-lightgrey">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Postgres</li>
+                            <li>Heroku</li>
+                            <li>Bootstrap</li>
+                            <li>Version Control (git/github)</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">I have taken courses on:</h2>
+                        <ul class="text-lightgrey">
+                            <li>Algorithms</li>
+                            <li>Data Structures</li>
+                            <li>Computer Systems</li>
+                            <li>Programming Languages</li>
+                            <li>Web Design</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">Also</h2>
+                        <ul class="text-lightgrey">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>Adobe XD</li>
+                            <li>SolidWorks Certified</li>
+                            <li>Arduino</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="portfolio" class="px">
+                <div class="section-header">
+                    <div class="section-title">Portfolio</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="d-grid halfs sans">
+                    <div class="grid-item">
+                        <img src="assets/img/cosmos-pizza.png" alt="cosmos pizza">
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">Cosmos Pizza Adventure</h2>
+                        <p class="text-lightgrey">
+                            A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done in GBStudio.
+                        </p>
+                        <a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="button d-block">view</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/img/the-thing-on-skeld.png" alt="skeld image">
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">The Thing on Skeld</h2>
+                        <p class="text-lightgrey">
+                            An interactive short story based on the game Among Us. You are a crewmate on a ship that has been infiltrated by an alien who is impersonating a member of your crew and is trying to kill you all. Done using HTML/CSS.
+                        </p>
+                        <a href="https://creative.colorado.edu/~kasc1637/web/hypertext-narrative/startup.html" class="button d-block">view</a>
+                    </div>
+                </div>
             </div>
         </article>
 
-        <footer>
-            <hr>
-            <div class="footer-content">
-                <p>© 2020 Copyright: <a href = "https://kaischuyler.com/">Kai Schuyler</p></a>
-                <a href="https://github.com/kaischuygon/kaischuygon.github.io">Deployed on GitHub Pages</a>
+        <div class="side-nav">
+            <a href="https://github.com/kaischuygon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kaischuyler/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/kaischuyler"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/kai.schuyler/"><i class="fab fa-instagram"></i></a>
+            <a href="https://codepen.io/kaischuygon"><i class="fab fa-codepen"></i></a>
+        </div>
+
+        <footer class="text-lightgrey text-lg sans d-flex align-items-center justify-center">
+            <div class="box-1">
+                <p>Created by: <a href="https://github.com/kaischuygon/kaischuygon.github.io">Kai Schuyler Gonzalez</a></p>
+                <p>Contact me: <a href="mailto:kai.schuyler@gmail.com">kai.schuyler@gmail.com</a></p>
             </div>
         </footer>
 
