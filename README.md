@@ -1,2 +1,2 @@
 # kaischuygon.github.io
-My personal site that serves as my resume and portfolio. Completely static and build from scratch by me.
+My personal site that serves as my resume and portfolio. Built by scratch.
