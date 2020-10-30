@@ -4,12 +4,12 @@
 
     <head>
         <meta charset="utf-8">
-        <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+        <link type="text/css" rel="stylesheet" href="portfolio/css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- Google font -->
         <meta name="author" content="Kai Schuyler Gonzalez">
         <meta name="description" content="my personal portfolio site">
-        <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg"> <!-- favicon from css-tricks.com -->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for responsive sizing, googled this -->
+        <link rel="icon" type="image/svg+xml" href="portfolio/img/logo.svg"> <!-- favicon from css-tricks.com -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for responsive media queries, googled this -->
         <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
         <title>Kai Schuyler Gonzalez</title>
     </head>
@@ -18,8 +18,8 @@
 
         <nav>
             <div class="nav-link left">
-                <a href="portfolio.html">
-                    <img src="assets/img/logo.svg" alt="logo">
+                <a href="index.html">
+                    <img src="portfolio/img/logo.svg" alt="logo">
                 </a>
             </div>
             <div class="nav-link hide-mobile">
@@ -31,8 +31,11 @@
             <div class="nav-link hide-mobile">
                 <a href="#portfolio">Portfolio</a>
             </div>
+            <div class="nav-link hide-mobile">
+                <a href="#projects">Projects</a>
+            </div>
             <div class="nav-link">
-                <a href="assets/kai-schuyler_resume.pdf" target="_blank" class="button">Resume</a>
+                <a href="portfolio/kai-schuyler_resume.pdf" target="_blank" class="button">Resume</a>
             </div>
         </nav>
 
@@ -43,7 +46,7 @@
                     <h1 id="banner" class="text-lightprimary">Kai Schuyler Gonzalez.</h1>
                     <p class="text-xl text-darkprimary">A computer science student.</p>
                     <div id="welcome-button">
-                        <a href="mailto:kai.schuyler@gmail.com" class="button">Contact me</a>
+                        <a href="mailto:kai.schuyler@gmail.com" class="button sans">Contact me</a>
                     </div>
                 </div>
             </div>
@@ -55,14 +58,14 @@
                 </div>
                 <div class="d-grid halfs">
                     <div class="grid-item" id="about-image">
-                        <img src="assets/img/image-of-me.jpg" alt="">
+                        <img src="portfolio/img/image-of-me.jpg" alt="">
                     </div>
                     <div class="grid-item text-lightgrey sans">
                         <p>
-                            I am currently a junior at the <a href="https://www.colorado.edu/">University of Colorado at Boulder</a>.
+                            I am currently a junior at the <a href="https://www.colorado.edu/">University of Colorado at Boulder</a> majoring in computer science and minoring in <a href="https://www.colorado.edu/engineering/academics/degree-programs/creative-technology-design">Creative Technology and Design</a>.
                         </p>
                         <p>
-                            I am majoring computer science and minoring in <a href="https://www.colorado.edu/engineering/academics/degree-programs/creative-technology-design">Creative Technology and Design</a>. I grew up in San Jose, Costa Rica and have been in the Boulder, CO area since I was 10. I currently work in the Transportation department at the <a href="https://www.colorado.edu/ecenter/">CU Environmental Center</a>.
+                            I currently work at the <a href="https://www.colorado.edu/ecenter/">CU Environmental Center</a> in the sustainable transportation department. I grew up in San Jose, Costa Rica and have lived in Colorado since I was 10.
                         </p>
                         <p>
                             Recently, I have been learning web design, full stack development and game development.
@@ -96,17 +99,18 @@
                             <li>Postgres</li>
                             <li>Heroku</li>
                             <li>Bootstrap</li>
-                            <li>Version Control (git/github)</li>
+                            <li>Git/Github</li>
                         </ul>
                     </div>
                     <div class="grid-item">
                         <h2 class="text-lightprimary">I have taken courses on:</h2>
                         <ul class="text-lightgrey">
                             <li>Algorithms</li>
-                            <li>Data Structures</li>
                             <li>Computer Systems</li>
                             <li>Programming Languages</li>
+                            <li>Software Development</li>
                             <li>Web Design</li>
+                            <li>Data Structures</li>
                         </ul>
                     </div>
                     <div class="grid-item">
@@ -129,17 +133,17 @@
                 </div>
                 <div class="d-grid halfs sans">
                     <div class="grid-item">
-                        <img src="assets/img/cosmos-pizza.png" alt="cosmos pizza">
+                        <img src="portfolio/img/cosmos-pizza.png" alt="cosmos pizza">
                     </div>
                     <div class="grid-item">
                         <h2 class="text-lightprimary">Cosmos Pizza Adventure</h2>
                         <p class="text-lightgrey">
-                            A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done in GBStudio.
+                            A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done using GBStudio.
                         </p>
-                        <a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="button d-block">view</a>
+                        <a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="button d-block">view on itch.io</a>
                     </div>
                     <div class="grid-item">
-                        <img src="assets/img/the-thing-on-skeld.png" alt="skeld image">
+                        <img src="portfolio/img/the-thing-on-skeld.png" alt="skeld image">
                     </div>
                     <div class="grid-item">
                         <h2 class="text-lightprimary">The Thing on Skeld</h2>
@@ -148,6 +152,43 @@
                         </p>
                         <a href="https://creative.colorado.edu/~kasc1637/web/hypertext-narrative/startup.html" class="button d-block">view</a>
                     </div>
+                </div>
+            </div>
+            <div id="projects" class="px">
+                <div class="section-header">
+                    <div class="section-title">Projects</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="d-grid halfs sans">
+                    <div class="grid-item">
+                        <img src="portfolio/img/personal-site.png" alt="cosmos pizza">
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">My Personal Site</h2>
+                        <p class="text-lightgrey">
+                            My personal site that serves as my resume and portfolio. Built completely by me and deployed on GitHub pages.
+                        </p>
+                        <a href="https://github.com/kaischuygon/kaischuygon.github.io" class="button d-block">view on GitHub</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="portfolio/img/cosmos.png" alt="cosmos pizza image">
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">Cosmos Pizza</h2>
+                        <p class="text-lightgrey">
+                            A pixel art game done in GBStudio and deployed on itch.io.
+                        </p>
+                        <a href="https://github.com/kaischuygon/Cosmos-Pizza" class="button d-block">view on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hide-mobile">
+                <div id="resume" class="px">
+                    <div class="section-header">
+                        <div class="section-title">Resume</div>
+                        <div class="section-divider"></div>
+                    </div>
+                    <embed src="portfolio/kai-schuyler_resume.pdf" class="hide-mobile">
                 </div>
             </div>
         </article>

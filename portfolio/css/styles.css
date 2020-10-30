@@ -19,15 +19,17 @@
 
 html { scroll-behavior: smooth; }
 
+img {
+    border-radius: 10px;
+}
+
 body {
     margin: 0;
     background-color: var(--darksecondary);
     font-family: 'Source Code Pro', sans-serif;
 }
 
-.hide-mobile {
-    display: none;
-}
+.hide-mobile { display: none; } 
 
 nav {
     display: flex;
@@ -37,22 +39,16 @@ nav {
     width: 100%;
     border-bottom: 2px solid var(--lightsecondary);
     background-color: rgba(1, 35, 38, 0.8);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     justify-content: flex-end;
     align-items: center;
 }
 
-.nav-link {
-    margin: 10px;
-}
+.nav-link { margin: 10px; }
 
-.left {
-    margin-right: auto;
-}
+.left { margin-right: auto; }
 
-nav img {
-    height: 3em;
-}
+nav img { height: 3em; }
 
 nav a, footer a {
     color: var(--darkprimary);
@@ -95,13 +91,11 @@ nav a:hover, footer a:hover {
     margin-top: 4vh;
 }
 
-#welcome-button a {
-    padding: 15px 20px;
-}
+#welcome-button a { padding: 15px 20px; }
 
 .section-header {
     display: flex;
-    padding-top: 6vh;
+    padding-top: 5em;
     margin-bottom: 25px;
 }
 
@@ -179,9 +173,7 @@ footer {
     text-align: center;
 }
 
-footer p {
-    margin: 0.5em auto;
-}
+footer p { margin: 0.5em auto; }
 
 .side-nav {
     margin-top: 2vh;
@@ -198,20 +190,22 @@ footer p {
     transition: 0.5s;
 }
 
-.side-nav a:hover {
-    color: var(--darkprimary);
+.side-nav a:hover { color: var(--darkprimary); }
+
+embed {
+    width: 100%;
+    height: 50vh;
 }
 
 /* Medium Screens */
 @media only screen and (min-width: 768px) {
     .hide-mobile {
-        display: initial;
+        display: inherit;
     }
-    .px {padding: 0 10%}
+    .px {padding: 0 10% }
 
-    #about-image {
-        order: 2;
-    }
+    #about-image { order: 2; }
+
     .thirds {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
@@ -220,9 +214,7 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
-    .grid-item { 
-        grid-column: span 1;
-    }
+    .grid-item { grid-column: span 1; }
 
     .side-nav {
         margin-top: 0;
@@ -237,7 +229,6 @@ footer p {
 /* Large screens */
 @media only screen and (min-width: 1300px) {
     .px {padding: 0 20%}
-    #banner {
-        font-size: 5vw;
-    }
+    
+    #banner { font-size: 5vw; }
 }
