@@ -19,9 +19,7 @@
 
 html { scroll-behavior: smooth; }
 
-img {
-    border-radius: 10px;
-}
+article img { border-radius: 10px; }
 
 body {
     margin: 0;
