@@ -1,5 +1,5 @@
 :root {
-    --lightgrey: #CFD8DC;
+    --lightgrey: #c5ffec;
     --darkprimary: #04C99D;
     --lightprimary: #07FFB2;
     --darksecondary: #012326;
@@ -48,14 +48,16 @@ nav {
 
 nav img { height: 3em; }
 
-nav a, footer a {
+.navlink a, footer a {
     color: var(--darkprimary);
     text-decoration: none;
+    border-bottom: 1px solid var(--darksecondary);
     transition: 0.5s;
 }
 
-nav a:hover, footer a:hover {
-    color: var(--lightprimary);
+.navlink a:hover, footer a:hover {
+    color: var(--lightgrey);
+    border-bottom: 1px solid var(--lightgrey);
     transition: 0.5s;
 }
 
@@ -121,13 +123,13 @@ nav a:hover, footer a:hover {
 
 .box-1 { flex: 1; }
 
-article a, footer a {
+article a {
     color: var(--darkprimary);
     text-decoration: none;
     transition: 0.2s;
 }
 
-article a:hover, footer a:hover {
+article a:hover {
     color: var(--lightprimary);
     transition: 0.2s;
 }
