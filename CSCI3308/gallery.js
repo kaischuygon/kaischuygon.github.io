@@ -1,5 +1,3 @@
-// key: b3fc55babf387e15fd62c0e23211af2d
-// secret: 8a357c990a15211a
 function newCard(url, title) {
     var newCard = document.createElement('div');
     newCard.className = 'card flex-item bg-info text-white';
@@ -23,6 +21,10 @@ function parseArray(objArray) {
         var photoTitle = objArray[i].title;
         newCard(photoURL, photoTitle);
     }
+}
+
+function refresh() {
+    document.getElementById('galleryPlaceholder').innerHTML = '';
 }
 
 function makeApiCall() {
