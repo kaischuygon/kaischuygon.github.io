@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    button.btn-circle {
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        border-radius: 15px;
-        font-size: 10px;
-        float: right;
-    }
-</style>
-
 <head>
     <title>Flickr Gallery</title>
     <meta charset="utf-8">
@@ -70,7 +59,7 @@
             </div>
         </div>
     </form>
-    <button class="btn btn-info mb-2" onclick="makeApiCall()">Submit</button>
+    <button class="btn btn-info mb-2" onclick="refresh(); makeApiCall()">Submit</button>
     <div id="galleryPlaceholder" class="d-flex flex-wrap">
         
     </div>
