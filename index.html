@@ -4,11 +4,11 @@
 
     <head>
         <meta charset="utf-8">
-        <link type="text/css" rel="stylesheet" href="portfolio/css/styles.css">
+        <link type="text/css" rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- Google font -->
         <meta name="author" content="Kai Schuyler Gonzalez">
         <meta name="description" content="my personal portfolio site">
-        <link rel="icon" type="image/svg+xml" href="portfolio/img/logo.svg"> <!-- favicon from css-tricks.com -->
+        <link rel="icon" type="image/svg+xml" href="img/vector-self.png"> <!-- favicon from css-tricks.com -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for responsive media queries, googled this -->
         <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
         <title>Kai Schuyler Gonzalez</title>
@@ -17,11 +17,6 @@
     <body>
 
         <nav>
-            <div class="nav-link left">
-                <a href="index.html">
-                    <img src="portfolio/img/logo.svg" alt="logo">
-                </a>
-            </div>
             <div class="nav-link navlink hide-mobile">
                 <a href="#about">About</a>
             </div>
@@ -31,11 +26,8 @@
             <div class="nav-link navlink hide-mobile">
                 <a href="#portfolio">Portfolio</a>
             </div>
-            <div class="nav-link navlink hide-mobile">
-                <a href="#projects">Projects</a>
-            </div>
-            <div class="nav-link">
-                <a href="portfolio/resume.pdf" target="_blank" class="button">Resume</a>
+            <div class="nav-link right">
+                <a href="resume.pdf" target="_blank" class="button">Resume</a>
             </div>
         </nav>
 
@@ -58,7 +50,7 @@
                 </div>
                 <div class="d-grid halfs">
                     <div class="grid-item" id="about-image">
-                        <img src="portfolio/img/image-of-me.jpg" alt="">
+                        <img src="img/vector-self.png" alt="">
                     </div>
                     <div class="grid-item text-lightgrey sans">
                         <p>
@@ -133,7 +125,18 @@
                 </div>
                 <div class="d-grid halfs sans">
                     <div class="grid-item">
-                        <img src="portfolio/img/cosmos-pizza.png" alt="cosmos pizza">
+                        <img src="img/htb-logo.png" alt="history through battleship">
+                    </div>
+                    <div class="grid-item">
+                        <h2 class="text-lightprimary">History Through Battleship</h2>
+                        <p class="text-lightgrey">
+                            History Through Battleship is an educational web-game developed to test and refine students’ history skills. This was a project for a course at CU Boulder. The app is built using node.js and is deployed on Heroku.
+                        </p>
+                        <a href="https://history-through-battleship.herokuapp.com" class="button d-block">view</a>
+                    </div>
+
+                    <div class="grid-item">
+                        <img src="img/cosmos-pizza.png" alt="cosmos pizza">
                     </div>
                     <div class="grid-item">
                         <h2 class="text-lightprimary">Cosmos Pizza Adventure</h2>
@@ -142,8 +145,9 @@
                         </p>
                         <a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="button d-block">view on itch.io</a>
                     </div>
+
                     <div class="grid-item">
-                        <img src="portfolio/img/the-thing-on-skeld.png" alt="skeld image">
+                        <img src="img/the-thing-on-skeld.png" alt="skeld image">
                     </div>
                     <div class="grid-item">
                         <h2 class="text-lightprimary">The Thing on Skeld</h2>
@@ -154,43 +158,6 @@
                     </div>
                 </div>
             </div>
-            <div id="projects" class="px">
-                <div class="section-header">
-                    <div class="section-title">Projects</div>
-                    <div class="section-divider"></div>
-                </div>
-                <div class="d-grid halfs sans">
-                    <div class="grid-item">
-                        <img src="portfolio/img/personal-site.png" alt="cosmos pizza">
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">My Personal Site</h2>
-                        <p class="text-lightgrey">
-                            My personal site that serves as my resume and portfolio. Built completely by me and deployed on GitHub pages.
-                        </p>
-                        <a href="https://github.com/kaischuygon/kaischuygon.github.io" class="button d-block">view on GitHub</a>
-                    </div>
-                    <div class="grid-item">
-                        <img src="portfolio/img/cosmos.png" alt="cosmos pizza image">
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">Cosmos Pizza</h2>
-                        <p class="text-lightgrey">
-                            A pixel art game done in GBStudio and deployed on itch.io.
-                        </p>
-                        <a href="https://github.com/kaischuygon/Cosmos-Pizza" class="button d-block">view on GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="hide-mobile">
-                <div id="resume" class="px">
-                    <div class="section-header">
-                        <div class="section-title">Resume</div>
-                        <div class="section-divider"></div>
-                    </div>
-                    <embed src="portfolio/resume.pdf" class="hide-mobile">
-                </div>
-            </div> -->
         </article>
 
         <div class="side-nav">
