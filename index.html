@@ -5,160 +5,131 @@
     <head>
         <meta charset="utf-8">
         <link type="text/css" rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- Google font -->
         <meta name="author" content="Kai Schuyler Gonzalez">
         <meta name="description" content="my personal portfolio site">
-        <link rel="icon" type="image/svg+xml" href="img/vector-self.png"> <!-- favicon from css-tricks.com -->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for responsive media queries, googled this -->
-        <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
+        <link rel="icon" type="image/svg+xml" href="img/vector-self.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kai Schuyler Gonzalez</title>
     </head>
 
     <body>
-        <nav>
+        <nav class="gradient-text">
             <a href="https://github.com/kaischuygon"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/kaischuyler/"><i class="fab fa-linkedin"></i></a>
             <a href="https://twitter.com/kaischuyler"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/kai.schuyler/"><i class="fab fa-instagram"></i></a>
             <a href="https://codepen.io/kaischuygon"><i class="fab fa-codepen"></i></a>
-            <a href="resume.pdf" target="_blank" class="button">Resume</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
         </nav>
 
+        <section id="introduction" class="gradient-text">
+            <img id="intro-img" src="img/vector-self.jpg" alt="vector image of self">
+            <div id="intro-text">
+                I'm <br>
+                <span class="larger">Kai Schuyler Gonzalez.</span><br>
+                A computer science student <br>
+            </div>
+        </section>
+        
         <article>
-            <div id="welcome" class="full-screen d-flex align-items-center px">
-                <div class="box-1">
-                    <h2 class="text-xl text-accentcolor">I'm</h2>
-                    <h1 id="banner" class="text-lightprimary">Kai Schuyler Gonzalez.</h1>
-                    <h2 class="text-xl text-accentcolor">A computer science student.</h2>
-                </div>
-            </div>
+            <section id="about">
+                <h2 class="gradient-text">About Me</h2>
+                <p>
+                    I am currently a junior at the <a href="https://www.colorado.edu/">University of Colorado at Boulder</a> majoring in computer science and minoring in <a href="https://www.colorado.edu/engineering/academics/degree-programs/creative-technology-design">Creative Technology and Design</a>.
+                </p>
+                <p>
+                    I currently work at the <a href="https://www.colorado.edu/ecenter/">CU Environmental Center</a> in the sustainable transportation department. I grew up in San Jose, Costa Rica and have lived in Colorado since I was 10.
+                </p>
+                <p>
+                    Recently, I have been learning web design, full stack development and game development.
+                </p>
+            </section>
 
-            <div id="about" class="px">
-                <div class="section-header">
-                    <div class="section-title">About Me</div>
-                    <div class="section-divider"></div>
+            <h2 class="gradient-text">Skills</h2>
+            <section id="skills" class="card-list">
+                <div class="card">
+                    <h3 class="gradient-text">Programming Languages</h3>
+                    <ul>
+                        <li>C/C++</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Scala</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                    </ul>
                 </div>
-                <div class="d-grid halfs">
-                    <div class="grid-item" id="about-image">
-                        <img src="img/vector-self.png" alt="">
-                    </div>
-                    <div class="grid-item text-lightgrey sans">
-                        <p>
-                            I am currently a junior at the <a href="https://www.colorado.edu/">University of Colorado at Boulder</a> majoring in computer science and minoring in <a href="https://www.colorado.edu/engineering/academics/degree-programs/creative-technology-design">Creative Technology and Design</a>.
-                        </p>
-                        <p>
-                            I currently work at the <a href="https://www.colorado.edu/ecenter/">CU Environmental Center</a> in the sustainable transportation department. I grew up in San Jose, Costa Rica and have lived in Colorado since I was 10.
-                        </p>
-                        <p>
-                            Recently, I have been learning web design, full stack development and game development.
-                        </p>
-                    </div>
+                <div class="card">
+                    <h3 class="gradient-text">Experienced in</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Postgres</li>
+                        <li>Heroku</li>
+                        <li>Bootstrap</li>
+                        <li>OpenGL</li>
+                    </ul>
                 </div>
-            </div>
+                <div class="card">
+                    <h3 class="gradient-text">Course History</h3>
+                    <ul>
+                        <li>Algorithms</li>
+                        <li>Computer Systems</li>
+                        <li>Programming Languages</li>
+                        <li>Software Development</li>
+                        <li>Web Design</li>
+                        <li>Data Structures</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Computer Graphics</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="gradient-text">Additionally</h3>
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>Adobe XD</li>
+                        <li>Figma</li>
+                        <li>SolidWorks Certified</li>
+                        <li>Arduino</li>
+                    </ul>
+                </div>
+            </section>
 
-            <div id="skills" class="px">
-                <div class="section-header">
-                    <div class="section-title">Skills</div>
-                    <div class="section-divider"></div>
+            <h2 class="gradient-text">Portfolio</h2>
+            <section id="portfolio">
+                <div class="grid-item">
+                    <img src="img/htb-logo.png" alt="history through battleship">
+                    <h3 class="gradient-text">History Through Battleship</h3>
+                    <p>
+                        History Through Battleship is an educational web-game developed to test and refine students’ history skills. This was a project for a course at CU Boulder. The app is built using node.js and is deployed on Heroku.
+                    </p>
+                    <a href="https://history-through-battleship.herokuapp.com">view</a>
                 </div>
-                <div class="d-grid halfs sans">
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">Programming Languages</h2>
-                        <ul class="text-lightgrey">
-                            <li>C/C++</li>
-                            <li>HTML/CSS</li>
-                            <li>JavaScript</li>
-                            <li>Scala</li>
-                            <li>Python</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">Experienced in</h2>
-                        <ul class="text-lightgrey">
-                            <li>Node.js</li>
-                            <li>Postgres</li>
-                            <li>Heroku</li>
-                            <li>Bootstrap</li>
-                            <li>OpenGL</li>
-                        </ul>
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">Course History</h2>
-                        <ul class="text-lightgrey">
-                            <li>Algorithms</li>
-                            <li>Computer Systems</li>
-                            <li>Programming Languages</li>
-                            <li>Software Development</li>
-                            <li>Web Design</li>
-                            <li>Data Structures</li>
-                            <li>Artificial Intelligence</li>
-                            <li>Computer Graphics</li>
-                        </ul>
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">Also</h2>
-                        <ul class="text-lightgrey">
-                            <li>Photoshop</li>
-                            <li>Illustrator</li>
-                            <li>Adobe XD</li>
-                            <li>Figma</li>
-                            <li>SolidWorks Certified</li>
-                            <li>Arduino</li>
-                        </ul>
-                    </div>
+                <div class="grid-item">
+                    <img src="img/cosmos-pizza.png" alt="cosmos pizza">
+                    <h3 class="gradient-text">Cosmos Pizza Adventure</h3>
+                    <p>
+                        A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done using GBStudio.
+                    </p>
+                    <a href="https://kschuygon.itch.io/cosmos-pizza-adventure">view on itch.io</a>
                 </div>
-            </div>
-
-            <div id="portfolio" class="px">
-                <div class="section-header">
-                    <div class="section-title">Portfolio</div>
-                    <div class="section-divider"></div>
+                <div class="grid-item">
+                    <img src="img/the-thing-on-skeld.png" alt="skeld image">
+                    <h3 class="gradient-text">The Thing on Skeld</h3>
+                    <p>
+                        An interactive short story based on the game Among Us. You are a crewmate on a ship that has been infiltrated by an alien who is impersonating a member of your crew and is trying to kill you all. Done using HTML/CSS.
+                    </p>
+                    <a href="https://creative.colorado.edu/~kasc1637/web/hypertext-narrative/startup.html" class="button d-block">view</a>
                 </div>
-                <div class="d-grid halfs sans">
-                    <div class="grid-item">
-                        <img src="img/htb-logo.png" alt="history through battleship">
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">History Through Battleship</h2>
-                        <p class="text-lightgrey">
-                            History Through Battleship is an educational web-game developed to test and refine students’ history skills. This was a project for a course at CU Boulder. The app is built using node.js and is deployed on Heroku.
-                        </p>
-                        <a href="https://history-through-battleship.herokuapp.com" class="button d-block">view</a>
-                    </div>
-
-                    <div class="grid-item">
-                        <img src="img/cosmos-pizza.png" alt="cosmos pizza">
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">Cosmos Pizza Adventure</h2>
-                        <p class="text-lightgrey">
-                            A quest-based pixel art game that takes place in a space station. You play as a robot pizza maker that has run out of ingredients and has to look around the space station for more, meeting interesting characters, encountering obstacles and solving puzzles along the way. Done using GBStudio.
-                        </p>
-                        <a href="https://kschuygon.itch.io/cosmos-pizza-adventure" class="button d-block">view on itch.io</a>
-                    </div>
-
-                    <div class="grid-item">
-                        <img src="img/the-thing-on-skeld.png" alt="skeld image">
-                    </div>
-                    <div class="grid-item">
-                        <h2 class="text-lightprimary">The Thing on Skeld</h2>
-                        <p class="text-lightgrey">
-                            An interactive short story based on the game Among Us. You are a crewmate on a ship that has been infiltrated by an alien who is impersonating a member of your crew and is trying to kill you all. Done using HTML/CSS.
-                        </p>
-                        <a href="https://creative.colorado.edu/~kasc1637/web/hypertext-narrative/startup.html" class="button d-block">view</a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </article>
 
-        <footer class="text-lightgrey sans d-flex align-items-center justify-center">
-            <div class="box-1">
-                <p>Created by: <a href="https://github.com/kaischuygon/kaischuygon.github.io">Kai Schuyler Gonzalez</a></p>
-                <p>Contact me: <a href="mailto:kai.schuyler@gmail.com">kai.schuyler@gmail.com</a></p>
-            </div>
+        <footer>
+            <p>Created by: <a href="https://github.com/kaischuygon/kaischuygon.github.io">Kai Schuyler Gonzalez</a></p>
+            <p>Contact me: <a href="mailto:kai.schuyler@gmail.com">kai.schuyler@gmail.com</a></p>
         </footer>
 
+        <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
     </body>
 
 </html>
