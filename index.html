@@ -7,24 +7,41 @@
         <link type="text/css" rel="stylesheet" href="css/styles.css">
         <meta name="author" content="Kai Schuyler Gonzalez">
         <meta name="description" content="my personal portfolio site">
-        <link rel="icon" type="image/svg+xml" href="img/vector-self.jpg">
+        <link rel="icon" type="image/svg+xml" href="img/vector-self.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kai Schuyler Gonzalez</title>
     </head>
 
-    <body>
+    <body onload="loadUp()">
         <nav class="gradient-text">
-            <a class="hover" href="https://github.com/kaischuygon"><i class="fab fa-github"></i></a>
-            <a class="hover" href="https://www.linkedin.com/in/kaischuyler/"><i class="fab fa-linkedin"></i></a>
-            <a class="hover" href="https://twitter.com/kaischuyler"><i class="fab fa-twitter"></i></a>
-            <a class="hover" href="https://www.instagram.com/kai.schuyler/"><i class="fab fa-instagram"></i></a>
-            <a class="hover" href="https://codepen.io/kaischuygon"><i class="fab fa-codepen"></i></a>
-            <a class="hover" href="resume.pdf" target="_blank">Resume</a>
+            <div class="nav-item flex-start">
+                <a id="theme-button" class="hover"></a>
+            </div>
+            <div class="nav-item">
+                <a class="hover" href="https://github.com/kaischuygon"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="nav-item">
+                <a class="hover" href="https://www.linkedin.com/in/kaischuyler/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="nav-item">
+                <a class="hover" href="https://twitter.com/kaischuyler"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="nav-item">
+                <a class="hover" href="https://www.instagram.com/kai.schuyler/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="nav-item">
+                <a class="hover" href="https://codepen.io/kaischuygon"><i class="fab fa-codepen"></i></a>
+            </div>
+            <div class="nav-item flex-end">
+                <a class="hover" href="resume.pdf" target="_blank">Resume</a>
+            </div>
         </nav>
 
-        <section id="introduction" class="gradient-text">
-            <img id="intro-img" src="img/vector-self.jpg" alt="vector image of self">
-            <div id="intro-text">
+        <section id="introduction">
+            <div class="intro-img">
+                <img src="img/vector-self.png" alt="vector image of self">
+            </div>
+            <div id="intro-text" class="gradient-text">
                 I'm <br>
                 <span class="larger">Kai Schuyler Gonzalez.</span><br>
                 A computer science student <br>
@@ -134,6 +151,7 @@
         </footer>
 
         <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
+        <script src="js/scripts.js"></script>
     </body>
 
 </html>
