@@ -75,6 +75,10 @@ nav a {
     -webkit-text-fill-color: transparent;
 }
 
+.card h3, .card ul {
+    max-width: fit-content;
+}
+
 #introduction {
     display: flex;
     align-items: center;
@@ -131,6 +135,7 @@ article p, article ul {
 
 .card {
     width: calc(var(--width) / 4);
+    word-wrap: break-word;
     padding: 1em;
     border-radius: 16px;
     background: var(--background);
@@ -206,7 +211,7 @@ h2, h3 {
 
     nav {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .flex-start, .flex-end {
