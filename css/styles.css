@@ -16,10 +16,10 @@
 
 .light {
     --background: #f1f1f1;
-    --primary: #BC3672;
-    --secondary: #FF4DA1;
-    --accent-light: #38E9FF;
-    --accent: #3DA9BC;
+    --primary: #3DA9BC;
+    --secondary: #38E9FF;
+    --accent-light: #FF4DA1;
+    --accent: #BC3672;
     --text: #091121;
     --shadow: #D1D9E9;
 }
@@ -48,12 +48,12 @@ nav {
 }
 
 .nav-item a {
-    color: var(--secondary);
+    color: var(--accent);
     transition: 0.5s;
 }
 
 .nav-item a:hover {
-    color: var(--primary);
+    color: var(--accent-light);
     transition: 0.5s;
 }
 
@@ -79,7 +79,7 @@ nav a {
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent), var(--accent-light));
+    background: -webkit-linear-gradient(-45deg, var(--secondary), var(--primary), var(--accent), var(--accent-light));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -103,7 +103,7 @@ nav a {
     border-radius: 100%;
     width: calc(var(--width) / 3);
     height: calc(var(--width) / 3);
-    background: linear-gradient(to bottom right, var(--primary), var(--secondary), var(--accent), var(--accent-light));
+    background: linear-gradient(to bottom right, var(--secondary), var(--primary), var(--accent), var(--accent-light));
 }
 
 .intro-img img {
