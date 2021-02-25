@@ -1,6 +1,6 @@
 const themeButton = document.getElementById('theme-button')
 const body = document.body
-
+const navbar = document.querySelector('#navbar');
 let theme = localStorage.getItem('theme') || 'dark'
 
 themeButton.onclick = () => {
