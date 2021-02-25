@@ -4,7 +4,6 @@ const navbar = document.querySelector('#navbar');
 let theme = localStorage.getItem('theme') || 'dark'
 
 themeButton.onclick = () => {
-    console.log('activated')
     if(theme == 'dark') {
         localStorage.setItem('theme', 'light')
         body.classList.replace('dark', 'light')
