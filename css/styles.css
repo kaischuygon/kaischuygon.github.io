@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {    
     --width: max(60vw, 50vh);
+    --theme-1-dark: hsl(189, 100%, 25%);
+    --theme-1-light: hsl(189, 100%, 50%);
+    --theme-2-dark: hsl(333, 100%, 30%);
+    --theme-2-light: hsl(333, 100%, 50%);
+    --theme-light: hsl(220, 57%, 92%);
+    --theme-dark: hsl(220, 57%, 8%);
 }
 
 .dark {
-    --background: #091121;
-    --primary: #8A0440;
-    --secondary: #D51B6F;
-    --accent-light: #06B7D6;
-    --accent: #0B778A;
-    --text: #D1D9E9;
-    --shadow: #000;
+    --background: var(--theme-dark);
+    --primary: var(--theme-2-light);
+    --secondary: var(--theme-2-dark);
+    --accent-primary: var(--theme-1-light);
+    --accent-secondary: var(--theme-1-dark);
+    --text: var(--theme-light);
+    --shadow: hsl(220, 57%, 16%);
 }
 
 .light {
-    --background: #f1f1f1;
-    --primary: #3DA9BC;
-    --secondary: #38E9FF;
-    --accent-light: #FF4DA1;
-    --accent: #BC3672;
-    --text: #091121;
-    --shadow: #D1D9E9;
+    --background: var(--theme-light);
+    --primary: var(--theme-1-light);
+    --secondary: var(--theme-1-dark);
+    --accent-primary: var(--theme-2-light);
+    --accent-secondary: var(--theme-2-dark);
+    --text: var(--theme-dark);
+    --shadow: hsl(220, 57%, 84%);
+}
+
+#logo-button {
+    font-family: 'Press Start 2P', cursive;
 }
 
 body {
@@ -48,12 +59,12 @@ nav {
 }
 
 .nav-item a {
-    color: var(--accent);
+    color: var(--accent-primary);
     transition: 0.5s;
 }
 
 .nav-item a:hover {
-    color: var(--accent-light);
+    color: var(--accent-secondary);
     transition: 0.5s;
 }
 
@@ -79,7 +90,7 @@ nav a {
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(-45deg, var(--secondary), var(--primary), var(--accent), var(--accent-light));
+    background: -webkit-linear-gradient(-45deg, var(--primary), var(--accent-primary));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -103,7 +114,7 @@ nav a {
     border-radius: 100%;
     width: calc(var(--width) / 3);
     height: calc(var(--width) / 3);
-    background: linear-gradient(to bottom right, var(--secondary), var(--primary), var(--accent), var(--accent-light));
+    background: linear-gradient(-45deg, var(--primary), var(--accent-primary));
 }
 
 .intro-img img {
@@ -123,13 +134,13 @@ nav a {
 }
 
 #about a, footer a {
-    color: var(--accent-light);
+    color: var(--accent-primary);
     text-decoration: none;
     transition: 0.5s;
 }
 
 #about a:hover, footer a:hover {
-    color: var(--accent);
+    color: var(--accent-secondary);
     transition: 0.5s;
 }
 
@@ -201,7 +212,7 @@ footer {
 }
 
 .hover:hover {
-    border-bottom: 2px solid var(--secondary    );
+    border-bottom: 2px solid var(--primary);
     transition: 0.5s;
 }
 
