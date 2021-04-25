@@ -3,32 +3,24 @@
 
 :root {    
     --width: max(60vw, 50vh);
-    --theme-1-dark: hsl(189, 100%, 25%);
-    --theme-1-light: hsl(189, 100%, 50%);
-    --theme-2-dark: hsl(333, 100%, 30%);
-    --theme-2-light: hsl(333, 100%, 50%);
-    --theme-light: hsl(220, 57%, 92%);
-    --theme-dark: hsl(220, 57%, 8%);
+    --theme-1: hsl(189, 100%, 50%);
+    --theme-2: hsl(333, 100%, 50%);
+    --theme-light: hsl(220, 100%, 92%);
+    --theme-dark: hsl(220, 100%, 4%);
 }
 
 .dark {
     --background: var(--theme-dark);
-    --primary: var(--theme-2-light);
-    --secondary: var(--theme-2-dark);
-    --accent-primary: var(--theme-1-light);
-    --accent-secondary: var(--theme-1-dark);
+    --link-color: var(--theme-1);
     --text: var(--theme-light);
-    --shadow: hsl(220, 57%, 16%);
+    --shadow: hsl(220, 100%, 8%);
 }
 
 .light {
     --background: var(--theme-light);
-    --primary: var(--theme-1-light);
-    --secondary: var(--theme-1-dark);
-    --accent-primary: var(--theme-2-light);
-    --accent-secondary: var(--theme-2-dark);
+    --link-color: var(--theme-2);
     --text: var(--theme-dark);
-    --shadow: hsl(220, 57%, 84%);
+    --shadow: hsl(220, 100%, 84%);
 }
 
 #logo-button {
@@ -58,13 +50,13 @@ nav {
     text-align: center;
 }
 
-.nav-item a {
-    color: var(--accent-primary);
+.nav-item a, .flex a {
+    color: var(--link-color);
     transition: 0.5s;
 }
 
-.nav-item a:hover {
-    color: var(--accent-secondary);
+.nav-item a:hover, .flex a:hover {
+    filter: brightness(50%);
     transition: 0.5s;
 }
 
@@ -90,7 +82,7 @@ nav a {
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(-45deg, var(--primary), var(--accent-primary));
+    background: -webkit-linear-gradient(-45deg, var(--theme-1), var(--theme-2));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -114,7 +106,7 @@ nav a {
     border-radius: 100%;
     width: calc(var(--width) / 3);
     height: calc(var(--width) / 3);
-    background: linear-gradient(-45deg, var(--primary), var(--accent-primary));
+    background: linear-gradient(-45deg, var(--theme-1), var(--theme-2));
 }
 
 .intro-img img {
@@ -134,13 +126,13 @@ nav a {
 }
 
 #about a, footer a {
-    color: var(--accent-primary);
+    color: var(--link-color);
     text-decoration: none;
     transition: 0.5s;
 }
 
 #about a:hover, footer a:hover {
-    color: var(--accent-secondary);
+    filter: brightness(75%);
     transition: 0.5s;
 }
 
@@ -189,31 +181,51 @@ article p, article ul {
     background: var(--background);
 }
 
-#portfolio img {
+.overlay img {
     width: 100%;
     border-radius: 16px;
+    z-index: 0;
+    filter: grayscale(1);
+}
+
+.overlay img:hover {
+    filter: none;
+}
+
+.overlay {
+    position: relative;
+    /* height: min-content; */
+}    
+
+.overlay:before {
+    content: "";
+    z-index: 1;
+    border-radius: 16px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    background: var(--link-color);
+    opacity: 0.2;
+}
+
+.overlay:hover:before {
+    background: none;
+    z-index: -1;
 }
 
 footer {
-    text-align: center;
     color: var(--text);
     margin-bottom: 1em;
     margin-top: 3em;
+    max-height: 5em;
+    text-align: center;
 }
 
 .shadow {
     box-shadow: -10px 0 30px var(--shadow);
-}
-
-.hover {
-    text-decoration: none;
-    border-bottom: 2px solid var(--background);
-    /* transition: 0.5s; */
-}
-
-.hover:hover {
-    border-bottom: 2px solid var(--primary);
-    transition: 0.5s;
 }
 
 h2, h3 {
@@ -221,17 +233,27 @@ h2, h3 {
 }
 
 .primary-text {
-    color: var(--primary);
+    color: var(--theme-2);
 }
 
-@media screen and (max-width: 600px) {
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex a {
+    font-size: 1em;
+    margin: 0 .5em;
+}
+
+@media screen and (max-width: 718px) {
     body {
         width: 90%;
         margin: 10px auto;
     }
 
     nav a {
-        font-size: calc(100vw / 16);
+        font-size: calc(var(--width) / 16);
     }
 
     nav {
@@ -260,10 +282,11 @@ h2, h3 {
 
     .card-list {
         flex-direction: column;
+        justify-content: center;
     }
 
     .card {
-        width: 100%;
+        width: var(--width);
         padding: 0;
     }
 
