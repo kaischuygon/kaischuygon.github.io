@@ -11,7 +11,7 @@
 
 .dark {
     --background: var(--theme-dark);
-    --link-color: hsl(44, 100%, 50%);
+    --link-color: var(--theme-1);
     --text: var(--theme-light);
     --shadow: hsl(220, 100%, 8%);
 }
