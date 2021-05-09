@@ -35,19 +35,34 @@ body {
 }
 
 nav {
-    position: absolute;
-    top: 0;
+    position: fixed;
     left: 0;
+    bottom: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
+    text-align: left;
+}
+
+nav a {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+nav a .link-text {
+    position: relative;
+    opacity: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+nav a:hover .link-text{
+    left: .5em;
+    opacity: initial;
+    transition: 0.5s;
 }
 
 .nav-item {
-    padding: calc(var(--width) / 80);
-    margin: calc(var(--width) / 80);
-    text-align: center;
+    margin: 1em;
 }
 
 .nav-item a, .flex a {
@@ -58,27 +73,6 @@ nav {
 .nav-item a:hover, .flex a:hover {
     filter: brightness(50%);
     transition: 0.5s;
-}
-
-.flex-start {
-    margin-right: auto;
-    text-align: left;
-}
-
-.flex-end {
-    margin-left: auto;
-    text-align: right;
-}
-
-.flex-start, .flex-end {
-    width: calc(var(--width) / 3);
-}
-
-nav a {
-    font-size: 2em;
-    color: currentColor;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 .gradient-text {
@@ -176,6 +170,7 @@ article p, article ul {
 
 #portfolio .grid-item {
     width: fit-content;
+    max-width: calc(var(--width) / 2 - 4em);
     padding: 1em;
     border-radius: 16px;
     background: var(--background);
@@ -283,10 +278,12 @@ h2, h3 {
     .card-list {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .card {
         width: var(--width);
+        max-width: 100%;
         padding: 0;
     }
 
@@ -310,5 +307,20 @@ h2, h3 {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    #portfolio .grid-item {
+        max-width: initial;
+    }
+    
+    nav {
+        position: initial;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .link-text {
+        display: none;
     }
 }
