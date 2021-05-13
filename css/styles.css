@@ -50,14 +50,16 @@ nav a {
 
 nav a .link-text {
     position: relative;
+    display: none;
     opacity: 0;
     left: 0;
     transition: 0.5s;
 }
 
-nav a:hover .link-text{
-    left: .5em;
-    opacity: initial;
+nav a:hover .link-text {
+    display: inline;
+    opacity: 1;
+    left: 0.5em;
     transition: 0.5s;
 }
 
@@ -136,12 +138,12 @@ article p, article ul {
 
 .card-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .card {
     width: calc(var(--width) / 4);
+    min-width: max-content;
     word-wrap: break-word;
     padding: 1em;
     border-radius: 16px;
@@ -170,7 +172,7 @@ article p, article ul {
 
 #portfolio .grid-item {
     width: fit-content;
-    max-width: calc(var(--width) / 2 - 4em);
+    max-width: calc(var(--width) / 2 - 2em);
     padding: 1em;
     border-radius: 16px;
     background: var(--background);
@@ -284,7 +286,6 @@ h2, h3 {
     .card {
         width: var(--width);
         max-width: 100%;
-        padding: 0;
     }
 
     .card h3 {
@@ -321,6 +322,10 @@ h2, h3 {
     }
 
     .link-text {
+        display: none;
+    }
+
+    nav a:hover .link-text {
         display: none;
     }
 }
