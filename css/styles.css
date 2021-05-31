@@ -192,7 +192,23 @@ footer a:hover {
 }
 
 .footer-info {
-  padding-bottom: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.footer-info div {
+  flex: 1;
+  margin: 0 1vw;
+}
+
+.footer-info img {
+  float: right;
+}
+
+footer img {
+  height: 4em;
 }
 
 article {
@@ -393,12 +409,22 @@ h3 {
     flex-wrap: wrap;
   }
 
+  nav a {
+    font-size: larger;
+  }
+
   .link-text {
     display: none;
   }
 
   nav a:hover .link-text {
     display: none;
+  }
+
+  .footer-info {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-bottom: 0.5em;
   }
 }
 
