@@ -1,10 +1,30 @@
+// Selected color theme will stay saved for 1 hour, other times it will be decided by time of day.
+
+var hours = 1; // to clear the localStorage after 1 hour
+var now = new Date().getTime();
+var setupTime = localStorage.getItem('setupTime');
+if (setupTime == null) {
+    localStorage.setItem('setupTime', now)
+} else {
+    if(now-setupTime > hours*60*60*1000) {
+        localStorage.clear()
+        localStorage.setItem('setupTime', now);
+    }
+}
+
 const themeButton = document.getElementById('theme-button')
 const body = document.body
 const navbar = document.querySelector('#navbar')
 const introduction = document.querySelector('#introduction')
 const article = document.querySelector('#article')
 const footer = document.querySelector('#footer')
-let theme = localStorage.getItem('theme') || 'dark'
+
+let date = new Date()
+let dateTheme = 'dark'
+if(date.getHours() > 6 && date.getHours() < 18) {
+    dateTheme = 'light'
+}
+let theme = localStorage.getItem('theme') || dateTheme
 
 themeButton.onclick = () => {
     if(theme == 'dark') {
