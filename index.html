@@ -10,9 +10,19 @@
         <link rel="icon" type="image/svg+xml" href="img/favicon.svg" id="favicon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kai Schuyler Gonzalez</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
+        <div class="loader-wrapper">
+            <svg viewBox="0 0 130 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="signature1" d="M35.2938 1.49894C31.8059 6.19421 31.6818 6.38024 28.6694 11.4227C24.0946 19.0805 19.6706 26.8332 14.8985 34.3742C13.0558 37.2862 7.43991 47.7409 2.39547 45.4127C-1.2009 43.7528 3.11954 38.7418 4.58132 37.3032C6.50361 35.4114 10.016 33.119 12.1444 35.8387C14.3865 38.7036 15.4586 42.1726 17.6527 45.0848C23.3337 52.625 29.522 58.7893 38.1123 62.7902C51.518 69.034 64.9344 50.9465 54.6373 40.3634C50.9634 36.5874 47.0915 31.779 48.0361 26.1116C49.4514 17.6194 55.3555 11.073 62.5501 6.87614C70.7773 2.07692 79.889 0.127982 89.3487 1.49894C93.0989 2.04245 96.6825 3.15415 100.475 3.5755C102.297 3.77794 104.121 3.93101 105.939 4.16568C106.267 4.20802 109.034 4.55914 107.666 4.55914C101.234 4.55914 95.337 11.9945 91.6219 16.3627C82.8989 26.6195 73.5654 40.417 76.2773 54.79C77.1868 59.6107 81.3311 63.5334 86.2666 63.5334C91.3492 63.5334 96.2417 58.4521 99.0538 54.7026C102.329 50.3361 104.229 45.376 107.163 40.888C108.396 39.003 113.045 40.9716 114.748 41.2377C117.679 41.6957 118.903 42.8416 117.699 45.675C113.72 55.0374 112.314 65.4249 107.141 74.3315C105.601 76.9833 103.734 79.8022 100.846 81.1077C99.7209 81.6164 96.4935 81.8808 95.8406 80.43C94.6416 77.7654 102.027 73.3714 103.36 72.4298C111.774 66.4873 120.679 61.3957 129 55.3146"/>
+                <path id="signature2" d="M10.8077 3.4345C13.7274 3.32833 15.8896 2.53239 18.4144 1.13936C20.799 -0.176264 17.71 8.24533 17.6275 8.68055C14.5576 24.8742 13.0954 41.3317 9.23385 57.3813C7.52478 64.4846 5.34484 71.459 3.7255 78.5841"/>
+                <path id="signature3" d="M26.3087 32.4943C23.8961 29.806 21.901 31.4623 20.8003 34.5053C20.3892 35.642 19.7702 37.4198 20.8441 38.3743C21.8882 39.3024 23.053 39.0888 23.9698 38.1338C25.5668 36.4703 26.7021 34.5737 26.7021 32.232C26.7021 30.3153 26.574 36.2816 27.5765 37.9152C28.6858 39.7231 30.8861 37.5051 31.7296 36.4288C32.3054 35.6942 32.8556 34.7558 33.1504 33.8714C33.2462 33.584 33.6599 30.8615 33.7624 32.4506C33.8759 34.2096 33.4608 39.1291 36.5822 37.9152C40.1007 36.5469 41.2599 33.2052 41.2599 29.7401"/>
+            </svg>
+        </div>
+        
         <section id="introduction">
             <div class="intro-img">
                 <img src="img/self.png" alt="vector image of self">
@@ -23,8 +33,8 @@
                 A computer science student.<br>
             </div>
         </section>
-        
-        <article>
+
+        <article id="article">
             <section id="about">
                 <h2 class="gradient-text">About Me</h2>
                 <p>
@@ -149,8 +159,8 @@
                 </div>
             </section>
         </article>
-
-        <footer>
+        
+        <footer id="footer">
             <nav id="navbar">
                 <div class="nav-item">
                     <a id="theme-button"></a>
@@ -192,9 +202,12 @@
                     </a>
                 </div>
             </nav>
-            <p>Created by: <a href="https://github.com/kaischuygon/kaischuygon.github.io">Kai Schuyler Gonzalez</a></p>
-            <p>Contact me: <a href="mailto:kai.schuyler@gmail.com">kai.schuyler@gmail.com</a></p>
+            <div class="footer-info">
+                <p>Created by: <a href="https://github.com/kaischuygon/kaischuygon.github.io">Kai Schuyler Gonzalez</a></p>
+                <p>Contact me: <a href="mailto:kai.schuyler@gmail.com">kai.schuyler@gmail.com</a></p>
+            </div>
         </footer>
+
 
         <script src="https://kit.fontawesome.com/09d3622ace.js" crossorigin="anonymous"></script> <!-- For the social media icons -->
         <script src="js/scripts.js"></script>

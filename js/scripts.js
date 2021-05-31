@@ -1,6 +1,9 @@
 const themeButton = document.getElementById('theme-button')
 const body = document.body
 const navbar = document.querySelector('#navbar')
+const introduction = document.querySelector('#introduction')
+const article = document.querySelector('#article')
+const footer = document.querySelector('#footer')
 let theme = localStorage.getItem('theme') || 'dark'
 
 themeButton.onclick = () => {
@@ -24,4 +27,11 @@ body.onload = () => {
     } else {
         themeButton.innerHTML = '<i class="fas fa-moon"></i>'
     }
+
+    setTimeout( () => { 
+        introduction.style.display = 'flex'
+        article.style.display = 'block'
+        footer.style.display = 'block'
+        $('.loader-wrapper').fadeOut(500)
+    }, 2000)   
 }
