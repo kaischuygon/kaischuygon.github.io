@@ -35,13 +35,13 @@ themeButton.onclick = () => {
     body.classList.replace("dark", "light");
     themeIcon.classList = "fas fa-moon";
     theme = "light";
-    themeText.innerHTML = "Enable light mode";
+    themeText.innerHTML = "Light mode";
   } else {
     localStorage.setItem("theme", "dark");
     body.classList.replace("light", "dark");
     themeIcon.classList = "fas fa-sun";
     theme = "dark";
-    themeText.innerHTML = "Enable dark mode";
+    themeText.innerHTML = "Dark mode";
   }
 };
 
@@ -60,10 +60,10 @@ body.onload = async () => {
   body.classList.add(theme);
   if (theme == "dark") {
     themeIcon.classList = "fas fa-sun";
-    themeText.innerHTML = "Enable light mode";
+    themeText.innerHTML = "Light mode";
   } else {
     themeIcon.classList = "fas fa-moon";
-    themeText.innerHTML = "Enable dark mode";
+    themeText.innerHTML = "Dark mode";
   }
 
   await signature();
