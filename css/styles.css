@@ -41,12 +41,12 @@ html {
   align-items: center;
 }
 
-svg {
+#signature {
   width: calc(var(--width) / 2);
 }
 
-svg path {
-  stroke: var(--text);
+#signature path {
+  stroke: var(--link-color);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -86,6 +86,7 @@ body {
   margin: 0 auto;
   width: var(--width);
   background: var(--background);
+  transition: 0.5s;
 }
 
 nav {
@@ -203,12 +204,21 @@ footer a:hover {
   margin: 0 1vw;
 }
 
-.footer-info img {
+.footer-info svg {
   float: right;
 }
 
-footer img {
+#favicon {
   height: 4em;
+  width: 4em;
+}
+
+#favicon path {
+  fill: var(--link-color);
+}
+
+#favicon #letters path {
+  fill: var(--background);
 }
 
 article {
@@ -426,12 +436,4 @@ h3 {
     text-align: center;
     padding-bottom: 0.5em;
   }
-}
-
-#logo-color1 {
-  stop-color: var(--theme-1);
-}
-
-#logo-color2 {
-  stop-color: var(--theme-2);
 }
