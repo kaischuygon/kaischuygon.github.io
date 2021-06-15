@@ -3,23 +3,25 @@
 
 :root {
   --width: max(60vw, 50vh);
-  --theme-1: hsl(189, 100%, 50%);
-  --theme-2: hsl(333, 100%, 50%);
-  --theme-light: hsl(220, 100%, 92%);
-  --theme-dark: hsl(220, 100%, 4%);
+  --cyan: hsl(189, 100%, 50%);
+  --magenta: hsl(333, 100%, 50%);
+  --yellow: hsl(45, 100%, 50%);
+  --blue: #0055FF;
+  --light: hsl(220, 100%, 92%);
+  --dark: hsl(220, 100%, 4%);
 }
 
 .dark {
-  --background: var(--theme-dark);
-  --link-color: var(--theme-1);
-  --text: var(--theme-light);
+  --background: var(--dark);
+  --link-color: var(--yellow);
+  --text: var(--light);
   --shadow: hsl(220, 100%, 8%);
 }
 
 .light {
-  --background: var(--theme-light);
-  --link-color: var(--theme-2);
-  --text: var(--theme-dark);
+  --background: var(--light);
+  --link-color: var(--blue);
+  --text: var(--dark);
   --shadow: hsl(220, 100%, 84%);
 }
 
@@ -135,7 +137,7 @@ nav a:hover .link-text {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(-45deg, var(--theme-1), var(--theme-2));
+  background: -webkit-linear-gradient(-45deg, var(--cyan), var(--magenta));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -160,7 +162,7 @@ nav a:hover .link-text {
   border-radius: 100%;
   width: calc(var(--width) / 3);
   height: calc(var(--width) / 3);
-  background: linear-gradient(-45deg, var(--theme-1), var(--theme-2));
+  background: linear-gradient(-45deg, var(--cyan), var(--magenta));
 }
 
 .intro-img img {
@@ -298,7 +300,7 @@ article ul {
   bottom: 4px;
   left: 0;
   right: 0;
-  background: var(--link-color);
+  background: var(--blue);
   opacity: 0.2;
 }
 
@@ -326,7 +328,7 @@ h3 {
 }
 
 .primary-text {
-  color: var(--theme-2);
+  color: var(--magenta);
 }
 
 .flex {
