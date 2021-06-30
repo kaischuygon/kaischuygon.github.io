@@ -8,6 +8,6 @@ Features include:
 * SVG Manipulation in DOM
 
 Additional Info:
-* I used (figma)[https://www.figma.com/organization/] for all design aspects of the website.
-* The font used is (Source Sans Pro)[https://fonts.google.com/specimen/Source+Sans+Pro?query=source]/
-* The cards are based off a tutorial from (Fireship.io)[https://fireship.io/lessons/css-cards-animated/]
+* I used [figma](https://www.figma.com/organization/) for all design aspects of the website.
+* The font used is [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro?query=source/)
+* The cards are based off a tutorial from [Fireship.io](https://fireship.io/lessons/css-cards-animated/)
