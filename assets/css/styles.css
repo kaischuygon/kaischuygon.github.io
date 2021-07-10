@@ -6,28 +6,48 @@
   --cyan: hsl(189, 100%, 50%);
   --magenta: hsl(333, 100%, 50%);
   --yellow: hsl(45, 100%, 50%);
-  --blue: #0055FF;
-  --light: hsl(220, 100%, 92%);
-  --dark: hsl(220, 100%, 4%);
+  --blue: hsl(220, 100%, 50%);
+  --light: hsl(220, 100%, 89%);
+  --dark: hsl(220, 42%, 11%);
 }
 
 .dark {
   --background: var(--dark);
   --link-color: var(--yellow);
   --text: var(--light);
-  --shadow: hsl(220, 100%, 8%);
+  --alt: hsl(222, 43%, 21%);
+  --shadow: hsl(220, 42%, 18%);
+  --brighten: 150%;
 }
 
 .light {
   --background: var(--light);
   --link-color: var(--blue);
   --text: var(--dark);
+  --alt: hsl(220, 100%, 80%);
   --shadow: hsl(220, 100%, 84%);
+  --brighten: 50%;
 }
 
 body,
 html {
   height: 100%;
+}
+
+#intro-text {
+  color: var(--cyan);
+}
+
+#intro-text span {
+  color: var(--magenta);
+}
+
+article h2 {
+  color: var(--magenta);
+}
+
+article h3 {
+  color: var(--cyan);
 }
 
 #signature-wrapper {
@@ -48,7 +68,7 @@ html {
 }
 
 #signature path {
-  stroke: var(--link-color);
+  stroke: var(--alt);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -124,23 +144,14 @@ nav a:hover .link-text {
   margin: 1em;
 }
 
-.nav-item a,
-.flex a {
-  color: var(--link-color);
+.nav-item a {
+  color: var(--alt);
   transition: 0.5s;
 }
 
-.nav-item a:hover,
-.flex a:hover {
-  filter: brightness(50%);
+.nav-item a:hover {
+  filter: brightness(var(--brighten));
   transition: 0.5s;
-}
-
-.gradient-text {
-  background: -webkit-linear-gradient(-45deg, var(--cyan), var(--magenta));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .card h3,
@@ -162,7 +173,7 @@ nav a:hover .link-text {
   border-radius: 100%;
   width: calc(var(--width) / 3);
   height: calc(var(--width) / 3);
-  background: linear-gradient(-45deg, var(--cyan), var(--magenta));
+  background: var(--alt);
 }
 
 .intro-img img {
@@ -182,15 +193,17 @@ nav a:hover .link-text {
 }
 
 #about a,
-footer a {
+footer a,
+.flex a {
   color: var(--link-color);
   text-decoration: none;
   transition: 0.5s;
 }
 
 #about a:hover,
-footer a:hover {
-  filter: brightness(50%);
+footer a:hover, 
+.flex a:hover {
+  filter: brightness(var(--brighten));
   transition: 0.5s;
 }
 
@@ -216,7 +229,7 @@ footer a:hover {
 }
 
 #favicon path {
-  fill: var(--link-color);
+  fill: var(--alt);
 }
 
 #favicon #letters path {
