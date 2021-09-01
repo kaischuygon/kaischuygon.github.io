@@ -9,8 +9,8 @@
 }
 
 .dark {
-  --background: hsl(276, 100%, 7%);
-  --text: hsl(276, 100%, 93%);
+  --background: hsl(275, 100%, 7%);
+  --text: hsl(277, 100%, 93%);
   --alt: hsl(276, 100%, 20%);
   --brighten: 150%;
 }
