@@ -3,25 +3,22 @@
 
 :root {
   --width: max(60vw, 50vh);
+  --primary: hsl(292, 94%, 44%);
+  --secondary: hsl(276, 96%, 48%);
+  --link-color: hsl(225, 78%, 59%);
 }
 
 .dark {
-  --background: hsl(220, 42%, 11%);
-  --link-color: hsl(45, 100%, 50%);
-  --text: hsl(220, 100%, 89%);
-  --alt: hsl(222, 43%, 21%);
-  --primary: hsl(189, 100%, 50%);
-  --secondary: hsl(333, 100%, 50%);
+  --background: hsl(276, 100%, 7%);
+  --text: hsl(276, 100%, 93%);
+  --alt: hsl(276, 100%, 20%);
   --brighten: 150%;
 }
 
 .light {
-  --background: #F2F2F2;
-  --link-color: #73B5B3;
-  --text: #171C2A;
-  --alt: hsl(0, 0%, 85%);
-  --primary: #4B58A6;
-  --secondary: #D977BF;
+  --background: hsl(276, 100%, 93%);
+  --text: hsl(276, 100%, 7%);
+  --alt: hsl(276, 100%, 82%);
   --brighten: 50%;
 }
 
@@ -148,6 +145,7 @@ nav a:hover .link-text {
 .nav-item a:hover {
   filter: brightness(var(--brighten));
   transition: 0.5s;
+  border-bottom: none;
 }
 
 .card h3,
@@ -201,6 +199,10 @@ footer a:hover,
 .flex a:hover {
   filter: brightness(var(--brighten));
   transition: 0.5s;
+}
+
+#about a:hover, footer a:hover {
+  border-bottom: 1px solid var(--link-color);
 }
 
 .footer-info {
