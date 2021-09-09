@@ -3,22 +3,23 @@
 
 :root {
   --width: max(60vw, 50vh);
-  --primary: hsl(292, 94%, 44%);
-  --secondary: hsl(276, 96%, 48%);
-  --link-color: hsl(225, 78%, 59%);
+  --primary: #00D9FF;
+  --secondary: #FF0073;
 }
 
 .dark {
-  --background: hsl(275, 100%, 7%);
-  --text: hsl(277, 100%, 93%);
-  --alt: hsl(276, 100%, 20%);
+  --link-color: #FFBF00;
+  --background: #101728;
+  --text: #d6e2ff;
+  --alt: hsl(224, 42%, 30%);
   --brighten: 150%;
 }
 
 .light {
-  --background: hsl(276, 100%, 93%);
-  --text: hsl(276, 100%, 7%);
-  --alt: hsl(276, 100%, 82%);
+  --link-color: #0055ff;
+  --background: #d6e2ff;
+  --text: #070B14;
+  --alt: hsl(222, 100%, 80%);;
   --brighten: 50%;
 }
 
