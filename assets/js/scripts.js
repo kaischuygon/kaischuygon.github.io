@@ -21,6 +21,8 @@ const introduction = document.querySelector("#introduction");
 const article = document.querySelector("#article");
 const footer = document.querySelector("#footer");
 const signatureWrapper = document.querySelector("#signature-wrapper");
+const favicon = document.querySelector("#headFavicon");
+const footerFavicon = document.querySelector("#favicon");
 
 let date = new Date();
 let dateTheme = "dark";
@@ -31,12 +33,16 @@ let theme = localStorage.getItem("theme") || dateTheme;
 
 themeButton.onclick = () => {
   if (theme == "dark") {
+    favicon.setAttribute("href", "assets/img/favicon-light.svg");
+    footerFavicon.setAttribute("src", "assets/img/favicon-light.svg");
     localStorage.setItem("theme", "light");
     body.classList.replace("dark", "light");
     themeIcon.classList = "fas fa-moon";
     theme = "light";
     themeText.innerHTML = "Light mode";
   } else {
+    favicon.setAttribute("href", "assets/img/favicon-dark.svg");
+    footerFavicon.setAttribute("src", "assets/img/favicon-dark.svg");
     localStorage.setItem("theme", "dark");
     body.classList.replace("light", "dark");
     themeIcon.classList = "fas fa-sun";
@@ -61,9 +67,13 @@ body.onload = async () => {
   if (theme == "dark") {
     themeIcon.classList = "fas fa-sun";
     themeText.innerHTML = "Light mode";
+    favicon.setAttribute("href", "assets/img/favicon-dark.svg");
+    footerFavicon.setAttribute("src", "assets/img/favicon-dark.svg");
   } else {
     themeIcon.classList = "fas fa-moon";
     themeText.innerHTML = "Dark mode";
+    favicon.setAttribute("href", "assets/img/favicon-light.svg");
+    footerFavicon.setAttribute("src", "assets/img/favicon-light.svg");
   }
 
   await signature();

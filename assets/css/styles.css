@@ -3,23 +3,27 @@
 
 :root {
   --width: max(60vw, 50vh);
-  --primary: #00D9FF;
-  --secondary: #FF0073;
+  --primary: hsl(203, 93%, 68%);
+  --secondary: hsl(321, 64%, 53%);
+  --black: 222, 48%;
+  --white: 222, 48%;
+  --blue: hsl(214, 65%, 51%);
+  --yellow: hsl(51, 61%, 57%);
 }
 
 .dark {
-  --link-color: #FFBF00;
-  --background: #101728;
-  --text: #d6e2ff;
-  --alt: hsl(224, 42%, 30%);
+  --link-color: var(--yellow);
+  --background: hsl(var(--black), 15%);
+  --text: hsl(var(--white), 96%);
+  --alt: hsl(var(--black), 30%);
   --brighten: 150%;
 }
 
 .light {
-  --link-color: #0055ff;
-  --background: #d6e2ff;
-  --text: #070B14;
-  --alt: hsl(222, 100%, 80%);;
+  --link-color: var(--blue);
+  --background: hsl(var(--white), 96%);
+  --text: hsl(var(--black), 15%);
+  --alt: hsl(var(--white), 80%);
   --brighten: 50%;
 }
 
@@ -225,14 +229,7 @@ footer a:hover,
 #favicon {
   height: 4em;
   width: 4em;
-}
-
-#favicon path {
-  fill: var(--alt);
-}
-
-#favicon #letters path {
-  fill: var(--background);
+  float: right;
 }
 
 article {
