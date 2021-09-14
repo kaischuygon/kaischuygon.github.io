@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Essential Design Principles"
-categories: jekyll update
+categories: MobileAppDev Design
 ---
 Video link: [Essential Design Principles](https://developer.apple.com/videos/play/wwdc2017/802/)
 
