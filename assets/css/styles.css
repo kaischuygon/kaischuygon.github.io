@@ -17,6 +17,7 @@
   --text: hsl(var(--white), 96%);
   --alt: hsl(var(--black), 30%);
   --brighten: 150%;
+  --img: 100%;
 }
 
 .light {
@@ -25,6 +26,7 @@
   --text: hsl(var(--black), 15%);
   --alt: hsl(var(--white), 80%);
   --brighten: 50%;
+  --img: 150%;
 }
 
 body,
@@ -178,6 +180,7 @@ nav a:hover .link-text {
 .intro-img img {
   width: 98%;
   border-radius: 100%;
+  filter: brightness(var(--img)) grayscale(0.5);
 }
 
 #intro-text {
@@ -309,7 +312,7 @@ article ul {
   bottom: 4px;
   left: 0;
   right: 0;
-  background: var(--primary);
+  background: var(--link-color);
   opacity: 0.2;
 }
 
