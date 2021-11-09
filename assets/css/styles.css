@@ -180,7 +180,7 @@ nav a:hover .link-text {
 .intro-img img {
   width: 98%;
   border-radius: 100%;
-  filter: brightness(var(--img)) grayscale(0.5);
+  filter: brightness(var(--img));
 }
 
 #intro-text {
