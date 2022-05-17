@@ -1,11 +1,10 @@
 <script setup>
-import PortfolioCard from "./components/card.vue";
-import links from "./components/header.vue";
+import { PortfolioCard, Links } from '#components'
 </script>
 
 <template>
   <div class="bg-liquid bg-fixed font-body">
-    <links />
+    <Links />
     <section id="intro" class="h-screen flex justify-center items-center">
       <div class="flex-1 flex justify-center items-center">
         <div class="text-slate-100">
