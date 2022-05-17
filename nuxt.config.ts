@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     exposeConfig: true,
   },
   target: "static",
+  ssr: false,
   head: {
     title: process.env.npm_package_name || "",
     meta: [
