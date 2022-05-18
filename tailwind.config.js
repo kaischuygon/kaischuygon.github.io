@@ -1,5 +1,17 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  theme: {},
+  theme: {
+    extend: {
+      backgroundImage: {
+        liquid: "url('assets/liquid.png')",
+      },
+      fontFamily: {
+        display: ["Rubik Glitch", ...fontFamily.sans],
+        body: ["Comfortaa", ...fontFamily.sans],
+      },
+    },
+  },
   plugins: [],
   content: [
     `components/**/*.{vue,js}`,
@@ -7,7 +19,5 @@ module.exports = {
     `pages/**/*.vue`,
     `composables/**/*.{js,ts}`,
     `plugins/**/*.{js,ts}`,
-    `App.{js,ts,vue}`,
-    `app.{js,ts,vue}`
-  ]
-}
+  ],
+};
