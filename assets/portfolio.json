@@ -4,7 +4,7 @@
     "title": "History Through Battleship",
     "category": "Web App",
     "desc": "An educational web-game developed to test history skills.",
-    "img": "https://github.com/kaischuygon/history-through-battleship/raw/main/readme-images/logo.png",
+    "img": "https://raw.githubusercontent.com/kaischuygon/history-through-battleship/main/social.png",
     "link": "https://history-through-battleship.herokuapp.com"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Choose Our Future",
     "category": "Web App",
     "desc": "A static web app developed for UCAR.",
-    "img": "https://picsum.photos/300/200",
+    "img": "",
     "link": "https://github.com/jswillard/choose-our-future"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Triadic Color Generator",
     "category": "Mobile",
     "desc": "An iOS app to calculate a triadic color palette from a single hex or rgb input.",
-    "img": "https://picsum.photos/300/200",
+    "img": "",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/triadic"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Endless Picross",
     "category": "Mobile",
     "desc": "An android game that generates random picross puzzles.",
-    "img": "https://picsum.photos/300/200",
+    "img": "",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/EndlessPicross"
   }
 ]
