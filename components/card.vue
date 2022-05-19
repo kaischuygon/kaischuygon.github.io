@@ -13,7 +13,7 @@
           {{ category }}
         </span>
       </div>
-      <img :src="`${img}`" class="rounded object-cover h-60 w-auto my-4" />
+      <img :src="`${img}`" class="rounded w-auto my-4" />
       <span class="flex-0">{{ desc }}</span>
     </div>
   </div>

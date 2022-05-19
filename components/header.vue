@@ -1,5 +1,5 @@
 <template>
-<section id="intro" class="bg-liquid bg-fixed bg-cover h-screen flex justify-center items-center">
+<section id="intro" class="top-0 w-full bg-liquid h-screen bg-fixed bg-cover flex justify-center items-center">
       <div class="flex-1 flex justify-center items-center">
         <div class="text-slate-100">
           <span class="text-lg md:text-2xl lg:text-4xl bg-clip-text text-slate-200">
