@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-  <div class="fixed top-0 w-full bg-liquid bg-fixed bg-cover">
+  <div class="fixed top-0 w-full bg-slate-800 shadow-lg">
     <div class="flex justify-end items-center m-4">
       <a 
         href="#"
