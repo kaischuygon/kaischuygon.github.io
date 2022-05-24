@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ["Rubik Glitch", ...fontFamily.sans],
-        body: ["Comfortaa", ...fontFamily.sans],
+        body: ["Rubik", ...fontFamily.sans],
       },
     },
   },
