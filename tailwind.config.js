@@ -1,11 +1,9 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        liquid: "url('assets/liquid.png')",
-      },
       fontFamily: {
         display: ["Rubik Glitch", ...fontFamily.sans],
         body: ["Comfortaa", ...fontFamily.sans],

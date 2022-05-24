@@ -40,4 +40,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  tailwindcss: {
+    // add '~tailwind.config` alias
+    exposeConfig: true
+  },
+  colorMode: {
+    classSuffix: ""
+  }
 };

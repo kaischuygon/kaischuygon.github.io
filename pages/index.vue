@@ -9,7 +9,7 @@ import { Card, Links, Header, Footer } from "#components";
 
     <section
       id="portfolio"
-      class="w-full md:w-4/5 lg:w-3/5 xl:w-2/5 mx-auto text-slate-100"
+      class="w-full md:w-4/5 lg:w-3/5 xl:w-2/5 mx-auto"
     >
       <Card
         v-for="card in cards"
@@ -34,4 +34,29 @@ export default {
     };
   },
 };
+
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+
+// Whenever the user explicitly chooses light mode
+localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+localStorage.removeItem('theme')
 </script>
+
+<style>
+body {
+  @apply bg-slate-100 text-slate-800
+}
+.dark body {
+  @apply bg-slate-800 text-slate-100
+}
+</style>
