@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.light {
+    --accent: #f29191;
+    --background: #f1f5f9;
+    --foreground: #2d3540;
+    --background-alt: #f8fafc;
+}
+
+.dark {
+    --accent: #f27272;
+    --background: #2d3540;
+    --foreground: #f1f5f9;
+    --background-alt: #171b21;
+}

@@ -1,10 +1,10 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col md:flex-row w-full bg-slate-50 dark:bg-slate-900 rounded my-2 shadow" >
+  <div class="flex flex-col md:flex-row w-full bg-background-alt rounded my-2 shadow" >
     <div class="flex-grow flex flex-col justify-between p-4">
       <div class="flex justify-between items-center md:text-lg lg:text-xl xl:text-2xl">
-          <a class="flex-0 font-display hover:text-rose-400 border-b-2 border-transparent hover:border-rose-400 duration-300"
+          <a class="flex-0 font-display hover:text-accent border-b-2 border-transparent hover:border-accent duration-300"
             :href="`${link}`"
             target="_blank">
             {{ title }}

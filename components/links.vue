@@ -6,21 +6,21 @@ export default {
 </script>
 
 <template>
-  <div class="fixed top-0 w-full bg-slate-100 dark:bg-slate-800 shadow-lg">
+  <div class="fixed top-0 w-full bg-background shadow-lg">
     <div class="flex justify-end items-center m-4">
       <a 
         href="#"
         class="mr-auto">
-        <Logo class="fill-slate-800 dark:fill-slate-50 hover:fill-rose-400 h-full duration-300"/>
+        <Logo class="fill-foreground hover:fill-accent h-full duration-300"/>
       </a>
       <a
-        class="hover:text-rose-400 duration-300 m-4 border-b-2 border-transparent hover:border-rose-400"
+        class="hover:text-accent duration-300 m-4 border-b-2 border-transparent hover:border-accent"
         href="./resume.pdf"
         target="_blank"
         >Resume</a
       >
       <a
-        class="hover:text-rose-400 duration-300 m-4 border-b-2 border-transparent hover:border-rose-400"
+        class="hover:text-accent duration-300 m-4 border-b-2 border-transparent hover:border-accent"
         href="https://github.com/kaischuygon"
         target="_blank"
         >GitHub</a
