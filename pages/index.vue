@@ -1,10 +1,9 @@
 <script setup>
-import { Card, Links, Header, Footer } from "#components";
+import { Card, Header, Footer } from "#components";
 </script>
 
 <template>
   <div class="font-body">
-    <Links />
     <Header />
 
     <section
