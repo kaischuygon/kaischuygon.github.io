@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         display: ["Playfair Display", ...fontFamily.serif],
         body: ["Lato", ...fontFamily.sans],
+        emoji: ["Noto Color Emoji", fontFamily.sans],
       },
       colors: {
         'accent': withOpacityValue('--accent'),
