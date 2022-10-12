@@ -3,9 +3,9 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
     if (opacityValue === undefined) {
-      return `rgb(${variable}))`
+      return `rgb(var(${variable}))`
     }
-    return `rgb(${variable}) / ${opacityValue})`
+    return `rgb(var(${variable}) / ${opacityValue})`
   }
 }
 
@@ -14,14 +14,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Rubik Glitch", ...fontFamily.sans],
-        body: ["Rubik", ...fontFamily.sans],
+        display: ["Playfair Display", ...fontFamily.serif],
+        body: ["Lato", ...fontFamily.sans],
       },
       colors: {
-        'accent': 'var(--accent)',
-        'background': 'var(--background)',
-        'foreground': 'var(--foreground)',
-        'background-alt': 'var(--background-alt)'
+        'accent': withOpacityValue('--accent'),
+        'primary': withOpacityValue('--primary'),
+        'background': withOpacityValue('--background'),
+        'foreground': withOpacityValue('--foreground'),
       }
     },
   },

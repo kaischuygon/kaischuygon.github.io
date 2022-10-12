@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .light {
-    --accent: #f29191;
-    --background: #f1f5f9;
-    --foreground: #2d3540;
-    --background-alt: #f8fafc;
+    --accent: 130 76 113;
+    --primary: 23 126 137;
+    --background: 240 239 244;
+    --foreground: 14 19 31;
 }
 
 .dark {
-    --accent: #f27272;
-    --background: #2d3540;
-    --foreground: #f1f5f9;
-    --background-alt: #171b21;
+    --accent: 130 76 113;
+    --primary: 23 126 137;
+    --background: 14 19 31;
+    --foreground: 240 239 244;
 }
