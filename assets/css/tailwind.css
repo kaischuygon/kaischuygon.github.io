@@ -4,16 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.light {
+:root {
     --accent: 130 76 113;
     --primary: 23 126 137;
-    --background: 240 239 244;
-    --foreground: 14 19 31;
+    --light: 240 239 244;
+    --dark: 14 19 31;
+}
+
+.light {
+    --background: var(--light);
+    --foreground: var(--dark);
 }
 
 .dark {
-    --accent: 130 76 113;
-    --primary: 23 126 137;
-    --background: 14 19 31;
-    --foreground: 240 239 244;
+    --background: var(--dark);
+    --foreground: var(--light);
 }

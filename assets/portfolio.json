@@ -15,14 +15,14 @@
   },
   {
     "title": "Endless Picross",
-    "category": "Mobile",
+    "category": "Android App",
     "desc": "An android game that generates random picross puzzles.",
     "img": "ep.png",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/EndlessPicross"
   },
   {
     "title": "Triadic Color Generator",
-    "category": "Mobile",
+    "category": "iOS App",
     "desc": "An iOS app to calculate a triadic color palette from a single hex or rgb input.",
     "img": "tcg.png",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/triadic"

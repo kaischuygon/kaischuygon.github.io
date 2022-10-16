@@ -2,7 +2,7 @@
 <div class="w-full h-screen bg-fixed bg-cover flex justify-center items-center snap-start">
   <div class="flex justify-end w-full items-center m-4 top-0 absolute">
     <button
-      class="text-accent mr-auto duration-300 m-4 text-3xl font-emoji font-black hover:text-4xl"
+      class="text-accent mr-auto duration-300 m-4 text-3xl font-emoji hover:filter hover:brightness-75 dark:hover:brightness-125"
       id="themeButton"
       @click="themeSwitch"
       ></button

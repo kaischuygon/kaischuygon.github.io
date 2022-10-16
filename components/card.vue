@@ -13,7 +13,7 @@
           {{ category }}
         </span>
       </div>
-      <img :src="`${img}`" class="rounded w-auto my-4 mix-blend-multiply dark:mix-blend-overlay hover:mix-blend-normal dark:hover:mix-blend-normal" />
+      <img :src="`${img}`" class="rounded w-auto my-4 brightness-75 hover:brightness-100 duration-300" />
       <span class="flex-0">{{ desc }}</span>
     </div>
   </div>
