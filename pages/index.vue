@@ -14,9 +14,8 @@ import { Card, Header, Footer } from "#components";
         v-for="card in cards"
         :key="card.title"
         :title="card.title"
-        :category="card.category"
         :desc="card.desc"
-        :img="card.img"
+        :tools="card.tools"
         :link="card.link"
       />
     </section>

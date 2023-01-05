@@ -1,30 +1,26 @@
 [
   {
     "title": "Choose Our Future",
-    "category": "Web App",
-    "desc": "A static web app developed for UCAR.",
-    "img": "cof.png",
+    "desc": "A static web application developed as part of my senior capstone. Over the course of a year, I worked with 5 other computer science students and a project sponsor.",
+    "tools": "Typescript, React, Tailwind, Agile",
     "link": "https://scied.ucar.edu/interactive/choose-our-future"
   },
   {
     "title": "History Through Battleship",
-    "category": "Web App",
-    "desc": "An educational game developed to test history skills.",
-    "img": "htb.png",
-    "link": "https://history-through-battleship.herokuapp.com"
+    "desc": "A full stack application developed for one of my courses at CU Boulder. I worked alongside 4 other students over the course of a semester to create a triva based battleship game.",
+    "tools": "Express, Node, API, Postgres, Agile",
+    "link": "https://github.com/kaischuygon/history-through-battleship"
   },
   {
     "title": "Endless Picross",
-    "category": "Android App",
-    "desc": "An android game that generates random picross puzzles.",
-    "img": "ep.png",
+    "desc": "An android game that generates random picross puzzles. Built for a mobile app development course at CU Boulder using Kotlin and Android Studio.",
+    "tools": "Kotlin, Android Studio",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/EndlessPicross"
   },
   {
     "title": "Triadic Color Generator",
-    "category": "iOS App",
-    "desc": "An iOS app to calculate a triadic color palette from a single hex or rgb input.",
-    "img": "tcg.png",
+    "desc": "An iOS app to calculate a triadic color palette from a single hex or rgb input. Built for a mobile app development course at CU Boulder using Swift and Xcode.",
+    "tools": "Swift, Xcode",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/triadic"
   }
 ]

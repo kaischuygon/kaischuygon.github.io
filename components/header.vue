@@ -9,6 +9,12 @@
     >
     <a
       class="text-foreground hover:text-primary duration-300 m-4 border-b-2 border-transparent hover:border-primary"
+      href="./blog/"
+      target="_blank"
+      >Blog</a
+    >
+    <a
+      class="text-foreground hover:text-primary duration-300 m-4 border-b-2 border-transparent hover:border-primary"
       href="./resume.pdf"
       target="_blank"
       >Resume</a

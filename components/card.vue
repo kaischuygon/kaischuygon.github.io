@@ -1,20 +1,19 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col md:flex-row w-full bg-foreground/10 rounded my-2 shadow" >
-    <div class="flex-grow flex flex-col justify-between p-4">
-      <div class="flex justify-between items-center md:text-lg lg:text-xl xl:text-2xl">
-          <a class="flex-0 font-display text-primary hover:text-accent border-b-2 border-transparent hover:border-accent duration-300 font-bold"
+  <div class="w-full bg-foreground/10 rounded my-2 shadow" >
+    <div class="flex-1 flex flex-col md:flex-row p-4">
+      <div class="md:w-1/4 md:text-right self-center">
+          <a class="font-display text-primary hover:text-accent duration-300 font-bold text-xl lg:text-2xl xl:text-3xl"
             :href="`${link}`"
             target="_blank">
             {{ title }}
-          </a>
-        <span class="text-xs md:text-sm lg:text-md xl:text-base place-self-end">
-          {{ category }}
-        </span>
+          </a>  
       </div>
-      <img :src="`${img}`" class="rounded w-auto my-4 brightness-75 hover:brightness-100 duration-300" />
-      <span class="flex-0">{{ desc }}</span>
+      <div class="flex-1 flex-grow flex flex-col justify-between p-4">
+        <span class="flex-1 mb-4">{{ desc }}</span>
+        <span class="flex-1 text-sm opacity-80 text-center">{{ tools }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -23,9 +22,8 @@
 export default {
   props: {
     title: String,
-    category: String,
     desc: String,
-    img: String,
+    tools: String,
     link: String,
   },
 };
