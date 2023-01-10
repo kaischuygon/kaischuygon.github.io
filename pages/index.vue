@@ -46,10 +46,8 @@ export default {
 
 <style>
 body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(var(--background) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(var(--foreground) / var(--tw-text-opacity));
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
 }
 
 </style>
