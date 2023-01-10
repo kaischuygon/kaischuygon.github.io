@@ -42,17 +42,14 @@ export default {
     document.documentElement.classList.remove('dark')
 
   }
-  // Whenever the user explicitly chooses light mode
-  // localStorage.theme = 'light'
-  // Whenever the user explicitly chooses dark mode
-  // localStorage.theme = 'dark'
-  // Whenever the user explicitly chooses to respect the OS preference
-  // localStorage.removeItem('theme')
 </script>
 
 <style>
 body {
-  @apply bg-background text-foreground
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--background) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground) / var(--tw-text-opacity));
 }
 
 </style>
