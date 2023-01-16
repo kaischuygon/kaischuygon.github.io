@@ -14,7 +14,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Playfair Display", ...fontFamily.serif],
+        display: ["Martian Mono", ...fontFamily.mono],
         body: ["Lato", ...fontFamily.sans],
         emoji: ["Noto Color Emoji", fontFamily.sans],
       },

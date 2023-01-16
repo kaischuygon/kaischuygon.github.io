@@ -20,7 +20,7 @@
   {
     "title": "Triadic Color Generator",
     "desc": "An iOS app to calculate a triadic color palette from a single hex or rgb input. Built for a mobile app development course at CU Boulder using Swift and Xcode.",
-    "tools": "Swift, Xcode",
+    "tools": "Swift, UI Kit, Xcode",
     "link": "https://github.com/kaischuygon/mobile-app-dev/tree/master/triadic"
   }
 ]
