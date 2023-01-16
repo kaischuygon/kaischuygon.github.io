@@ -2,19 +2,19 @@
 <div class="w-full h-screen bg-fixed bg-cover flex justify-center items-center snap-start">
   <div class="font-display flex right-0 justify-end items-center m-4 top-0 absolute bg-white dark:bg-black rounded-md px-2 shadow">
     <a
-      class="text-primary hover:brightness-75 dark:hover:brightness-125 duration-300 m-4"
+      class="text-primary hover:brightness-50 dark:hover:brightness-150 duration-300 m-4"
       href="./blog/"
       target="_blank"
       >Blog</a
     >
     <a
-      class="text-primary hover:brightness-75 dark:hover:brightness-125 duration-300 m-4"
+      class="text-primary hover:brightness-50 dark:hover:brightness-150 duration-300 m-4"
       href="./resume.pdf"
       target="_blank"
       >Resume</a
     >
     <a
-      class="text-primary hover:brightness-75 dark:hover:brightness-125 duration-300 m-4"
+      class="text-primary hover:brightness-50 dark:hover:brightness-150 duration-300 m-4"
       href="https://github.com/kaischuygon"
       target="_blank"
       >GitHub</a
