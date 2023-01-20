@@ -9,7 +9,7 @@ export default {
     <div class="bottom-0 flex justify-center items-center my-4">
         <Logo class="fill-accent h-12"/>
         <div class="flex-0 flex flex-col mx-4 text-xs md:text-base">
-            <span>Contact me: <a href="mailto: kai.schuyler@gmail.com" class="text-accent border-b-2 border-transparent hover:border-accent duration-300">kai.schuyler@gmail.com</a></span>
+            <span>Contact me: <a href="mailto: kai.schuyler@gmail.com" class="text-primary border-b-2 border-transparent hover:brightness-75 dark:hover:brightness-125 duration-300">kai.schuyler@gmail.com</a></span>
         </div>
     </div>
 </template>

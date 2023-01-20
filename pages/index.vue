@@ -1,5 +1,5 @@
 <script setup>
-import { Card, Header, Footer } from "#components";
+  import { Card, Header, Footer } from "#components";
 </script>
 
 <template>
