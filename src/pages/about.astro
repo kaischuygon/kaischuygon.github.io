@@ -14,7 +14,6 @@ import Hero from '../components/Hero.astro';
 				<img
 					src="/assets/about-me.jpg"
 					alt="Kai Schuyler on his most recent trip to Ireland."
-					style="width:70%; margin: auto"
 				/>
 			</Hero>
 
@@ -33,14 +32,13 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<strong>University of Colorado Boulder</strong>
 					<p>B.S. in Computer Science</p>
-					<p>08/2018 - 08/2022</p>
+					<p>Aug 2018 - Aug 2022</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>OpenGL, C / C++, C#, CSS, Git, HTML, iOS SDK, JavaScript / Typescript, Node.js, Python, React.js, SQL, Swift,
-						Unity</p>
+					<p>OpenGL, C / C++, C#, CSS, Git, HTML, iOS SDK, JavaScript / Typescript, Node.js, Python, React.js, SQL, Swift, Unity</p>
 				</div>
 			</section>
 		</main>
@@ -55,6 +53,10 @@ import Hero from '../components/Hero.astro';
 	}
 
 	img {
+		aspect-ratio: 5 / 3;
+		object-fit: cover;
+		object-position: top;
+		width: 100%;
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);

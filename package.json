@@ -1,7 +1,9 @@
 {
 	"name": "kschuygon.github.io",
+	"homepage": "https://github.com/kaischuygon/kaischuygon.github.io/",
+	"license": "(MIT OR Apache-2.0)",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
