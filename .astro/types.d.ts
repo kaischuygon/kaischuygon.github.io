@@ -74,9 +74,30 @@ declare module 'astro:content' {
   collection: "work",
   data: InferEntrySchema<"work">
 },
+"cosmos-pizza.md": {
+  id: "cosmos-pizza.md",
+  slug: "cosmos-pizza",
+  body: string,
+  collection: "work",
+  data: InferEntrySchema<"work">
+},
 "endless-picross.md": {
   id: "endless-picross.md",
   slug: "endless-picross",
+  body: string,
+  collection: "work",
+  data: InferEntrySchema<"work">
+},
+"glTF-viewer.md": {
+  id: "glTF-viewer.md",
+  slug: "gltf-viewer",
+  body: string,
+  collection: "work",
+  data: InferEntrySchema<"work">
+},
+"gltf-viewer.md": {
+  id: "gltf-viewer.md",
+  slug: "gltf-viewer",
   body: string,
   collection: "work",
   data: InferEntrySchema<"work">
