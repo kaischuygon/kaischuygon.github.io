@@ -95,13 +95,6 @@ declare module 'astro:content' {
   collection: "work",
   data: InferEntrySchema<"work">
 },
-"gltf-viewer.md": {
-  id: "gltf-viewer.md",
-  slug: "gltf-viewer",
-  body: string,
-  collection: "work",
-  data: InferEntrySchema<"work">
-},
 "history-through-battleship.md": {
   id: "history-through-battleship.md",
   slug: "history-through-battleship",
