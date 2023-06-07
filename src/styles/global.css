@@ -3,28 +3,25 @@
 /* Global variables */
 :root {
 	/* Colors */
-	--gray-0: #090b11;
-	--gray-50: #141925;
-	--gray-100: #283044;
-	--gray-200: #3d4663;
-	--gray-300: #505d84;
-	--gray-400: #6474a2;
-	--gray-500: #8490b5;
-	--gray-600: #a3acc8;
-	--gray-700: #c3cadb;
-	--gray-800: #e3e6ee;
-	--gray-900: #f3f4f7;
-	--gray-999-basis: 0, 0%, 100%;
-	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
-	--gray-999: #ffffff;
+	--gray-50:  #041F24;
+	--gray-100: #083944;
+	--gray-200: #107389;
+	--gray-300: #19B0D2;
+	--gray-400: #4DCDEA;
+	--gray-500: #91E0F2;
+	--gray-600: #A8E7F5;
+	--gray-700: #BFEDF7;
+	--gray-800: #D1F2FA;
+	--gray-900: #E8F9FC;
+	--gray-950: #F6FCFE;
 
-	--accent-light: hsl(197, 78%, 90%);
-	--accent-regular: hsl(197, 78%, 75%);
-	--accent-dark: hsl(322, 47%, 49%);
-	--accent-overlay: hsla(322, 47%, 49%, 0.33);
-	--accent-subtle-overlay: hsla(197, 78%, 75%, 0.33);
-	--accent-text-over: var(--gray-999);
-	--accent-text-invert: var(--gray-0);
+	--accent-regular: hsl(242, 79%, 76%);
+	--accent-light: hsla(242, 79%, 76%, 0.5);
+	--accent-subtle-overlay: hsla(242, 79%, 76%, 0.25);
+	--accent-dark: hsl(191, 79%, 76%);
+	--accent-overlay: hsla(191, 79%, 76%, 0.5);
+	--accent-text-over: var(--gray-950);
+	--accent-text-invert: var(--gray-50);
 
 	--link-color: var(--accent-regular);
 
@@ -58,27 +55,25 @@
 }
 
 :root.theme-dark {
-	--gray-0: #ffffff;
-	--gray-50: #e8e8e8;
-	--gray-100: #d1d2d1;
-	--gray-200: #bbbbba;
-	--gray-300: #a4a4a3;
-	--gray-400: #8d8e8d;
-	--gray-500: #767776;
-	--gray-600: #5f605f;
-	--gray-700: #494948;
-	--gray-800: #323331;
-	--gray-900: #1b1c1a;
-	--gray-999-basis: 225, 31%, 5%;
-	--gray-999: #181917;
-
-	--accent-light: hsl(255, 49%, 90%);
-	--accent-regular: hsl(255, 49%, 64%);
-	--accent-dark: hsl(128, 47%, 63%);
-	--accent-overlay: hsla(128, 47%, 63%, 0.33);
-	--accent-subtle-overlay: hsla(255, 49%, 64%, 0.33);
-	--accent-text-over: var(--gray-999);
-	--accent-text-invert: var(--gray-0);
+	--gray-50: #EAE1F9;
+	--gray-100: #D6C3F4;
+	--gray-200: #A982E8;
+	--gray-300: #8046DD;
+	--gray-400: #5A22B5;
+	--gray-500: #3B1676;
+	--gray-600: #2F125F;
+	--gray-700: #240E49;
+	--gray-800: #18092F;
+	--gray-900: #0D051A;
+	--gray-950: #06020D;
+	
+	--accent-light: hsla(310, 94%, 44%, 0.5);
+	--accent-regular: hsl(310, 94%, 44%);
+	--accent-subtle-overlay: hsla(310, 94%, 44%, 0.25);
+	--accent-dark: hsl(180, 96%, 28%);
+	--accent-overlay: hsla(180, 96%, 28%, 0.5);
+	--accent-text-over: var(--gray-950);
+	--accent-text-invert: var(--gray-50);
 
 	--link-color: var(--accent-regular);
 
@@ -97,7 +92,7 @@ body {
 }
 
 body {
-	background-color: var(--gray-999);
+	background-color: var(--gray-950);
 	color: var(--gray-200);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
