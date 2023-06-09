@@ -18,8 +18,8 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
-			<Icon icon="wind" color="var(--accent-regular)" size="1.6em" />
+		<a href="/" class="site-title" style="color: var(--gray-500);">
+			<Icon icon="wind" color="var(--accent-400)" size="1.6em" />
 			Kai Schuyler Gonzalez
 		</a>
 		<menu-button>
@@ -217,13 +217,13 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		display: flex;
 		padding: var(--icon-padding);
 		text-decoration: none;
-		color: var(--accent-dark);
+		color: var(--accent-500);
 		transition: color var(--theme-transition);
 	}
 
 	.social:hover,
 	.social:focus {
-		color: var(--accent-text-invert);
+		color: var(--accent-800);
 	}
 
 	.theme-toggle {
@@ -284,12 +284,12 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		.link:hover,
 		.link:focus {
 			color: var(--gray-100);
-			background-color: var(--accent-subtle-overlay);
+			background-color: var(--accent-100);
 		}
 
 		.link.active {
-			color: var(--accent-text-over);
-			background-color: var(--accent-regular);
+			color: var(--gray-950);
+			background-color: var(--accent-300);
 		}
 
 		.menu-footer {

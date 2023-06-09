@@ -18,10 +18,9 @@ const { data, slug } = Astro.props.project;
 		display: grid;
 		grid-template: auto 1fr / auto 1fr;
 		height: 11rem;
-		background: var(--gradient-subtle);
-		border: 1px solid var(--gray-800);
 		border-radius: 0.75rem;
 		overflow: hidden;
+		border: 1px solid var(--gray-900);
 		box-shadow: var(--shadow-sm);
 		text-decoration: none;
 		font-family: var(--font-brand);
@@ -40,7 +39,8 @@ const { data, slug } = Astro.props.project;
 		margin: 0.5rem;
 		padding: 0.5rem 1rem;
 		background: var(--gray-950);
-		color: var(--gray-200);
+		border: 1px solid var(--gray-900);
+		color: var(--accent-500);
 		border-radius: 0.375rem;
 	}
 

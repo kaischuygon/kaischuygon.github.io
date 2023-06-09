@@ -3,27 +3,31 @@
 /* Global variables */
 :root {
 	/* Colors */
-	--gray-50:  #041F24;
-	--gray-100: #083944;
-	--gray-200: #107389;
-	--gray-300: #19B0D2;
-	--gray-400: #4DCDEA;
-	--gray-500: #91E0F2;
-	--gray-600: #A8E7F5;
-	--gray-700: #BFEDF7;
-	--gray-800: #D1F2FA;
-	--gray-900: #E8F9FC;
-	--gray-950: #F6FCFE;
+	--gray-50: #111826;
+	--gray-100: #263754;
+	--gray-200: #283f64;
+	--gray-300: #2c4978;
+	--gray-400: #365a93;
+	--gray-500: #4773b0;
+	--gray-600: #6a91c6;
+	--gray-700: #9eb7db;
+	--gray-800: #ccd8eb;
+	--gray-900: #e8ecf6;
+	--gray-950: #f4f6fb;
 
-	--accent-regular: hsl(242, 79%, 76%);
-	--accent-light: hsla(242, 79%, 76%, 0.5);
-	--accent-subtle-overlay: hsla(242, 79%, 76%, 0.25);
-	--accent-dark: hsl(191, 79%, 76%);
-	--accent-overlay: hsla(191, 79%, 76%, 0.5);
-	--accent-text-over: var(--gray-950);
-	--accent-text-invert: var(--gray-50);
-
-	--link-color: var(--accent-regular);
+	--accent-50: #fef4f2;
+	--accent-100: #fde8e3;
+	--accent-200: #fcd5cc;
+	--accent-300: #f9b7a8;
+	--accent-400: #f27a5e;
+	--accent-500: #ea6749;
+	--accent-600: #d64c2c;
+	--accent-700: #b43d21;
+	--accent-800: #95351f;
+	--accent-900: #7c3120;
+	--accent-950: #43160c;
+	
+	--link-color: var(--accent-500);
 
 	/* Shadows */
 	--shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
@@ -55,27 +59,31 @@
 }
 
 :root.theme-dark {
-	--gray-50: #EAE1F9;
-	--gray-100: #D6C3F4;
-	--gray-200: #A982E8;
-	--gray-300: #8046DD;
-	--gray-400: #5A22B5;
-	--gray-500: #3B1676;
-	--gray-600: #2F125F;
-	--gray-700: #240E49;
-	--gray-800: #18092F;
-	--gray-900: #0D051A;
-	--gray-950: #06020D;
+	--gray-50: #f3f1fc;
+	--gray-100: #d6cff8;
+	--gray-200: #ae9ff0;
+	--gray-300: #8367e1;
+	--gray-400: #5e38c9;
+	--gray-500: #471fad;
+	--gray-600: #39168b;
+	--gray-700: #31166f;
+	--gray-800: #2c1659;
+	--gray-900: #28174a;
+	--gray-950: #06020d;
 	
-	--accent-light: hsla(310, 94%, 44%, 0.5);
-	--accent-regular: hsl(310, 94%, 44%);
-	--accent-subtle-overlay: hsla(310, 94%, 44%, 0.25);
-	--accent-dark: hsl(180, 96%, 28%);
-	--accent-overlay: hsla(180, 96%, 28%, 0.5);
-	--accent-text-over: var(--gray-950);
-	--accent-text-invert: var(--gray-50);
+	--accent-50: #590047;
+	--accent-100: #820d6a;
+	--accent-200: #a00884;
+	--accent-300: #da07b7;
+	--accent-400: #ed0ccd;
+	--accent-500: #ff2dde;
+	--accent-600: #ff66e1;
+	--accent-700: #ff9fee;
+	--accent-800: #ffc9f7;
+	--accent-900: #ffe5fb;
+	--accent-950: #fff2fd;
 
-	--link-color: var(--accent-regular);
+	--link-color: var(--accent-500);
 
 	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
 		0px 2px 2px rgba(255, 255, 255, 0.02), 0px 0px 1px rgba(255, 255, 255, 0.03);
