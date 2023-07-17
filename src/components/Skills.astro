@@ -4,17 +4,17 @@ import Icon from './Icon.astro';
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="browsers" color="var(--gray-950)" size="2.5rem" />
+		<Icon icon="browsers" color="var(--gray-50)" size="2.5rem" />
 		<h2>Front End</h2>
 		<p>I am experienced in building pixel-perfect front end applications in React, Vue and vanilla HTML and CSS.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="apple" color="var(--gray-950)" size="2.5rem" />
+		<Icon icon="apple" color="var(--gray-50)" size="2.5rem" />
 		<h2>iOS</h2>
 		<p>I've written iOS apps in Swift and Objective-C, as well as tools like React Native.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--gray-950)" size="2.5rem" />
+		<Icon icon="terminal-window" color="var(--gray-50)" size="2.5rem" />
 		<h2>Graphics</h2>
 		<p>I have experience with low-level graphics programming APIs like OpenGL and WebGL, as well as industry standards Unity and Unreal.</p>
 	</div>
@@ -32,16 +32,12 @@ import Icon from './Icon.astro';
 	.skills {
 		display: flex;
 		flex-direction: column;
+		color: var(--gray-50);
 		gap: 3rem;
 	}
 
 	.skills h2 {
 		font-size: var(--text-lg);
-		color: var(--gray-950);
-	}
-
-	.skills p {
-		color: var(--gray-50);
 	}
 
 	@media (min-width: 50em) {

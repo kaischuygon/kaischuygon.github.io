@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Night Owl Light",
+    "workbench.colorTheme": "Night Owl Light",
+    "workbench.preferredDarkColorTheme": "Night Owl",
+    "workbench.preferredHighContrastColorTheme": "Night Owl",
+    "workbench.preferredHighContrastLightColorTheme": "Night Owl Light",
+    "jupyter.themeMatplotlibPlots": true
+}
