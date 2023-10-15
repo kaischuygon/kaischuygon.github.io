@@ -1,0 +1,43 @@
+---
+// Learn about using Astro layouts:
+// https://docs.astro.build/en/core-concepts/layouts/
+
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<MainHead title={title} description={description} />
+		<ViewTransitions />
+	</head>
+	<body class="font-body bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 scroll-smooth leading-6 transition-all duration-300">
+		<Nav />
+		<div class="m-4">
+			<slot />
+		</div>
+		<Footer />
+	</body>
+	<script>
+		// Add “loaded” class once the document has completely loaded.
+		addEventListener('load', () => document.documentElement.classList.add('loaded'));
+	</script>
+</html>
+
+<style>
+	body {
+		display: grid;
+		grid-template-rows: 0fr auto 0fr;
+		min-height: 100vh;
+	}
+</style>
