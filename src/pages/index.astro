@@ -27,7 +27,7 @@ const gridItems = (await getCollection('grid'))
 			<Hero
 				title="Hello, I'm Kai."
 				tagline="I am a software engineer based in Boulder, CO."
-				class:list={'col-span-2'}
+				class:list={'md:col-span-2'}
 			/>
 			<div class="flex gap-4 my-4">
 				<Pill><Icon name="bx:bx-code" class="h-6" />Developer</Pill>
@@ -62,6 +62,6 @@ const gridItems = (await getCollection('grid'))
 	}
 
 	#portrait {
-		@apply col-span-1 row-span-1 md:col-start-3 md:row-span-2;
+		@apply col-span-1 row-span-1 hidden md:block md:col-start-3 md:row-span-2;
 	}
 </style>
