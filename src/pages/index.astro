@@ -1,24 +1,17 @@
 ---
-import { getCollection, CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import Layout from '../layouts/Layout.astro';
 
 // Component Imports
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from 'astro-icon';
 import Pill from '../components/Pill.astro';
 import GridItem from '../components/GridItem.astro';
 
-// Page section components
-import Workpreview from '../components/WorkPreview.astro';
-
 // Content Fetching: List four most recent work projects
 const gridItems = (await getCollection('grid'))
-// const projects = (await getCollection('work'))
-// 	.sort((a:any, b:any) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-// 	.slice(0, 4); // only show the four most recent projects
 ---
 
 <Layout>

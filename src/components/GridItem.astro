@@ -1,10 +1,10 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, type CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon'
 
 const { item, path } = Astro.props;
-const entry = await getEntry('grid', path);
-const { Content, headings } = await entry.render();
+const entry:any = await getEntry('grid', path);
+const { Content } = await entry.render();
 ---
 
 <div class={`flex flex-col gap-4 p-4 bg-slate-200 dark:bg-slate-900 shadow-outline dark:shadow-outline-dark overflow-scroll md:col-span-${item.data.span}`}>
