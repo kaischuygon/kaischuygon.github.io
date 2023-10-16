@@ -3,7 +3,7 @@
 My personal site and portfolio.
 
 ## Built With
-- [TailwindCSS](tailwindcss.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 - [@tailwind/typography](https://tailwindcss.com/docs/typography-plugin)
-- [astro](astro.build)
-- [BoxIcons](boxicons.com/)
+- [astro](https://astro.build)
+- [BoxIcons](https://boxicons.com/)
