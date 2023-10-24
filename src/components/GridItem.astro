@@ -7,12 +7,12 @@ const entry:any = await getEntry('grid', path);
 const { Content } = await entry.render();
 ---
 
-<div class={`flex flex-col gap-4 p-4 bg-slate-200 dark:bg-slate-900 shadow-outline dark:shadow-outline-dark overflow-scroll md:col-span-${item.data.span}`}>
+<div class={`flex flex-col gap-4 p-4 bg-zinc-200 dark:bg-zinc-900 shadow-outline dark:shadow-outline-dark overflow-scroll md:col-span-${item.data.span}`}>
     <div class="flex-0 flex items-center gap-2">
-        <Icon name={item.data.icon} class="flex-0 text-fuchsia-400 h-8"/>
-        <h2 class="flex-1 text-lg font-header text-fuchsia-400">{item.data.title}</h2>
+        <Icon name={item.data.icon} class="flex-0 text-emerald-400 h-8"/>
+        <h2 class="flex-1 text-lg font-header text-emerald-400">{item.data.title}</h2>
     </div>
-    <div class="flex-1 prose max-w-none prose-fuchsia dark:prose-invert">
+    <div class="flex-1 prose max-w-none prose-emerald dark:prose-invert">
         <Content />
     </div>
 </div>

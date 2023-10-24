@@ -13,15 +13,20 @@ interface Props {
 	description?: string | undefined;
 }
 
-const { title, description } = Astro.props;
+const { 
+	title, 
+	description="The personal Site and Portfolio of Kai Schuyler Gonzalez" 
+} = Astro.props;
+
+const makeTitle = title? `${title} | Kai Schuyler Gonzalez` : 'Kai Schuyler Gonzalez';
 ---
 
 <html lang="en">
 	<head>
-		<MainHead title={title} description={description} />
+		<MainHead title={makeTitle} description={description} />
 		<ViewTransitions />
 	</head>
-	<body class="font-body bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 scroll-smooth leading-6 transition-all duration-300">
+	<body class="font-body bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 scroll-smooth leading-6">
 		<Nav />
 		<div class="m-4">
 			<slot />

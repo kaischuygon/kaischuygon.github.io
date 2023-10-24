@@ -6,15 +6,14 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				'outline': '4px 4px #020617',
-				'outline-dark': '4px 4px #f8fafc'
+				'outline': '4px 4px #d4d4d8',
+				'outline-dark': '4px 4px #3f3f46'
 			},
 			fontFamily: {
-				header: ['Martian Mono', defaultTheme.fontFamily.mono],
-				body: ['Lato', defaultTheme.fontFamily.sans],
+				header: ['JetBrains Mono', defaultTheme.fontFamily.mono],
+				body: ['Rubik', defaultTheme.fontFamily.sans],
 				system: [defaultTheme.fontFamily.system],
 			},
-			
 		},
 	},
 	darkMode: 'class',

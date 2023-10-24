@@ -5,6 +5,7 @@ import ThemeToggle from './ThemeToggle.astro';
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: '/work', href: '/work' },
+	// { label: '/recipes', href: '/recipes' },
 ];
 
 /** Icon links to social media */
@@ -19,7 +20,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 	<div class="flex-1 flex gap-4">
 		<a aria-current={Astro.url.pathname === "/"} 
 			class:list={[
-			"flex-0 text-slate-400 hover:brightness-75",
+			"flex-0 text-zinc-400 hover:brightness-75",
 				{
 					active:
 						Astro.url.pathname === "/"
@@ -32,7 +33,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 			textLinks.map(({ label, href }) => (
 				<a aria-current={Astro.url.pathname === href} 
 					class:list={[
-					"flex-0 text-slate-400 hover:brightness-75",
+					"flex-0 text-zinc-400 hover:brightness-75",
 						{
 							active:
 								Astro.url.pathname === href ||
@@ -61,6 +62,6 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 
 <style>
 	.active {
-		@apply text-fuchsia-400;
+		@apply text-emerald-400;
 	}
 </style>

@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 
-import WorkPreview from '../components/WorkPreview.astro';
+import CollectionPreview from '../components/CollectionPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
@@ -26,7 +26,7 @@ const projects = (await getCollection('work')).sort(
 		{
 			projects.map((project:any) => (
 				<li class="shadow-outline dark:shadow-outline-dark">
-					<WorkPreview project={project} />
+					<CollectionPreview project={project} />
 				</li>
 			))
 		}

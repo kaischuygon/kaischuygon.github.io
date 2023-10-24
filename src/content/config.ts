@@ -23,5 +23,5 @@ const gridCollection = defineCollection({
 
 export const collections = {
 	'work': workCollection,
-	'grid': gridCollection
+	'grid': gridCollection,
 };
