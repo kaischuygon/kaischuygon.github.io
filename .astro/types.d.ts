@@ -196,9 +196,9 @@ declare module 'astro:content' {
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
-"4-ios.md": {
-	id: "4-ios.md";
-  slug: "4-ios";
+"4-mobile.md": {
+	id: "4-mobile.md";
+  slug: "4-mobile";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
