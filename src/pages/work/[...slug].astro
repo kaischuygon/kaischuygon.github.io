@@ -45,11 +45,13 @@ const { Content } = await entry.render();
 			</header>
 			<main class="mt-4">
 				{entry.data.img && 
-					<div class="shadow-outline dark:shadow-outline-dark mx-auto bg-zinc-200 dark:bg-zinc-900 p-4 w-full md:w-4/5 lg:w-3/5 xl:w-2/5">
-						<img 
-							src={entry.data.img} 
+					<div class="shadow-outline dark:shadow-outline-dark mx-auto bg-zinc-200 dark:bg-zinc-900 w-full md:w-4/5 lg:w-3/5 xl:w-2/5">
+						<Image 
+							src={entry.data.img}
 							alt={entry.data.title ? entry.data.title : ""}
-							class="w-full h-auto"
+							width={entry.data.imgWidth ? entry.data.imgWidth : 1000}
+							height={entry.data.imgHeight ? entry.data.imgHeight : 1000}
+							class="w-full h-auto object-cover"
 							loading="lazy" decoding="async"
 						/>
 					</div>

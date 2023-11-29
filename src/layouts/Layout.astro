@@ -46,3 +46,14 @@ const makeTitle = title? `${title} | Kai Schuyler Gonzalez` : 'Kai Schuyler Gonz
 		min-height: 100vh;
 	}
 </style>
+
+<script>
+	// open external links in new tab
+	const links = document.querySelectorAll('a');
+	links.forEach(link => {
+		if (link.host !== window.location.host) {
+			link.setAttribute('target', '_blank');
+			link.setAttribute('rel', 'noopener noreferrer');
+		}
+	});
+</script>

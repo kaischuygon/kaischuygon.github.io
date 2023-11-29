@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets'
 
 interface Props {
 	project: CollectionEntry<'work'>;
@@ -10,9 +11,12 @@ const { data, slug } = Astro.props.project;
 
 <a class="grid w-full overflow-hidden aspect-video mx-auto hover:brightness-90" href={`/work/${slug}`}>
 	<span class="absolute z-10 m-2 p-2 bg-zinc-100 dark:bg-zinc-900 font-header text-xl md:text-2xl font-bold shadow-outline dark:shadow-outline-dark">{data.title}</span>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" class="w-full bg-cover"/>
+	<Image 
+		src={data.img} 
+		alt={data.img_alt || ''}
+		width={data.img_width || 1920}
+		height={data.img_height || 1080} 
+		loading="lazy" decoding="async" 
+		class="w-full bg-cover"
+	/>
 </a>
-
-<style>
-
-</style>
