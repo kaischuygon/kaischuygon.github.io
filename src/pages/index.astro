@@ -29,7 +29,7 @@ const gridItems = (await getCollection('grid'))
 		</div>
 		<div class="bg-zinc-200 dark:bg-zinc-900 shadow-outline dark:shadow-outline-dark" id="portrait">
 			<img
-				class="aspect-square object-contain h-full mx-auto"
+				class="aspect-square object-cover h-full mx-auto"
 				alt="A profile of Kai"
 				src="/assets/portrait.png"
 			/>
@@ -55,6 +55,6 @@ const gridItems = (await getCollection('grid'))
 	}
 
 	#portrait {
-		@apply col-span-1 row-span-1 hidden md:block md:col-start-3 md:row-span-2;
+		@apply col-span-1 row-span-1 lg:block lg:col-start-3 lg:row-span-2;
 	}
 </style>

@@ -6,14 +6,14 @@ span: 1
 <!-- 
   Skills:
   - Python
-  - JavaScript
+  - typeScript
   - Cloud Computing
   - CI/CD
   - HTML / CSS
   - LLMs
   - C / C++
-  - Git
-  - C#
+  - Version Control
+  - C#/.NET
   - iOS SDK
   - Node.js
   - React.js
@@ -25,7 +25,7 @@ span: 1
 <table>
   <tr>
     <td>Python</td>
-    <td>JavaScript</td>
+    <td>TypeScript</td>
     <td>Cloud Computing</td>
     <td>CI/CD</td>
   </tr>
@@ -33,18 +33,18 @@ span: 1
     <td>HTML / CSS</td>
     <td>LLMs</td>
     <td>C / C++</td>
-    <td>Git</td>
+    <td>Version Control</td>
   </tr>
   <tr>
-    <td>C#</td>
+    <td>C#/.NET</td>
     <td>iOS SDK</td>
     <td>Node.js</td>
-    <td>SQL</td>
+    <td>React.js</td>
   </tr>
   <tr>
+    <td>SQL</td>
     <td>Swift</td>
-    <td>React.js</td>
-    <td></td>
-    <td></td>
+    <td>Open/Web GL</td>
+    <td>Unity</td>
   </tr>
 </table>
