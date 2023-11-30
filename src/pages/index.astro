@@ -1,11 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import Layout from '../layouts/Layout.astro';
 
 // Component Imports
-import Hero from '../components/Hero.astro';
 import Icon from 'astro-icon';
 import Pill from '../components/Pill.astro';
 import GridItem from '../components/GridItem.astro';
@@ -13,23 +12,28 @@ import { Image } from 'astro:assets';
 import portrait from '../../public/assets/portrait.png';
 
 // Content Fetching: List four most recent work projects
-const gridItems = (await getCollection('grid'))
+const gridItems = await getCollection('grid');
+
+gridItems.sort(function (a:CollectionEntry, b:CollectionEntry) {
+  return a.data.sortOrder - b.data.sortOrder;
+});
 ---
 
 <Layout>
-	<header class="header-grid">
-		<div id="hero">
-			<Hero
-				title="Hello, I'm Kai."
-				tagline="I write code and design things."
-				class:list={'md:col-span-2'}
-			/>
-			<div class="flex gap-4 my-4">
+	<header class="grid gap-4 grid-cols-1 grid-rows-1 md:grid-cols-3">
+		<div class="col-span-1 md:col-span-2 flex flex-col justify-around font-header gap-4">
+			<h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-emerald-400 font-bold block">
+				Hello, I'm Kai.
+			</h1>
+			<p class="text-lg md:text-2xl text-zinc-800 dark:text-zinc-200 font-light block">
+				I write code and design things.
+			</p>
+			<div class="flex gap-4">
 				<Pill><Icon name="bx:bx-code" class="h-6" />Developer</Pill>
 				<Pill><Icon name="bx:bxs-pencil" class="h-6" />Designer</Pill>
 			</div>
 		</div>
-		<div class="bg-zinc-200 dark:bg-zinc-900 shadow-outline dark:shadow-outline-dark" id="portrait">
+		<div class="bg-zinc-200 dark:bg-zinc-900 shadow-outline dark:shadow-outline-dark col-span-1 row-span-1 max-w-full lg:row-span-2">
 			<Image
 				src={portrait}
 				alt="A profile of Kai"
@@ -40,23 +44,8 @@ const gridItems = (await getCollection('grid'))
 			gridItems.map((item) => (
 				<GridItem
 					item={item}
-					path={item.slug}
 				/>
 			))
 		}
 	</header>
 </Layout>
-
-<style>
-	.header-grid {
-		@apply grid gap-4 grid-cols-1 grid-rows-1 md:grid-cols-3;
-	}
-
-	#hero {
-		@apply col-span-1 md:col-span-2;
-	}
-
-	#portrait {
-		@apply col-span-1 row-span-1 max-w-full lg:block lg:col-start-3 lg:row-span-2;
-	}
-</style>

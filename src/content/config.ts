@@ -17,7 +17,8 @@ const gridCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		icon: z.string(),
-		span: z.number(),
+		span: z.array(z.number().or(z.string())),
+		sortOrder: z.number()
 	})
 });
 

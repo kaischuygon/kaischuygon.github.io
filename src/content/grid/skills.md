@@ -1,7 +1,8 @@
 ---
-title: "Skills"
-icon: "bx:bx-code-alt"
-span: 1
+title: Skills
+sortOrder: 3
+icon: bx:bx-code-alt
+span: [2]
 ---
 <!-- 
   Skills:

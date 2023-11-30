@@ -175,44 +175,44 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"grid": {
-"1-about.md": {
-	id: "1-about.md";
-  slug: "1-about";
+"about.md": {
+	id: "about.md";
+  slug: "about";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
-"2-front-end.md": {
-	id: "2-front-end.md";
-  slug: "2-front-end";
+"education.md": {
+	id: "education.md";
+  slug: "education";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
-"3-graphics.md": {
-	id: "3-graphics.md";
-  slug: "3-graphics";
+"front-end.md": {
+	id: "front-end.md";
+  slug: "front-end";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
-"4-mobile.md": {
-	id: "4-mobile.md";
-  slug: "4-mobile";
+"graphics.md": {
+	id: "graphics.md";
+  slug: "graphics";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
-"5-education.md": {
-	id: "5-education.md";
-  slug: "5-education";
+"mobile.md": {
+	id: "mobile.md";
+  slug: "mobile";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
-"6-skills.md": {
-	id: "6-skills.md";
-  slug: "6-skills";
+"skills.md": {
+	id: "skills.md";
+  slug: "skills";
   body: string;
   collection: "grid";
   data: InferEntrySchema<"grid">
