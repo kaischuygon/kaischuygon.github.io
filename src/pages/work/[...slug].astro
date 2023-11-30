@@ -4,7 +4,6 @@ import type { CollectionEntry } from 'astro:content';
 
 import Layout from '../../layouts/Layout.astro';
 
-import Hero from '../../components/Hero.astro';
 import Icon from 'astro-icon';
 import Pill from '../../components/Pill.astro';
 
@@ -49,8 +48,8 @@ const { Content } = await entry.render();
 						<Image 
 							src={entry.data.img}
 							alt={entry.data.title ? entry.data.title : ""}
-							width={entry.data.imgWidth ? entry.data.imgWidth : 1000}
-							height={entry.data.imgHeight ? entry.data.imgHeight : 1000}
+							width=1000
+							height=1000
 							class="w-full h-auto object-cover"
 							loading="lazy" decoding="async"
 						/>
