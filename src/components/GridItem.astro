@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { item } = Astro.props;
-const entry:any = await getEntry('grid', item.slug);
+const entry:CollectionEntry<'grid'> = await getEntry('grid', item.slug);
 const { Content } = await entry.render();
 
 const sizes = ['md', 'lg', 'xl'];
