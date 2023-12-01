@@ -17,6 +17,8 @@ const gridItems = await getCollection('grid');
 gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
   return a.data.sortOrder - b.data.sortOrder;
 });
+
+const about = gridItems.shift();
 ---
 
 <Layout>
@@ -33,15 +35,16 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
 				<Pill><Icon name="bx:bxs-pencil" class="h-6" />Designer</Pill>
 			</div>
 		</div>
-		<div class="bg-zinc-200 dark:bg-zinc-900 shadow-outline dark:shadow-outline-dark col-span-1 lg:row-span-2">
+		<div class="bg-zinc-200 dark:bg-zinc-900 shadow-outline dark:shadow-outline-dark lg:row-span-2">
 			<Image
 				src={portrait}
 				alt="A profile of Kai"
 				class:list={'aspect-square object-cover h-full mx-auto'}
 			/>
 		</div>
+		{<GridItem item={about} id="about"/>}
 		{
-			gridItems.map((item) => (
+			gridItems.map((item:CollectionEntry) => (
 				<GridItem
 					item={item}
 				/>

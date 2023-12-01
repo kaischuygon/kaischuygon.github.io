@@ -2,7 +2,7 @@
 title: Skills
 sortOrder: 3
 icon: bx:bx-code-alt
-span: [2]
+span: 2
 ---
 <!-- 
   Skills:

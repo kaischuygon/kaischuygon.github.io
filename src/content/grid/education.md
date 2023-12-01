@@ -2,7 +2,6 @@
 title: Education
 sortOrder: 3
 icon: bx:bxs-graduation
-span: [1]
 ---
 
 <table>
