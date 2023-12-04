@@ -10,7 +10,7 @@ const { project } = Astro.props ;
 ---
 
 <a class="grid w-full overflow-hidden aspect-video mx-auto hover:brightness-90" href={`/work/${project.slug}`}>
-	<span class="absolute z-10 m-2 p-2 bg-zinc-100 dark:bg-zinc-900 font-header text-xl md:text-2xl font-bold shadow-outline dark:shadow-outline-dark">{project.data.title}</span>
+	<span class="absolute z-10 m-2 p-2 bg-zinc-100 dark:bg-zinc-900 font-header text-xl lg:text-2xl font-bold shadow-outline dark:shadow-outline-dark">{project.data.title}</span>
 	<Image 
 		src={project.data.img} 
 		alt={project.data.img_alt || ''}
