@@ -6,5 +6,6 @@
     "workbench.preferredDarkColorTheme": "Night Owl",
     "workbench.preferredHighContrastColorTheme": "Night Owl",
     "workbench.preferredHighContrastLightColorTheme": "Night Owl Light",
-    "jupyter.themeMatplotlibPlots": true
+    "jupyter.themeMatplotlibPlots": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
 }

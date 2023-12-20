@@ -1,3 +1,26 @@
-<div class="flex justify-center items-center p-2 gap-1 text-zinc-950 bg-emerald-400 shadow-outline dark:shadow-outline-dark">
+---
+const variants = ['violet', 'pink', 'red', 'orange', 'yellow', 'lime', 'cyan']
+
+interface Props {
+    variant?: 'violet' | 'pink' | 'red' | 'orange' | 'yellow' | 'lime' | 'cyan'
+}
+
+// by default, select a random variant
+const { variant=variants[Math.floor(Math.random() * variants.length )] } = Astro.props;
+
+const tailwind_compatible = {
+    violet: 'bg-violet-400',
+    pink: 'bg-pink-400',
+    red: 'bg-red-400',
+    orange: 'bg-orange-400',
+    yellow: 'bg-yellow-400',
+    lime: 'bg-lime-400',
+    cyan: 'bg-cyan-400',
+}
+
+const background = tailwind_compatible[variant]
+---
+
+<div class=`flex justify-center items-center p-2 gap-1 text-zinc-950 brutalist-outline ${background}`>
     <slot />
 </div>

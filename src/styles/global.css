@@ -3,5 +3,9 @@
 /* Global variables */
 
 a {
-	@apply text-emerald-400;
+	@apply text-zinc-400;
+}
+
+.brutalist-outline {
+	@apply shadow-outline dark:shadow-outline-dark rounded border-[1px] dark:border-black;
 }

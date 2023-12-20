@@ -18,7 +18,7 @@ const gridCollection = defineCollection({
 		title: z.string(),
 		icon: z.string(),
 		span: z.number().optional(),
-		sortOrder: z.number()
+		sortOrder: z.number(),
 	})
 });
 
