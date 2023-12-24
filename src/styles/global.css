@@ -7,5 +7,5 @@ a {
 }
 
 .brutalist-outline {
-	@apply shadow-outline dark:shadow-outline-dark rounded border-[1px] dark:border-black;
+	@apply shadow-outline dark:shadow-outline-dark rounded border-[1px] dark:border-zinc-950;
 }

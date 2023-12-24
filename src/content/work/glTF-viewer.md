@@ -9,6 +9,7 @@ tags:
   - OpenGL
   - C++
   - glTF
+variant: orange
 ---
 
 ## Description

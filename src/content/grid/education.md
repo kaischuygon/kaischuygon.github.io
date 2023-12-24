@@ -1,6 +1,7 @@
 ---
 title: Education
 sortOrder: 3
+variant: pink
 icon: bx:bxs-graduation
 ---
 

@@ -14,22 +14,12 @@ const gridItems = await getCollection('grid');
 gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
   return a.data.sortOrder - b.data.sortOrder;
 });
-
-// We want custom classes for the about item
-const about = gridItems.shift();
-
-const variants = ['text-violet-400','text-pink-400','text-red-400','text-orange-400','text-yellow-400','text-lime-400','text-cyan-400']
-
-// get random key from variants
-
-
-const randomVariant = variants[Math.floor(Math.random() * variants.length)]
 ---
 
 <Layout>
 	<header class="grid gap-4 grid-cols-1 grid-rows-1 md:grid-cols-3">
 		<div class="col-span-1 md:col-span-2 flex flex-col justify-around font-header gap-4">
-			<h1 class:list={["text-4xl md:text-6xl lg:text-7xl xl:text-8xl drop-shadow-outline dark:drop-shadow-outline-dark font-bold block", randomVariant]}>
+			<h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl drop-shadow-outline dark:drop-shadow-outline-dark font-bold block text-violet-400">
 				Hello, I'm Kai.
 			</h1>
 			<p class="text-lg md:text-2xl text-zinc-800 dark:text-zinc-200 font-light block">
@@ -47,13 +37,8 @@ const randomVariant = variants[Math.floor(Math.random() * variants.length)]
 				class:list={'aspect-square object-cover h-full mx-auto'}
 			/>
 		</div>
-		{<GridItem item={about} id="about"/>}
-		{
-			gridItems.map((item:CollectionEntry) => (
-				<GridItem
-					item={item}
-				/>
-			))
-		}
+		{gridItems.map((item) => (
+			item.slug == 'about' ? <GridItem item={item} id="about"/> : <GridItem item={item} /> // about is special
+		))}
 	</header>
 </Layout>

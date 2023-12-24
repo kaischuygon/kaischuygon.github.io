@@ -8,6 +8,7 @@ description: |
 tags:
   - Android
   - Kotlin
+variant: red
 ---
 
 ## Description

@@ -1,6 +1,7 @@
 ---
 title: Skills
 sortOrder: 3
+variant: red
 icon: bx:bx-code-alt
 span: 2
 ---

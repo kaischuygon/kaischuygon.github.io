@@ -3,20 +3,23 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets'
 
 interface Props {
-	project: CollectionEntry<'work'>;
+	project: CollectionEntry<'work'>
 }
 
-const { project } = Astro.props ;
-
-const variants = ['violet', 'pink', 'red', 'orange', 'yellow', 'lime', 'cyan']
-
-const randomVariant = variants[Math.floor(Math.random() * variants.length)]
-
-const tailwind = `bg-${randomVariant}-400`
+const { project } = Astro.props;
+const t_variant = {
+	violet: 'bg-violet-400',
+	pink: 'bg-pink-400',
+	red: 'bg-red-400',
+	orange: 'bg-orange-400',
+	yellow: 'bg-yellow-400',
+	lime: 'bg-lime-400',
+	cyan: 'bg-cyan-400',
+}[project.data.variant]
 ---
 
 <a class="grid w-full overflow-hidden aspect-video mx-auto hover:brightness-90" href={`/work/${project.slug}`}>
-	<span class:list={["absolute z-10 m-2 p-2 font-header text-xl lg:text-2xl font-bold brutalist-outline text-black", tailwind]}>{project.data.title}</span>
+	<span class:list={["absolute z-10 m-2 p-2 font-header text-xl lg:text-2xl font-bold brutalist-outline text-black", t_variant]}>{project.data.title}</span>
 	<Image 
 		src={project.data.img} 
 		alt={project.data.img_alt || ''}

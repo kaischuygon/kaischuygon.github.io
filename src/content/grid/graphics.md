@@ -1,6 +1,7 @@
 ---
 title: Graphics
 sortOrder: 2
+variant: lime
 icon: bx:bx-desktop
 ---
 

@@ -3,12 +3,12 @@
 
 <footer class="flex justify-between items-center mx-4 mb-4 h-full text-zinc-400 dark:text-zinc-600">
 	<div class="text-left">
-		<p>Developed with <a href="https://astro.build/" target="_blank">Astro</a></p>
+		<p>Developed with <a href="https://astro.build/" class="underline" target="_blank">Astro</a></p>
 		<p>© 2023 Kai Schuyler Gonzalez</p>
 	</div>
 	<div class="text-right">
-		<a class="" href="mailto:kai@kaischuyler.com" target="_blank">Contact Me</a>
-		<a class="" href="https://kaischuyler.com/blog" target="_blank">Blog</a>
+		<a href="mailto:kai@kaischuyler.com" target="_blank">Contact Me</a>
+		<a href="https://kaischuyler.com/blog" target="_blank">Blog</a>
 	</div>
 </footer>
 
@@ -17,6 +17,6 @@
 		@apply flex gap-4 flex-col md:flex-row;
 	}
 	a {
-		@apply hover:underline text-inherit;
+		@apply underline underline-offset-2 text-inherit;
 	}
 </style>

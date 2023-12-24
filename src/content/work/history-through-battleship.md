@@ -9,6 +9,7 @@ tags:
   - Full-stack
   - Express
   - PostgreSQL
+variant: yellow
 ---
 
 ## Description

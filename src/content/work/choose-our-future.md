@@ -9,6 +9,7 @@ tags:
   - TypeScript
   - Tailwind
   - React
+variant: violet
 ---
 ## Description
 A web version of the popular Choose Our Future exhibit at the [UCAR/NCAR Mesa Lab Visitor Center](https://scied.ucar.edu/visit) in Boulder, Colorado, USA. Developed for my senior capstone alongside 6 other developers and a project sponsor.

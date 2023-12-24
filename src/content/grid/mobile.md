@@ -1,6 +1,7 @@
 ---
 title: Mobile
 sortOrder: 2
+variant: cyan
 icon: bx:bxs-devices
 ---
 

@@ -10,6 +10,7 @@ tags:
   - Astro
   - Tailwind
   - MDX
+variant: lime
 ---
 
 ## Description

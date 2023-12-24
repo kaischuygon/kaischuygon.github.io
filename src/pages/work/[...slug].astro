@@ -27,11 +27,15 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const variants = ['violet', 'pink', 'red', 'orange', 'yellow', 'lime', 'cyan']
-
-const randomVariant = variants[Math.floor(Math.random() * variants.length)]
-
-const tailwind = `bg-${randomVariant}-400`
+const t_variant = {
+	violet: 'bg-violet-400',
+	pink: 'bg-pink-400',
+	red: 'bg-red-400',
+	orange: 'bg-orange-400',
+	yellow: 'bg-yellow-400',
+	lime: 'bg-lime-400',
+	cyan: 'bg-cyan-400',
+}[entry.data.variant]
 ---
 
 <Layout title={entry.data.title} description={entry.data.description}>
@@ -40,12 +44,12 @@ const tailwind = `bg-${randomVariant}-400`
 			<Icon name="bx:bx-arrow-back" class="inline-block w-4 h-4 mr-2" />	
 			Back to work
 		</a>
-		<div class:list={[tailwind, 'rounded brutalist-outline p-4']}>
+		<div class:list={[t_variant, 'rounded brutalist-outline p-4']}>
 			<header>
 				<h2 class="font-header text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-800">{entry.data.title}</h2>
 				<p class="text-zinc-600">{entry.data.description}</p>
 				<div class="flex gap-4 mt-4">
-					{entry.data.tags.map((t:InnerHTML) => <Pill>{t}</Pill>)}
+					{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 				</div>
 			</header>
 			<main class="mt-4">

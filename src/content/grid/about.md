@@ -1,6 +1,7 @@
 ---
 title: About
 sortOrder: 1
+variant: violet
 icon: bx:bxs-info-circle
 ---
 I am a passionate and experienced developer and designer dedicated to creating engaging and user-friendly software. With a strong foundation in front-end and back-end development, I bring a comprehensive approach to every project I work on. My goal is to deliver high-quality, pixel perfect software that not only meet objectives but also provide an exceptional user experience.
