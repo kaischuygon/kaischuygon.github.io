@@ -17,14 +17,14 @@ const projects = (await getCollection('work')).sort(
 >
 	<div class="mb-4">
 		<div class="gap-2 font-header">
-			<h1 class="text-4xl md:text-6xl text-violet-400 font-bold drop-shadow-outline dark:drop-shadow-outline-dark">My work</h1>
-			<p class="text-lg md:text-2xl text-zinc-800 dark:text-zinc-200 font-light">Projects I've working on dating back to my undergrad.</p>
+			<h1 class="text-4xl md:text-6xl text-accent-400 font-bold mb-2">My work</h1>
+			<p class="text-lg md:text-2xl text-primary-800 dark:text-primary-200 font-light">Projects I've worked on dating back to my undergrad.</p>
 		</div>
 	</div>
 	<Grid>
 		{
 			projects.map((project) => (
-				<li class="brutalist-outline">
+				<li class="brutalist-outline brutalist-outline-hover">
 					<CollectionPreview project={project} />
 				</li>
 			))

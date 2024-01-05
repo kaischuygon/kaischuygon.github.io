@@ -9,7 +9,6 @@ tags:
   - iOS
   - UIKit
   - Swift
-variant: cyan
 ---
 ## Description
 An single page iOS app to calculate a triadic color palette from either an rgb slider input or a hex value.

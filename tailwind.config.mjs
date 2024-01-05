@@ -1,66 +1,45 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from 'tailwindcss/defaultTheme'
+import typography from '@tailwindcss/typography'
+import colors from 'tailwindcss/colors'
+
+const primary = colors.zinc;
+const accent = colors.emerald;
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
 			colors: {
-				violet: {
-				  100: "#A5B4FB",
-				  200: "#A8A6FF",
-				  300: "#918efa",
-				  400: "#807dfa",
-				},
-				pink: {
-				  200: "#FFA6F6",
-				  300: "#fa8cef",
-				  400: "#fa7fee",
-				},
-				red: {
-				  200: "#FF9F9F",
-				  300: "#fa7a7a",
-				  400: "#f76363",
-				},
-				orange: {
-				  200: "#FFC29F",
-				  300: "#FF965B",
-				  400: "#fa8543",
-				},
-				yellow: {
-				  200: "#FFF59F",
-				  300: "#FFF066",
-				  400: "#FFE500",
-				},
-				lime: {
-				  100: "#c6fab4",
-				  200: "#B8FF9F",
-				  300: "#9dfc7c",
-				  400: "#7df752",
-				},
-				cyan: {
-				  200: "#A6FAFF",
-				  300: "#79F7FF",
-				  400: "#53f2fc",
-				},
+				primary: primary,
+				accent: accent
 			},
 			boxShadow: {
-				'outline': '2px 2px black',
-				'outline-dark': '2px 2px white',
-			},
-			dropShadow: {
-				'outline': '2px 2px black',
-				'outline-dark': '2px 2px white',
+				'outline': `2px 2px ${primary['950']}`,
+				'outline-dark': `2px 2px ${primary['50']}`,
+				'outline-accent': `2px 2px ${accent['400']}`,
+				'outline-hover': '4px 4px'
 			},
 			fontFamily: {
-				header: ['JetBrains Mono', defaultTheme.fontFamily.mono],
-				body: ['Rubik', defaultTheme.fontFamily.sans],
+				header: ['Noto Sans Display', defaultTheme.fontFamily.sans],
+				body: ['Noto Sans', defaultTheme.fontFamily.body],
+				code: ['JetBrains Mono', defaultTheme.fontFamily.mono],
 				system: [defaultTheme.fontFamily.system],
 			},
+			typography: () => ({
+				DEFAULT: {
+				  css: {
+					a: {
+						color: accent,
+						'&:hover': {
+							color: accent,
+						},
+					}
+				  },
+				},
+			}),
 		},
 	},
 	darkMode: 'class',
-	plugins: [
-		require("@tailwindcss/typography")
-	],
+	plugins: [typography]
 }

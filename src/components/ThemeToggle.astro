@@ -1,73 +1,69 @@
 ---
-import Icon from 'astro-icon';
+import { Icon } from "astro-icon/components";
 ---
 
-<theme-toggle class="bg-zinc-200 dark:bg-zinc-800" transition:persist>
-	<button class="flex cursor-pointer brutalist-outline" id="themeToggle">
-		<span class="sr-only">Dark theme</span>
-		<span class="icon light"><Icon name="bx:bx-sun" /></span>
-		<span class="icon dark"><Icon name="bx:bx-moon" /></span>
-	</button>
-</theme-toggle>
+<div class="inline-flex items-center brutalist-outline-accent brutalist-outline-hover h-full p-2 text-accent-400">
+	<Icon name="bx:bx-sun" class="text-xl mr-2 hidden" id="sun"/>
+	<Icon name="bx:bx-moon" class="text-xl mr-2 hidden" id="moon"/>
+	<Icon name="bx:bx-laptop" class="text-xl mr-2 hidden" id="laptop"/>
+	<select name="themeSwitch" id="themeSwitch" class="bg-transparent">
+		<option value="system">system</option>
+		<option value="dark">dark</option>
+		<option value="light">light</option>
+	</select>
+</div>
 
 <style>
-	.icon {
-		@apply z-10 relative flex p-2 w-8 aspect-square text-zinc-500;
-	}
-
-	.icon.light::before {
-		@apply -z-10 block absolute inset-0 bg-zinc-400 dark:bg-zinc-600 content-[''] rounded;
-	}
-
-	:global(.dark) .icon.light::before {
-		transform: translateX(100%);
-	}
-
-	.icon.dark::before {
-		transform: translateX(-100%);
-	}
-
-	:global(.dark) .icon.dark,
-	:global(html:not(.dark)) .icon.light,
-	button[aria-pressed='false'] .icon.light {
-		@apply text-zinc-950
-	}
+  :global(.dark) {
+    color-scheme: dark;
+  }
 </style>
 
 <script is:inline>
-	const theme = (() => {
-	  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-		return localStorage.getItem('theme');
-	  }
-	  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		return 'dark';
-	  }
-		return 'light';
-	})();
+  function updateTheme(value) {
+    switch(value) {
+      case "dark":
+        document.getElementById("moon").classList.replace("hidden", "block");
+        document.getElementById("sun").classList.replace("block", "hidden");
+        document.getElementById("laptop").classList.replace("block", "hidden");
+        break;
+      case "light":
+        document.getElementById("sun").classList.replace("hidden", "block");
+        document.getElementById("moon").classList.replace("block", "hidden");
+        document.getElementById("laptop").classList.replace("block", "hidden");
+        break;
+      case "system":
+        document.getElementById("laptop").classList.replace("hidden", "block");
+        document.getElementById("sun").classList.replace("block", "hidden");
+        document.getElementById("moon").classList.replace("block", "hidden");
+        break;
+    }
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+    const newTheme = value === "system" ? systemTheme : value;
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem("theme", value);
+  }
   
-	if (theme === 'light') {
-	  document.documentElement.classList.remove('dark');
-	} else {
-	  document.documentElement.classList.add('dark');
-	}
-  
-	window.localStorage.setItem('theme', theme);
-  
-	const handleToggleClick = () => {
-		
-	  const element = document.documentElement;
-	  element.classList.toggle("dark");
-  
-	  const isDark = element.classList.contains("dark");
-	  localStorage.setItem("theme", isDark ? "dark" : "light");
-	}
-  
-	document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
+  const select = document.getElementById("themeSwitch");
+  const theme = localStorage.getItem("theme");
+  select.value = theme !== null ? theme : "system";
+  updateTheme(select.value);
 
-	document.addEventListener('astro:after-swap', function () {
-		if (theme === 'dark') {
-			const element = document.documentElement;
-		  	element.classList.toggle("dark", true);
-		}
-	});
-  </script>
+  select.addEventListener("change", () => {
+    updateTheme(select.value);
+  });
+
+  document.addEventListener('astro:after-swap', () => {
+    const theme = localStorage.getItem("theme");
+    const select = document.getElementById("themeSwitch");
+    select.value = theme !== null ? theme : "system";
+    updateTheme(theme !== null ? theme : "system");
+
+    select.addEventListener("change", () => {
+      updateTheme(select.value);
+    });
+  });
+</script>

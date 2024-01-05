@@ -9,7 +9,6 @@ const workCollection = defineCollection({
 		tags: z.array(z.string()),
 		img: z.string(),
 		img_alt: z.string().optional(),
-		variant: z.string().default('violet'),
 	})
 });
 
@@ -19,7 +18,6 @@ const gridCollection = defineCollection({
 		title: z.string(),
 		icon: z.string(),
 		span: z.number().default(1),
-		variant: z.string().default('violet'),
 		sortOrder: z.number(),
 	})
 });

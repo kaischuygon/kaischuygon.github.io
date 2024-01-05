@@ -1,18 +1,3 @@
-<svg width="426" height="426" viewBox="0 0 426 426" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_203_2)">
-<path d="M233.833 73.5833C233.833 33.375 201.125 0.666687 160.917 0.666687C118.542 0.666687 93.2084 32.4375 93.2084 63.1667H134.875C134.875 54.5209 142.958 42.3334 160.917 42.3334C178.146 42.3334 192.167 56.3542 192.167 73.5833C192.167 90.8125 178.146 104.833 160.917 104.833H4.66675V146.5H160.917C201.125 146.5 233.833 113.792 233.833 73.5833ZM285.917 271.5H129.667V313.167H285.917C303.146 313.167 317.167 327.187 317.167 344.417C317.167 361.646 303.146 375.667 285.917 375.667C267.958 375.667 259.875 363.479 259.875 354.833H218.208C218.208 385.562 243.542 417.333 285.917 417.333C326.125 417.333 358.833 384.625 358.833 344.417C358.833 304.208 326.125 271.5 285.917 271.5Z" fill="#34D399"/>
-<path d="M338 63.1667C292.042 63.1667 254.667 100.542 254.667 146.5H296.333C296.333 123.521 315.021 104.833 338 104.833C360.979 104.833 379.667 123.521 379.667 146.5C379.667 169.479 360.979 188.167 338 188.167H4.66675V229.833H338C383.958 229.833 421.333 192.458 421.333 146.5C421.333 100.542 383.958 63.1667 338 63.1667ZM4.66675 271.5H88.0001V313.167H4.66675V271.5Z" fill="#34D399"/>
-</g>
-<defs>
-<filter id="filter0_d_203_2" x="0.666748" y="0.666687" width="424.667" height="424.667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_203_2"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_203_2" result="shape"/>
-</filter>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path fill="#34D399" d="M12 3H8v2h4v2H2v2h12V3zm10 8V7h-6v2h4v2H2v2h20zM2 17v-2h14v6h-6v-2h4v-2z"/>
 </svg>

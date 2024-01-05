@@ -7,25 +7,16 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const t_variant = {
-	violet: 'bg-violet-400',
-	pink: 'bg-pink-400',
-	red: 'bg-red-400',
-	orange: 'bg-orange-400',
-	yellow: 'bg-yellow-400',
-	lime: 'bg-lime-400',
-	cyan: 'bg-cyan-400',
-}[project.data.variant]
 ---
 
-<a class="grid w-full overflow-hidden aspect-video mx-auto hover:brightness-90" href={`/work/${project.slug}`}>
-	<span class:list={["absolute z-10 m-2 p-2 font-header text-xl lg:text-2xl font-bold brutalist-outline text-black", t_variant]}>{project.data.title}</span>
+<a class="grid w-full overflow-hidden aspect-video mx-auto" href={`/work/${project.slug}`}>
+	<span class:list={["absolute z-10 m-2 p-2 font-code text-xl lg:text-2xl font-bold brutalist-outline-accent dark:text-primary-50 text-primary-950 dark:bg-primary-800 bg-primary-200"]}>{project.data.title}</span>
 	<Image 
 		src={project.data.img} 
 		alt={project.data.img_alt || ''}
 		width=1920
 		height=1080
 		loading="lazy" decoding="async" 
-		class="w-full bg-cover"
+		class="w-full bg-cover rounded hover:brightness-75"
 	/>
 </a>

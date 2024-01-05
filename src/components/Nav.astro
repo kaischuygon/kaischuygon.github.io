@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon';
 import ThemeToggle from './ThemeToggle.astro';
+import { Icon } from 'astro-icon/components';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -12,57 +12,56 @@ const textLinks: { label: string; href: string }[] = [
 const iconLinks: { label: string; href: string; icon: string }[] = [
 	{ label: 'GitHub', href: 'https://github.com/kaischuygon', icon: 'bx:bxl-github' },
 	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/kaischuyler', icon: 'bx:bxl-linkedin' },
-	{ label: 'Bluesky', href: 'https://bsky.app/profile/kaischuyler.com', icon: 'bx:bxs-square-rounded'},
+	{ label: 'Bluesky', href: 'https://bsky.app/profile/kaischuyler.com', icon: 'bsky'},
 	{ label: 'Twitter', href: 'https://twitter.com/kaischuyler', icon: 'bx:bxl-twitter' },
 ];
 ---
 
-<nav class="flex h-full justify-start items-center p-4 font-header">
-	<div class="flex-1 flex gap-4">
-		<a aria-current={Astro.url.pathname === "/"} 
-			class:list={[
-			"flex-0 text-zinc-400 hover:brightness-75",
-				{
-					active:
-						Astro.url.pathname === "/"
-				},
-			]}
-			href="/">
-			<Icon name="bx:bx-wind" class="h-6 inline" />
-		</a>
-		{
-			textLinks.map(({ label, href }) => (
-				<a aria-current={Astro.url.pathname === href} 
-					class:list={[
-					"flex-0 text-zinc-400 hover:brightness-75",
-						{
-							active:
-								Astro.url.pathname === href ||
-								(href !== '/' && Astro.url.pathname.startsWith(href)),
-						},
-					]}
+<nav class="flex h-full justify-start items-center p-4 font-code">
+		<div class="flex-1 flex gap-4">
+			<a aria-current={Astro.url.pathname === "/"} 
+				class:list={[
+				"flex-0 text-primary-400 hover:brightness-75",
+					{
+						active:
+							Astro.url.pathname === "/"
+					},
+				]}
+				href="/">
+				<Icon name="wind" class="text-xl inline" />
+			</a>
+			{
+				textLinks.map(({ label, href }) => (
+					<a aria-current={Astro.url.pathname === href} 
+						class:list={[
+						"flex-0 text-primary-400 dark:text-primary-600 hover:brightness-75",
+							{
+								active:
+									Astro.url.pathname === href ||
+									(href !== '/' && Astro.url.pathname.startsWith(href)),
+							},
+						]}
 					href={href}>
-					{label}
-				</a>
-			))
-		}
-	</div>
-	<div class="flex-0 flex gap-4 mr-2">
-		{
-			iconLinks.map(({ href, icon, label }) => (
-				<a href={href} target="_blank">
-					<span class="sr-only">{label}</span>
-					<Icon name={icon} class="w-6 hover:brightness-75" />
-				</a>
-			))
-		}
-	</div>
-
-	<ThemeToggle class="flex-0"/>
+						{label}
+					</a>
+				))
+			}
+		</div>
+		<div class="flex-0 flex gap-4 mr-2">
+			{
+				iconLinks.map(({ href, icon, label }) => (
+					<a href={href} target="_blank">
+						<span class="sr-only">{label}</span>
+						<Icon name={icon} class="text-xl hover:brightness-75" />
+					</a>
+				))
+			}
+		</div>
+		<ThemeToggle class="flex-0"/>
 </nav>
 
 <style>
 	.active {
-		@apply text-zinc-950;
+		@apply text-accent-400;
 	}
 </style>

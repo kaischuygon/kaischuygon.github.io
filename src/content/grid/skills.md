@@ -1,52 +1,65 @@
 ---
 title: Skills
 sortOrder: 3
-variant: red
 icon: bx:bx-code-alt
 span: 2
 ---
 <!-- 
   Skills:
-  - Python
-  - typeScript
-  - Cloud Computing
-  - CI/CD
-  - HTML / CSS
-  - LLMs
-  - C / C++
-  - Version Control
-  - C#/.NET
-  - iOS SDK
-  - Node.js
-  - React.js
-  - SQL
-  - Swift
-  - Open/Web GL
-  - Unity
+  - Frontend
+    - TypeScript / JS
+    - React
+    - Vue
+    - Svelte
+    - Responsive HTML/CSS
+    - Tailwind
+  - Backend
+    - Python
+    - Django, Flask, FastAPI
+    - Node.js / Express.js
+    - Deno
+    - SQL
+    - MongoDB / Cassandra
+    - Cloud computing (AWS, Heroku)
+    - Nginx
+  - DevOps
+    - Git
+    - Docker
+    - CI/CD
+    - Kubernetes
+    - Terraform
+  - Mobile
+    - iOS SDK (Swift, Objective-C)
+    - Kotlin / Java
+    - React Native
+    - Flutter
+  - Additional
+    - LLMs (GPT / LLaMA / Open-Source)
+    - C/C++
+    - Open/Web GL
+    - C#/.NET
  -->
+Non-comprehensive list of tools I have professional experience working with. 
+
 <table>
   <tr>
-    <td>Python</td>
-    <td>TypeScript</td>
-    <td>Cloud Computing</td>
-    <td>CI/CD</td>
+    <th>Frontend</th>
+    <td>TypeScript / JS, React, Vue, Svelte, Responsive HTML/CSS, Tailwind, Sass, Bootstrap</td>
   </tr>
   <tr>
-    <td>HTML / CSS</td>
-    <td>LLMs</td>
-    <td>C / C++</td>
-    <td>Version Control</td>
+    <th>Backend</th>
+    <td>Python, Django, Flask, FastAPI, Node.js / Express.js, Deno, SQL, MongoDB / Cassandra, Cloud computing (AWS, Heroku), Nginx</td>
   </tr>
   <tr>
-    <td>C#/.NET</td>
-    <td>iOS SDK</td>
-    <td>Node.js</td>
-    <td>React.js</td>
+    <th>DevOps</th>
+    <td>Git, Docker, CI/CD, Kubernetes, Terraform</td>
   </tr>
   <tr>
-    <td>SQL</td>
-    <td>Swift</td>
-    <td>Open/Web GL</td>
-    <td>Unity</td>
+    <th>Mobile</th>
+    <td>iOS SDK (Swift, Objective-C), Kotlin / Java, React Native, Flutter</td>
+  </tr>
+  <tr>
+    <th>Additional</th>
+    <td>LLMs (GPT / LLaMA / Open-Source), C/C++, Open/Web GL, C#/.NET</td>
   </tr>
 </table>

@@ -1,7 +1,6 @@
 ---
 title: Front End
 sortOrder: 2
-variant: orange
 icon: bx:bxs-planet
 ---
 

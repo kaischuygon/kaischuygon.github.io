@@ -1,23 +1,7 @@
 ---
-const variants = ['violet', 'pink', 'red', 'orange', 'yellow', 'lime', 'cyan']
 
-interface Props {
-    variant?: 'violet' | 'pink' | 'red' | 'orange' | 'yellow' | 'lime' | 'cyan'
-}
-
-const { variant } = Astro.props;
-
-const tailwind_compatible = {
-    violet: 'bg-violet-400',
-    pink: 'bg-pink-400',
-    red: 'bg-red-400',
-    orange: 'bg-orange-400',
-    yellow: 'bg-yellow-400',
-    lime: 'bg-lime-400',
-    cyan: 'bg-cyan-400',
-}
 ---
 
-<div class='flex justify-center items-center p-2 gap-1 text-zinc-50 brutalist-outline bg-zinc-950'>
+<div class='flex justify-center items-center p-2 gap-1 brutalist-outline bg-accent-400 text-primary-950 font-code'>
     <slot />
 </div>

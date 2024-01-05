@@ -1,6 +1,6 @@
 ---
 import { getEntry, type CollectionEntry } from 'astro:content';
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 
 interface Props {
     item: CollectionEntry<'grid'>,
@@ -11,39 +11,31 @@ const { item, id } = Astro.props;
 const entry:CollectionEntry<'grid'> = await getEntry('grid', item.slug);
 const { Content } = await entry.render();
 
-const t_variant = {
-	violet:  'bg-violet-400',
-	pink:    'bg-pink-400',
-	red:     'bg-red-400',
-	orange:  'bg-orange-400',
-	yellow:  'bg-yellow-400',
-	lime:    'bg-lime-400',
-	cyan:    'bg-cyan-400',
-}[item.data.variant]
+const spans = [
+    'md:col-span-none',
+    'md:col-span-1',
+    'md:col-span-2',
+    'md:col-span-3',
+    'md:col-span-4',
+    'md:col-span-5',
+    'md:col-span-6',
+    'md:col-span-7',
+    'md:col-span-8',
+    'md:col-span-9',
+    'md:col-span-10',
+    'md:col-span-11',
+    'md:col-span-12',
+]
 
-const span = [
-    'col-span-none',
-    'col-span-1',
-    'col-span-2',
-    'col-span-3',
-    'col-span-4',
-    'col-span-5',
-    'col-span-6',
-    'col-span-7',
-    'col-span-8',
-    'col-span-9',
-    'col-span-10',
-    'col-span-11',
-    'col-span-12',
-][item.data.span]
+const span = spans[item.data.span].toString();
 ---
 
-<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline', span, t_variant]}>
-    <div class="flex-0 flex items-center gap-2 text-zinc-950">
-        <Icon name={item.data.icon} class="flex-0 h-8"/>
-        <h2 class="flex-1 text-lg font-header">{item.data.title}</h2>
+<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-200 dark:bg-primary-800', span]}>
+    <div class="flex-0 flex items-center gap-2 text-primary-950">
+        <Icon name={item.data.icon} class="flex-0 text-xl text-accent-400"/>
+        <h2 class="flex-1 text-lg font-code text-accent-400">{item.data.title}</h2>
     </div>
-    <div class="flex-1 prose max-w-none prose-zinc">
+    <div class="flex-1 prose max-w-none dark:prose-invert">
         <Content />
     </div>
 </div>
