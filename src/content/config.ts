@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 
 const workCollection = defineCollection({
 	type: 'content', // v2.5.0 and later
@@ -13,14 +13,15 @@ const workCollection = defineCollection({
 });
 
 const gridCollection = defineCollection({
-	type: 'content', // v2.5.0 and later
+	type: 'content',
 	schema: z.object({
 		title: z.string(),
 		icon: z.string(),
-		span: z.number().optional(),
-		sortOrder: z.number()
+		span: z.number().default(1),
+		sortOrder: z.number(),
 	})
 });
+
 
 export const collections = {
 	'work': workCollection,
