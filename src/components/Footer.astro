@@ -2,25 +2,26 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<footer class="flex gap-4 items-center mx-4 mb-4 h-full text-primary-400 dark:text-primary-600">
-	<div class="">
+<footer class="flex flex-wrap md:flex-nowrap gap-2 justify-between md:justify-normal items-center mx-4 mb-4 text-primary-400 dark:text-primary-600">
+	<div>
 		<p>Developed with <a href="https://astro.build/" class="underline" target="_blank">Astro</a></p>
+		<span class="hidden md:inline-block">•</span>
 		<p>© 2023 Kai Schuyler Gonzalez</p>
 	</div>
-	<div class="ml-auto">
+	<div class="text-right md:ml-auto">
 		<a href="mailto:kai@kaischuyler.com" target="_blank">Contact Me</a>
+		<span class="hidden md:inline-block">•</span>
 		<a href="https://kaischuyler.com/blog" target="_blank">Blog</a>
 	</div>
-	<div class="">
-		<a href="https://notbyai.fyi/">
-			<Icon name="notbyai" class="text-4xl" />
-		</a>
-	</div>
+	<span class="hidden md:inline-block">•</span>
+	<a href="https://notbyai.fyi/" class="ml-auto md:m-0">
+		<Icon name="notbyai" class="text-3xl md:text-4xl" />
+	</a>
 </footer>
 
 <style>
 	div {
-		@apply flex gap-4 flex-col md:flex-row;
+		@apply flex gap-2 flex-col md:flex-row;
 	}
 	a {
 		@apply underline underline-offset-2 text-inherit;
