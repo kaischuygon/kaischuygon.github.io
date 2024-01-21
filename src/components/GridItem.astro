@@ -30,10 +30,10 @@ const spans = [
 const span = spans[item.data.span].toString();
 ---
 
-<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-200 dark:bg-primary-800', span]}>
+<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900', span]}>
     <div class="flex-0 flex items-center gap-2 text-primary-950">
-        <Icon name={item.data.icon} class="flex-0 text-xl text-accent-400"/>
-        <h2 class="flex-1 text-lg font-code text-accent-400">{item.data.title}</h2>
+        <Icon name={item.data.icon} class="flex-0 text-xl text-accent"/>
+        <h2 class="flex-1 text-lg font-code text-accent">{item.data.title}</h2>
     </div>
     <div class="flex-1 prose max-w-none dark:prose-invert">
         <Content />

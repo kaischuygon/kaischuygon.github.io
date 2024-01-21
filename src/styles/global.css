@@ -3,9 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 /* Global variables */
-
 a {
-	@apply text-accent-400 fill-accent-400;
+	@apply text-accent fill-accent;
 }
 
 .brutalist-outline {
@@ -13,7 +12,7 @@ a {
 }
 
 .brutalist-outline-accent {
-	@apply shadow-outline-accent rounded border-[1px] border-accent-400;
+	@apply shadow-outline-accent rounded border-[1px] border-accent;
 }
 
 .brutalist-outline-hover:hover {

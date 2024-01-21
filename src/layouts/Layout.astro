@@ -7,6 +7,7 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
+import colors from 'tailwindcss/colors'
 
 interface Props {
 	title?: string | undefined;
@@ -16,11 +17,34 @@ interface Props {
 
 const { 
 	title, 
-	description="The personal Site and Portfolio of Kai Schuyler Gonzalez",
-	keywords="developer designer web development web design portfolio zephy code kai schuyler gonzalez"
+	description="The personal site and portfolio of Kai Schuyler Gonzalez",
+	keywords="developer designer web development design computer science portfolio zephy code kai schuyler gonzalez"
 } = Astro.props;
 
 const makeTitle = title? `${title} | Kai Schuyler Gonzalez` : 'Kai Schuyler Gonzalez';
+
+const colorArray = [
+    colors.amber['400'],
+    colors.blue['400'],
+    colors.cyan['400'],
+    colors.emerald['400'],
+    colors.fuchsia['400'],
+    colors.green['400'],
+    colors.indigo['400'],
+    colors.lime['400'],
+    colors.orange['400'],
+    colors.pink['400'],
+    colors.purple['400'],
+    colors.red['400'],
+    colors.rose['400'],
+    colors.sky['400'],
+    colors.teal['400'],
+    colors.violet['400'],
+    colors.yellow['400'],
+]
+
+// Choose a color from the array based on the current day of the year
+const defaultColor = colorArray[new Date().getDay() % colorArray.length]
 ---
 
 <html lang="en">
@@ -35,13 +59,27 @@ const makeTitle = title? `${title} | Kai Schuyler Gonzalez` : 'Kai Schuyler Gonz
 		</div>
 		<Footer />
 	</body>
-	<script>
-		// Add “loaded” class once the document has completely loaded.
-		addEventListener('load', () => document.documentElement.classList.add('loaded'));
-	</script>
 </html>
 
-<style>
+<script define:vars={{ defaultColor }}>
+	// set the default color if not in local storage
+	document.addEventListener('astro:page-load', () => {
+		if (!localStorage.getItem('accent')) {
+			localStorage.setItem('accent', defaultColor);
+			document.documentElement.style.setProperty('--ACCENT', defaultColor);
+		} else {
+			document.documentElement.style.setProperty('--ACCENT', localStorage.getItem('accent'));
+		}
+	});
+	// Add “loaded” class once the document has completely loaded.
+	addEventListener('load', () => document.documentElement.classList.add('loaded'));
+</script>
+
+<style define:vars={{ defaultColor }}>
+	:root {
+		--ACCENT: var(--defaultColor)
+	}
+
 	body {
 		display: grid;
 		grid-template-rows: 0fr auto 0fr;

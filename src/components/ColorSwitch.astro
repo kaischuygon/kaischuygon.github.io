@@ -1,0 +1,41 @@
+---
+import colors from 'tailwindcss/colors'
+import { Icon } from 'astro-icon/components'
+
+const colorArray = [
+    colors.amber['400'],
+    colors.blue['400'],
+    colors.cyan['400'],
+    colors.emerald['400'],
+    colors.fuchsia['400'],
+    colors.green['400'],
+    colors.indigo['400'],
+    colors.lime['400'],
+    colors.orange['400'],
+    colors.pink['400'],
+    colors.purple['400'],
+    colors.red['400'],
+    colors.rose['400'],
+    colors.sky['400'],
+    colors.teal['400'],
+    colors.violet['400'],
+    colors.yellow['400'],
+]
+---
+
+<script is:inline>
+    function changeAccent() {
+        // Split the color data into an array
+        const colorArray = document.getElementById('colorSwitcher').dataset.colors.split(',')
+        const currentAccent = document.documentElement.style.getPropertyValue('--ACCENT')
+        const newAccent = colorArray[(colorArray.indexOf(currentAccent) + 1) % colorArray.length]
+        document.documentElement.style.setProperty('--ACCENT', newAccent)
+
+        // Save the new accent color to local storage
+        localStorage.setItem('accent', newAccent)
+    }
+</script>
+
+<button title="Change accent color" class="inline-flex items-center h-3/4 aspect-square m-2 hover:brightness-75" data-colors={colorArray} onclick="changeAccent()" id="colorSwitcher">
+    <Icon name="bx:bxs-palette" class="text-accent text-xl" />
+</button>

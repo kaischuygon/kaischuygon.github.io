@@ -4,7 +4,6 @@ import typography from '@tailwindcss/typography'
 import colors from 'tailwindcss/colors'
 
 const primary = colors.zinc;
-const accent = colors.emerald;
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -12,12 +11,12 @@ export default {
 		extend: {
 			colors: {
 				primary: primary,
-				accent: accent
+				accent: 'var(--ACCENT)',
 			},
 			boxShadow: {
 				'outline': `2px 2px ${primary['950']}`,
 				'outline-dark': `2px 2px ${primary['50']}`,
-				'outline-accent': `2px 2px ${accent['400']}`,
+				'outline-accent': `2px 2px var(--ACCENT)`,
 				'outline-hover': '4px 4px'
 			},
 			fontFamily: {
@@ -30,9 +29,9 @@ export default {
 				DEFAULT: {
 				  css: {
 					a: {
-						color: accent,
+						color: 'var(--ACCENT)',
 						'&:hover': {
-							color: accent,
+							color: 'var(--ACCENT)',
 						},
 					}
 				  },

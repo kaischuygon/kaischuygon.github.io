@@ -15,29 +15,26 @@ const accent = config.theme.extend.colors.accent;
 
 <SEO
 	title={title}
-	titleTemplate="%s | Kai Schuyler Gonzalez"
-	titleDefault="Kai Schuyler Gonzalez"
 	description={description}
 	canonical="https://kaischuyler.com"
 	charset='UTF-8'
-	openGraph={{
-		basic: {
-			type: "website",
-			title: "I'm Kai, a software engineer and designer.",
-			image: "/opengraph-seo.png",
-			url: "https://kaischuyler.com",
-		}
-	}}
 	twitter={{
 		creator: "@kaischuyler"
 	}}
 	extend={{
-	// extending the default link tags
+		// extending the default link tags
 		link: [
-			{ rel: "icon", href: "/favicon.ico" },
-			{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-			{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-			{ rel: "manifest", href: "/site.webmanifest" },
+			{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+			// for all browsers
+			{ rel: 'icon', type: 'image/png', imageSizes: '32x32', href: '/favicon-32x32.png' },
+			{ rel: 'icon', type: 'image/png', imageSizes: '16x16', href: '/favicon-16x16.png' },
+			// for google and chrome
+			{ rel: 'icon', type: 'image/png', imageSizes: '48x48', href: '/favicon-48x48.png' },
+			{ rel: 'icon', type: 'image/png', imageSizes: '192x192', href: '/favicon-192x192.png' },
+			// for ipad
+			{ rel: 'apple-touch-icon', type: 'image/png', imageSizes: '167x167', href: '/favicon-167x167.png' },
+			// for iphone
+			{ rel: 'apple-touch-icon', type: 'image/png', imageSizes: '180x180', href: '/favicon-180x180.png' },
 		],
 		// extending the default meta tags
 		meta: [
@@ -46,12 +43,8 @@ const accent = config.theme.extend.colors.accent;
 			{ name: "description", content: description },
 			{ name: "author", content: "Kai Schuyler Gonzalez" },
 			{ name: "keywords", content: keywords },
-			{
-				name: "twitter:image",
-				content: "/opengraph-seo.png",
-			},
-			{ name: "twitter:title", content: "Kai Schuyler Gonzalez" },
-			{ name: "twitter:description", content: "software engineer and designer" },
+			{ name: "twitter:title", content: title },
+			{ name: "twitter:description", content: description },
 		],
 	}}
 />

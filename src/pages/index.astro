@@ -19,7 +19,7 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
 <Layout>
 	<header class="grid gap-4 grid-cols-1 md:grid-cols-3">
 		<div class="col-span-1 md:col-span-2 flex flex-col justify-around font-header gap-4">
-			<h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold block text-accent-400">
+			<h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold block text-accent">
 				Hello, I'm Kai.
 			</h1>
 			<p class="text-lg md:text-2xl text-primary-800 dark:text-primary-200 font-light block">
@@ -34,7 +34,7 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
 			<Image
 				src={portrait}
 				alt="A profile of Kai"
-				class:list={'object-cover h-full mx-auto rounded bg-primary-200 dark:bg-primary-800'}
+				class:list={'object-cover h-full mx-auto rounded bg-primary-100 dark:bg-primary-900'}
 			/>
 		</div>
 		{gridItems.map((item) => (
