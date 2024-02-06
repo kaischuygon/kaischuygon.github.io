@@ -4,7 +4,7 @@ publishDate: 2021-04-24 00:00:00
 img: /assets/gltf-viewer.png
 img_alt: a 3d model of a bunny
 description: |
-  An 3d glTF viewer written in c++ with openGL.
+  An 3d glTF viewer written in C++ with openGL.
 tags:
   - OpenGL
   - C++
