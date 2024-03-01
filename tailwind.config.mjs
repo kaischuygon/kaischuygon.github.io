@@ -11,12 +11,11 @@ export default {
 		extend: {
 			colors: {
 				primary: primary,
-				accent: 'var(--ACCENT)',
+				accent: 'var(--GRADIENT1)'
 			},
 			boxShadow: {
 				'outline': `2px 2px ${primary['950']}`,
 				'outline-dark': `2px 2px ${primary['50']}`,
-				'outline-accent': `2px 2px var(--ACCENT)`,
 				'outline-hover': '4px 4px'
 			},
 			fontFamily: {
@@ -25,18 +24,9 @@ export default {
 				code: ['JetBrains Mono', defaultTheme.fontFamily.mono],
 				system: [defaultTheme.fontFamily.system],
 			},
-			typography: () => ({
-				DEFAULT: {
-				  css: {
-					a: {
-						color: 'var(--ACCENT)',
-						'&:hover': {
-							color: 'var(--ACCENT)',
-						},
-					}
-				  },
-				},
-			}),
+			backgroundImage: {
+				'animated-gradient': 'url(background.svg)',
+			}
 		},
 	},
 	darkMode: 'class',

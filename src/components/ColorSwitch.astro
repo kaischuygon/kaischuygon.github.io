@@ -27,15 +27,21 @@ const colorArray = [
     function changeAccent() {
         // Split the color data into an array
         const colorArray = document.getElementById('colorSwitcher').dataset.colors.split(',')
-        const currentAccent = document.documentElement.style.getPropertyValue('--ACCENT')
-        const newAccent = colorArray[(colorArray.indexOf(currentAccent) + 1) % colorArray.length]
-        document.documentElement.style.setProperty('--ACCENT', newAccent)
+        const currentAccent = document.documentElement.style.getPropertyValue('--GRADIENT1')
+        const newGradient1 = colorArray[(colorArray.indexOf(currentAccent) + 1) % colorArray.length]
+        const newGradient2 = colorArray[(colorArray.indexOf(currentAccent) + 2) % colorArray.length]
+        const newGradient3 = colorArray[(colorArray.indexOf(currentAccent) + 3) % colorArray.length]
+        document.documentElement.style.setProperty('--GRADIENT1', newGradient1)
+        document.documentElement.style.setProperty('--GRADIENT2', newGradient2)
+        document.documentElement.style.setProperty('--GRADIENT3', newGradient3)
 
         // Save the new accent color to local storage
-        localStorage.setItem('accent', newAccent)
+        localStorage.setItem('gradients[0]', newGradient1)
+        localStorage.setItem('gradients[1]', newGradient2)
+        localStorage.setItem('gradients[2]', newGradient3)
     }
 </script>
 
 <button title="Change accent color" class="inline-flex items-center h-3/4 aspect-square m-2 hover:brightness-75" data-colors={colorArray} onclick="changeAccent()" id="colorSwitcher">
-    <Icon name="bx:bxs-palette" class="text-accent text-xl" />
+    <Icon name="bx:bxs-palette" class="text-primary-900 dark:text-primary-100 text-xl" />
 </button>

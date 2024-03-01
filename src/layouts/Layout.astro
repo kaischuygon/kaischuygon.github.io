@@ -4,7 +4,7 @@
 
 // Component Imports
 import MainHead from '../components/MainHead.astro';
-import Nav from '../components/Nav.astro';
+import Nav from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import colors from 'tailwindcss/colors'
@@ -24,7 +24,7 @@ const {
 const makeTitle = title? `${title} | Kai Schuyler Gonzalez` : 'Kai Schuyler Gonzalez';
 
 const colorArray = [
-    colors.amber['400'],
+colors.amber['400'],
     colors.blue['400'],
     colors.cyan['400'],
     colors.emerald['400'],
@@ -43,8 +43,11 @@ const colorArray = [
     colors.yellow['400'],
 ]
 
-// Choose a color from the array based on the current day of the year
-const defaultColor = colorArray[new Date().getDay() % colorArray.length]
+// Choose a color from the array based on the current day of the year, plus 2 adjecent colors
+const dayIndex = new Date().getDay() % colorArray.length
+const color1 = colorArray[dayIndex];
+const color2 = colorArray[dayIndex + 1];
+const color3 = colorArray[dayIndex + 2];
 ---
 
 <html lang="en">
@@ -52,40 +55,36 @@ const defaultColor = colorArray[new Date().getDay() % colorArray.length]
 		<MainHead title={makeTitle} description={description} keywords={keywords} />
 		<ViewTransitions />
 	</head>
-	<body class="font-body bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-200 scroll-smooth leading-6">
-		<Nav />
+	<body class="font-body bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-200 scroll-smooth leading-6 flex flex-col h-screen justify-between bg-animated-gradient from-[var(--GRADIENT1)] from-10% via-[var(--GRADIENT2)] via-30% to-primary-50 dark:to-primary-950 to-50% bg-no-repeat bg-fixed">
+		<div>
+			<Nav />
+		</div>
 		<div class="m-4">
 			<slot />
 		</div>
-		<Footer />
+		<div>
+			<Footer />
+		</div>
 	</body>
 </html>
 
-<script define:vars={{ defaultColor }}>
+<script define:vars={{ color1, color2, color3 }}>
 	// set the default color if not in local storage
 	document.addEventListener('astro:page-load', () => {
-		if (!localStorage.getItem('accent')) {
-			localStorage.setItem('accent', defaultColor);
-			document.documentElement.style.setProperty('--ACCENT', defaultColor);
+		if (localStorage.getItem('gradients')) {
+			// localStorage.setItem('accent', defaultColor);
+			document.documentElement.style.setProperty('--GRADIENT1', localStorage.getItem('gradients[0]'));
+			document.documentElement.style.setProperty('--GRADIENT2', localStorage.getItem('gradients[1]'));
+			document.documentElement.style.setProperty('--GRADIENT3', localStorage.getItem('gradients[2]'));
 		} else {
-			document.documentElement.style.setProperty('--ACCENT', localStorage.getItem('accent'));
+			document.documentElement.style.setProperty('--GRADIENT1', color1);
+			document.documentElement.style.setProperty('--GRADIENT2', color2);
+			document.documentElement.style.setProperty('--GRADIENT3', color3);
 		}
 	});
 	// Add “loaded” class once the document has completely loaded.
 	addEventListener('load', () => document.documentElement.classList.add('loaded'));
 </script>
-
-<style define:vars={{ defaultColor }}>
-	:root {
-		--ACCENT: var(--defaultColor)
-	}
-
-	body {
-		display: grid;
-		grid-template-rows: 0fr auto 0fr;
-		min-height: 100vh;
-	}
-</style>
 
 <script>
 	// open external links in new tab

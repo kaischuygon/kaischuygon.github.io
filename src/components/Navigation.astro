@@ -22,7 +22,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 	<div class="flex-1 flex gap-4">
 		<a aria-current={Astro.url.pathname === "/"} 
 			class:list={[
-			"flex-0 text-primary-400 hover:brightness-75",
+			"flex-0 text-primary-950 dark:text-primary-50 hover:underline",
 				{
 					active:
 						Astro.url.pathname === "/"
@@ -35,7 +35,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 			textLinks.map(({ label, href }) => (
 				<a aria-current={Astro.url.pathname === href} 
 					class:list={[
-					"flex-0 text-primary-400 dark:text-primary-600 hover:brightness-75",
+					"flex-0 text-primary-950 dark:text-primary-50",
 						{
 							active:
 								Astro.url.pathname === href ||
@@ -64,6 +64,6 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 
 <style>
 	.active {
-		@apply text-accent;
+		@apply brightness-100;
 	}
 </style>

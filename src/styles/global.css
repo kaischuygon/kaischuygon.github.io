@@ -4,17 +4,17 @@
 @tailwind utilities;
 /* Global variables */
 a {
-	@apply text-accent fill-accent;
+	@apply text-primary-900 dark:text-primary-100 fill-accent;
 }
 
 .brutalist-outline {
 	@apply shadow-outline dark:shadow-outline-dark rounded border-[1px] border-primary-950 dark:border-primary-50;
 }
 
-.brutalist-outline-accent {
-	@apply shadow-outline-accent rounded border-[1px] border-accent;
-}
-
 .brutalist-outline-hover:hover {
 	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover;
+}
+
+.bg-blur {
+	@apply backdrop-blur-3xl bg-[rgba(255,255,255,0.3)] dark:bg-[rgba(0,0,0,0.3)];
 }
