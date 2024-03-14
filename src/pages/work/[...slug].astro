@@ -42,19 +42,19 @@ const { Content } = await entry.render();
 					{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 				</div>
 			</header>
-			{entry.data.img ?
-				<div class="p-2">
-					<Image 
-						src={entry.data.img}
-						alt={entry.data.title ? entry.data.title : ""}
-						width=1000
-						height=1000
-						class="brutalist-outline mx-auto"
-						loading="lazy" decoding="async"
-					/>
-				</div> : null
-			}
-			<main class="p-2 prose dark:prose-invert mx-auto">
+			<main class="p-2 prose prose-zinc dark:prose-invert mx-auto">
+				{entry.data.img ?
+					<div class="p-2">
+						<Image 
+							src={entry.data.img}
+							alt={entry.data.title ? entry.data.title : ""}
+							width=1000
+							height=1000
+							class="brutalist-outline mx-auto w-full"
+							loading="lazy" decoding="async"
+						/>
+					</div> : null
+				}
 				<Content />
 			</main>
 		</div>
