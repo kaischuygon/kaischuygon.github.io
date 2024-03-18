@@ -4,33 +4,16 @@ import { Icon } from 'astro-icon/components'
 
 interface Props {
     item: CollectionEntry<'grid'>,
+    order?: string,
     id?: string,
 }
 
-const { item, id } = Astro.props;
+const { item, order, id } = Astro.props;
 const entry:CollectionEntry<'grid'> = await getEntry('grid', item.slug);
 const { Content } = await entry.render();
-
-const spans = [
-    'md:col-span-none',
-    'md:col-span-1',
-    'md:col-span-2',
-    'md:col-span-3',
-    'md:col-span-4',
-    'md:col-span-5',
-    'md:col-span-6',
-    'md:col-span-7',
-    'md:col-span-8',
-    'md:col-span-9',
-    'md:col-span-10',
-    'md:col-span-11',
-    'md:col-span-12',
-]
-
-const span = spans[item.data.span].toString();
 ---
 
-<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900', span]}>
+<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900', `md:col-span-${item.data.span}`, `order-${order}`]}>
     <div class="flex-0 flex items-center gap-2 text-primary-950">
         <Icon name={item.data.icon} class="flex-0 text-xl text-accent"/>
         <h2 class="flex-1 text-lg font-code text-accent">{item.data.title}</h2>
@@ -39,17 +22,3 @@ const span = spans[item.data.span].toString();
         <Content />
     </div>
 </div>
-
-<style>
-    @media (min-width: 768px) {
-        #about {
-            grid-column: 1 / -1;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        #about {
-            grid-column: 1 / span 2;
-        } 
-    }
-</style>

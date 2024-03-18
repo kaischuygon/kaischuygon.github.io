@@ -1,44 +1,47 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
-
 import Layout from '../layouts/Layout.astro';
-
-import { Icon } from 'astro-icon/components';
-import Pill from '../components/Pill.astro';
-import GridItem from '../components/GridItem.astro';
-import { Image } from 'astro:assets';
-import portrait from '../../public/assets/portrait.png';
-
-const gridItems = await getCollection('grid');
-
-gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
-  return a.data.sortOrder - b.data.sortOrder;
-});
 ---
 
 <Layout>
-	<header class="grid gap-4 grid-cols-1 md:grid-cols-3">
-		<div class="col-span-1 md:col-span-2 flex flex-col justify-around font-header gap-4">
-			<h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold block text-accent">
-				Hello, I'm Kai.
-			</h1>
-			<p class="text-lg md:text-2xl text-primary-800 dark:text-primary-200 font-light block">
-				I develop and design things for the web.
-			</p>
-			<div class="flex gap-4">
-				<Pill><Icon name="bx:bx-code" class="text-xl" />Developer</Pill>
-				<Pill><Icon name="bx:bxs-pencil" class="text-xl" />Designer</Pill>
-			</div>
-		</div>
-		<div class="brutalist-outline lg:row-span-2">
-			<Image
-				src={portrait}
-				alt="A profile of Kai"
-				class:list={'object-cover h-full mx-auto rounded bg-primary-100 dark:bg-primary-900'}
-			/>
-		</div>
-		{gridItems.map((item) => (
-			item.slug == 'about' ? <GridItem item={item} id="about"/> : <GridItem item={item} /> // about is special
-		))}
-	</header>
+	<div class="flex flex-col justify-center h-full max-w-screen-md mx-auto gap-4 p-4">
+		<div class="font-code text-primary-500">👋🏼 Hello! I'm </div>
+		<div id="variable" class="font-code font-semibold text-accent text-4xl md:text-6xl lg:text-7xl xl:text-8xl">Kai Schuyler Gonzalez,</div>
+		<div class="font-code text-primary-500">a software engineer and designer based in Colorado.</div>
+	</div>
 </Layout>
+
+<script is:inline>
+// Get the element
+var element = document.getElementById('variable');
+
+// Wrap each character in a span
+element.innerHTML = element.textContent.split('').map(char => `<span style="opacity: 0">${char}</span>`).join('');
+
+// Get all the spans
+var spans = element.getElementsByTagName('span');
+
+// The current index of the spans
+var index = 0;
+
+// Create a typing effect
+var typingInterval = setInterval(function() {
+  // Make the current span visible
+  spans[index].style.opacity = '1';
+  index++;
+
+  // If all spans are visible, stop the interval
+  if (index === spans.length) {
+    clearInterval(typingInterval);
+
+    // Start the blinking underscore
+    var blinkInterval = setInterval(function() {
+      // If the underscore is visible, hide it, otherwise show it
+      if (element.textContent.endsWith('_')) {
+        element.textContent = element.textContent.slice(0, -1);
+      } else {
+        element.textContent += '_';
+      }
+    }, 500);
+  }
+}, 100);
+</script>

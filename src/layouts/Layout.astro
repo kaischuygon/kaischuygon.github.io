@@ -52,9 +52,9 @@ const defaultColor = colorArray[new Date().getDay() % colorArray.length]
 		<MainHead title={makeTitle} description={description} keywords={keywords} />
 		<ViewTransitions />
 	</head>
-	<body class="font-body bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-200 scroll-smooth leading-6">
+	<body class="font-body bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-200 scroll-smooth leading-6 mx-auto">
 		<Nav />
-		<div class="m-4">
+		<div class="m-4 max-w-screen-2xl mx-auto">
 			<slot />
 		</div>
 		<Footer />

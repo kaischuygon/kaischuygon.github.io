@@ -1,5 +1,6 @@
 ---
-title: About
+title: About me
+span: 2
 sortOrder: 1
 icon: bx:bxs-info-circle
 ---
