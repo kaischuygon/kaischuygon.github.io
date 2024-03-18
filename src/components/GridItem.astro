@@ -4,16 +4,19 @@ import { Icon } from 'astro-icon/components'
 
 interface Props {
     item: CollectionEntry<'grid'>,
-    order?: string,
+    order?: number,
     id?: string,
 }
 
-const { item, order, id } = Astro.props;
+const { item, order='2', id='' } = Astro.props;
 const entry:CollectionEntry<'grid'> = await getEntry('grid', item.slug);
 const { Content } = await entry.render();
+
+const span:string = `md:col-span-${item.data.span}`;
+const twOrder:string = `order-${order}`;
 ---
 
-<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900', `md:col-span-${item.data.span}`, `order-${order}`]}>
+<div id={id} class:list={[span, twOrder, 'flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900']}>
     <div class="flex-0 flex items-center gap-2 text-primary-950">
         <Icon name={item.data.icon} class="flex-0 text-xl text-accent"/>
         <h2 class="flex-1 text-lg font-code text-accent">{item.data.title}</h2>

@@ -1,6 +1,6 @@
 ---
 title: Graphics
-sortOrder: 2
+sortOrder: 1
 icon: bx:bx-desktop
 ---
 

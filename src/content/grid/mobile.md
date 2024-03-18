@@ -1,6 +1,6 @@
 ---
 title: Mobile
-sortOrder: 2
+sortOrder: 1
 icon: bx:bxs-devices
 ---
 
