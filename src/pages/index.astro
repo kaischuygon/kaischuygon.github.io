@@ -6,43 +6,34 @@ import Pill from '../components/Pill.astro'
 <Layout>
 	<div class="flex flex-col justify-center h-full max-w-screen-md mx-auto gap-4 p-4">
 		<div class="font-code text-primary-500">👋🏽 Hello! I'm </div>
-		<div id="variable" class="font-code font-semibold text-accent text-4xl md:text-6xl lg:text-7xl xl:text-8xl">Kai Schuyler Gonzalez,</div>
+		<div class="font-code break-all font-semibold text-accent text-4xl md:text-6xl lg:text-7xl xl:text-8xl"><span id="typing">Kai Schuyler Gonzalez</span><span id="cursor">_</span></div>
 		<div class="font-code text-primary-500">a software engineer 💻 and designer ✏️ based in Colorado.</div>
 	</div>
 </Layout>
 
 <script is:inline>
-// Get the element
-var element = document.getElementById('variable');
+	window.onload = function() {
+		var text = 'Kai Schuyler Gonzalez';
+		var i = 0;
+		let typingSpeed = 100;
+		
+		function type() {
+			var typingDiv = document.getElementById('typing');
+			if(i <= text.length) {
+				typingDiv.textContent = text.slice(0, i++);
+			}
+			setTimeout(type, typingSpeed);
+		}
 
-// Wrap each character in a span
-element.innerHTML = element.textContent.split('').map(char => `<span style="opacity: 0">${char}</span>`).join('');
-
-// Get all the spans
-var spans = element.getElementsByTagName('span');
-
-// The current index of the spans
-var index = 0;
-
-// Create a typing effect
-var typingInterval = setInterval(function() {
-  // Make the current span visible
-  spans[index].style.opacity = '1';
-  index++;
-
-  // If all spans are visible, stop the interval
-  if (index === spans.length) {
-    clearInterval(typingInterval);
-
-    // Start the blinking underscore
-    var blinkInterval = setInterval(function() {
-      // If the underscore is visible, hide it, otherwise show it
-      if (element.textContent.endsWith('_')) {
-        element.textContent = element.textContent.slice(0, -1);
-      } else {
-        element.textContent += '_';
-      }
-    }, 500);
-  }
-}, 100);
+		function blinkCursor() {
+			var cursor = document.getElementById('cursor');
+			cursor.style.display = cursor.style.display === 'none' ? '' : 'none';
+			setTimeout(blinkCursor, 500);
+		}
+	
+		type();
+		// wait for typing to finish before blinking cursor
+		setTimeout(blinkCursor, text.length * typingSpeed);
+		// setInterval(blinkCursor, cursorBlinkSpeed);
+	}
 </script>

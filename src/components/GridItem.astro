@@ -12,11 +12,11 @@ const { item, order='2', id='' } = Astro.props;
 const entry:CollectionEntry<'grid'> = await getEntry('grid', item.slug);
 const { Content } = await entry.render();
 
-const span:string = `md:col-span-${item.data.span}`;
-const twOrder:string = `order-${order}`;
+let twSpan:string = `custom-span-${item.data.span}`;
+let twOrder:string = `order-${order}`;
 ---
 
-<div id={id} class:list={[span, twOrder, 'flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900']}>
+<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900', twOrder, twSpan]}>
     <div class="flex-0 flex items-center gap-2 text-primary-950">
         <Icon name={item.data.icon} class="flex-0 text-xl text-accent"/>
         <h2 class="flex-1 text-lg font-code text-accent">{item.data.title}</h2>
@@ -25,3 +25,17 @@ const twOrder:string = `order-${order}`;
         <Content />
     </div>
 </div>
+
+<style>
+    .custom-span-1 {
+        @apply col-span-1 md:col-span-1
+    }
+
+    .custom-span-2 {
+        @apply col-span-1 md:col-span-2
+    }
+
+    .custom-span-3 {
+        @apply col-span-1 md:col-span-3
+    }
+</style>

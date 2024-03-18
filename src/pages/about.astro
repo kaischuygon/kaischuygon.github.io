@@ -16,7 +16,7 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
 
 <Layout>
 	<div class="grid gap-4 grid-cols-1 md:grid-cols-3">
-        <div class="brutalist-outline order-1">
+        <div class="brutalist-outline order-0 md:order-1">
             <Image
                 src={portrait}
                 alt="A profile of Kai"
@@ -24,7 +24,7 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
             />
         </div>
 		{gridItems.map((item:CollectionKey) => (
-            item.slug == 'about' ? <GridItem item={item} id="about" order={0}/> : <GridItem item={item} order={1} /> // about is special
+            item.slug == 'about' ? <GridItem item={item} id="about" order={0} /> : <GridItem item={item} order={1} />
             )
         )}
 	</div>

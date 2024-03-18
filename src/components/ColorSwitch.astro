@@ -2,40 +2,83 @@
 import colors from 'tailwindcss/colors'
 import { Icon } from 'astro-icon/components'
 
-const colorArray = [
-    colors.amber['400'],
-    colors.blue['400'],
-    colors.cyan['400'],
-    colors.emerald['400'],
-    colors.fuchsia['400'],
-    colors.green['400'],
-    colors.indigo['400'],
-    colors.lime['400'],
-    colors.orange['400'],
-    colors.pink['400'],
-    colors.purple['400'],
-    colors.red['400'],
-    colors.rose['400'],
-    colors.sky['400'],
-    colors.teal['400'],
-    colors.violet['400'],
-    colors.yellow['400'],
-]
+const colorArray = {
+    'amber': colors.amber['400'],
+    'blue': colors.blue['400'],
+    'cyan': colors.cyan['400'],
+    'emerald': colors.emerald['400'],
+    'fuchsia': colors.fuchsia['400'],
+    'green': colors.green['400'],
+    'indigo': colors.indigo['400'],
+    'lime': colors.lime['400'],
+    'orange': colors.orange['400'],
+    'pink': colors.pink['400'],
+    'purple': colors.purple['400'],
+    'red': colors.red['400'],
+    'rose': colors.rose['400'],
+    'sky': colors.sky['400'],
+    'teal': colors.teal['400'],
+    'violet': colors.violet['400'],
+    'yellow': colors.yellow['400'],
+}
+
+// Choose a color from the array based on the current day of the year
+const defaultColor = Object.entries(colorArray)[new Date().getDay() % Object.keys(colorArray).length][1]
 ---
 
-<script is:inline>
+<script define:vars={{ defaultColor }}>
+	// set the default color if not in local storage
+	document.addEventListener('astro:page-load', () => {
+		if (!localStorage.getItem('accent')) {
+			localStorage.setItem('accent', 'daily');
+			document.documentElement.style.setProperty('--ACCENT', defaultColor);
+            document.getElementById('colorSwitch').value = defaultColor;
+		} else {
+			document.documentElement.style.setProperty('--ACCENT', localStorage.getItem('accent'));
+            if (localStorage.getItem('accent') === 'daily') {
+                document.getElementById('colorSwitch').value = 'daily';
+    			document.documentElement.style.setProperty('--ACCENT', defaultColor);
+            }
+            document.getElementById('colorSwitch').value = localStorage.getItem('accent');
+		}
+	});
+	// Add “loaded” class once the document has completely loaded.
+	addEventListener('load', () => document.documentElement.classList.add('loaded'));
+</script>
+
+<style define:vars={{ defaultColor }} is:global>
+	:root {
+		--ACCENT: var(--defaultColor)
+	}
+</style>
+
+<div class="inline-flex items-center brutalist-outline-accent brutalist-outline-hover h-full p-2 text-accent">
+    <Icon name="bx:bxs-palette" class="text-accent text-xl mr-2" />
+    <select title="Change color theme" name="colorSwitch" id="colorSwitch" class="bg-transparent">
+        <option value='daily'>daily</option>
+        <hr>
+        {
+            Object.keys(colorArray).map((color, index) => (
+                <option value={Object.entries(colorArray)[index][1]}>{color}</option>
+            ))
+        }
+    </select>
+</div>
+
+<script is:inline define:vars={{ colorArray, defaultColor }}>
     function changeAccent() {
         // Split the color data into an array
-        const colorArray = document.getElementById('colorSwitcher').dataset.colors.split(',')
-        const currentAccent = document.documentElement.style.getPropertyValue('--ACCENT')
-        const newAccent = colorArray[(colorArray.indexOf(currentAccent) + 1) % colorArray.length]
+        const newAccent = document.getElementById('colorSwitch').value
+        if (newAccent === 'daily') {
+            document.documentElement.style.setProperty('--ACCENT', defaultColor)
+            localStorage.setItem('accent', 'daily')
+            return
+        } 
         document.documentElement.style.setProperty('--ACCENT', newAccent)
-
+        
         // Save the new accent color to local storage
         localStorage.setItem('accent', newAccent)
     }
+    
+    document.getElementById('colorSwitch').addEventListener('change', changeAccent)
 </script>
-
-<button title="Change accent color" class="inline-flex items-center h-3/4 aspect-square m-2 hover:brightness-75" data-colors={colorArray} onclick="changeAccent()" id="colorSwitcher">
-    <Icon name="bx:bxs-palette" class="text-accent text-xl" />
-</button>
