@@ -16,16 +16,22 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
 
 <Layout>
 	<div class="grid gap-4 grid-cols-1 md:grid-cols-3">
-        <div class="brutalist-outline order-0 md:order-1">
+        <div class="brutalist-outline profile-order">
             <Image
                 src={portrait}
                 alt="A profile of Kai"
-                class:list={'object-cover h-full mx-auto rounded bg-primary-100 dark:bg-primary-900'}
+                class:list={['object-cover h-full mx-auto rounded bg-primary-100 dark:bg-primary-900']}
             />
         </div>
 		{gridItems.map((item:CollectionKey) => (
-            item.slug == 'about' ? <GridItem item={item} id="about" order={0} /> : <GridItem item={item} order={1} />
+            item.slug == 'about' ? <GridItem item={item} id="about" order='1' /> : <GridItem item={item} order='2' />
             )
         )}
 	</div>
 </Layout>
+
+<style>
+    .profile-order {
+        @apply md:order-2;
+    }
+</style>

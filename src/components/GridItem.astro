@@ -4,16 +4,16 @@ import { Icon } from 'astro-icon/components'
 
 interface Props {
     item: CollectionEntry<'grid'>,
-    order?: number,
+    order?: string,
     id?: string,
 }
 
-const { item, order='2', id='' } = Astro.props;
+const { item, order='1', id='' } = Astro.props;
 const entry:CollectionEntry<'grid'> = await getEntry('grid', item.slug);
 const { Content } = await entry.render();
 
 let twSpan:string = `custom-span-${item.data.span}`;
-let twOrder:string = `order-${order}`;
+let twOrder:string = `custom-order-${order}`;
 ---
 
 <div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-primary-100 dark:bg-primary-900', twOrder, twSpan]}>
@@ -26,7 +26,7 @@ let twOrder:string = `order-${order}`;
     </div>
 </div>
 
-<style>
+<style define:vars={{ twOrder }}>
     .custom-span-1 {
         @apply col-span-1 md:col-span-1
     }
@@ -37,5 +37,17 @@ let twOrder:string = `order-${order}`;
 
     .custom-span-3 {
         @apply col-span-1 md:col-span-3
+    }
+
+    .custom-order-1 {
+        @apply order-1
+    }
+
+    .custom-order-2 {
+        @apply order-2
+    }
+
+    .custom-order-3 {
+        @apply order-3
     }
 </style>

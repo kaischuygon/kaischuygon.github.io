@@ -16,8 +16,8 @@ export default {
 			boxShadow: {
 				'outline': `2px 2px ${primary['950']}`,
 				'outline-dark': `2px 2px ${primary['50']}`,
-				'outline-accent': `2px 2px var(--ACCENT)`,
-				'outline-hover': '4px 4px'
+				'outline-accent': '2px 2px var(--ACCENT)',
+				'outline-hover': `4px 4px`,
 			},
 			fontFamily: {
 				header: ['Noto Sans Display', defaultTheme.fontFamily.sans],

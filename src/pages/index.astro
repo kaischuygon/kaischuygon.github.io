@@ -1,24 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Pill from '../components/Pill.astro'
+import {Icon} from 'astro-icon/components'
 ---
 
 <Layout>
-	<div class="flex flex-col justify-center h-full max-w-screen-md mx-auto gap-4 p-4">
+	<div class="flex flex-col gap-4 mx-auto w-full md:w-[750px] h-full justify-center">
 		<div class="font-code text-primary-500">👋🏽 Hello! I'm </div>
-		<div class="font-code break-all font-semibold text-accent text-4xl md:text-6xl lg:text-7xl xl:text-8xl"><span id="typing">Kai Schuyler Gonzalez</span><span id="cursor">_</span></div>
-		<div class="font-code text-primary-500">a software engineer 💻 and designer ✏️ based in Colorado.</div>
+		<div class="font-code font-semibold text-accent text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+			<span id="typing" class="break-word">Kai Schuyler Gonzalez</span>
+			<span id="cursor" class="absolute">_</span>
+		</div>
+		<div class="font-code text-primary-500">a software engineer 💻 and designer ✏️ based in Boulder, Colorado 🦬 🏔️.</div>
+		<div class="flex justify-end">
+			<a href="/about" class="flex justify-end p-4">
+				<Pill hover={true}>about me <Icon name="bx:right-arrow-alt" /></Pill>
+			</a>
+			<a href="/work" class="flex justify-end p-4">
+				<Pill hover={true}>my work <Icon name="bx:right-arrow-alt" /></Pill>
+			</a>
+		</div>
 	</div>
 </Layout>
 
 <script is:inline>
-	window.onload = function() {
-		var text = 'Kai Schuyler Gonzalez';
+	document.addEventListener('astro:page-load', () => {
+		var typingDiv = document.getElementById('typing');
+		var text = typingDiv.textContent;
 		var i = 0;
 		let typingSpeed = 100;
 		
 		function type() {
-			var typingDiv = document.getElementById('typing');
 			if(i <= text.length) {
 				typingDiv.textContent = text.slice(0, i++);
 			}
@@ -27,13 +39,13 @@ import Pill from '../components/Pill.astro'
 
 		function blinkCursor() {
 			var cursor = document.getElementById('cursor');
-			cursor.style.display = cursor.style.display === 'none' ? '' : 'none';
+			cursor.classList.toggle('opacity-0');
 			setTimeout(blinkCursor, 500);
 		}
 	
 		type();
+		
 		// wait for typing to finish before blinking cursor
 		setTimeout(blinkCursor, text.length * typingSpeed);
-		// setInterval(blinkCursor, cursorBlinkSpeed);
-	}
+	});
 </script>

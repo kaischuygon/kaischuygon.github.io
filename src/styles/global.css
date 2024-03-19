@@ -16,5 +16,9 @@ a {
 }
 
 .brutalist-outline-hover:hover {
-	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover;
+	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-primary-950 dark:shadow-primary-50;
+}
+
+.brutalist-outline-hover-accent:hover {
+	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-accent;
 }
