@@ -24,28 +24,34 @@ import {Icon} from 'astro-icon/components'
 </Layout>
 
 <script is:inline>
+	// ensure only on index page
 	document.addEventListener('astro:page-load', () => {
 		var typingDiv = document.getElementById('typing');
-		var text = typingDiv.textContent;
-		var i = 0;
-		let typingSpeed = 100;
-		
-		function type() {
-			if(i <= text.length) {
-				typingDiv.textContent = text.slice(0, i++);
+		var cursor = document.getElementById('cursor');
+		if (typingDiv && cursor) {
+			var text = typingDiv.textContent || '';
+			var i = 0;
+			let typingSpeed = 100; 
+			let blinkCount = 0;
+			
+			function type() {
+				if(i <= text.length) {
+					typingDiv.textContent = text.slice(0, i++);
+				}
+				setTimeout(type, typingSpeed);
 			}
-			setTimeout(type, typingSpeed);
-		}
-
-		function blinkCursor() {
-			var cursor = document.getElementById('cursor');
-			cursor.classList.toggle('opacity-0');
-			setTimeout(blinkCursor, 500);
-		}
 	
-		type();
+			function blinkCursor() { // blink 5 times
+				if(blinkCount > 10) return;
+				cursor.classList.toggle('opacity-0');
+				setTimeout(blinkCursor, 500);
+				blinkCount++;
+			}
 		
-		// wait for typing to finish before blinking cursor
-		setTimeout(blinkCursor, text.length * typingSpeed);
+			type();
+			
+			// wait for typing to finish before blinking cursor
+			setTimeout(blinkCursor, text.length * typingSpeed);
+		}
 	});
 </script>
