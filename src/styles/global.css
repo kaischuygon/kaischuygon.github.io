@@ -22,3 +22,7 @@ a {
 .brutalist-outline-hover-accent:hover {
 	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-accent;
 }
+
+option {
+	@apply text-primary-950;
+}
