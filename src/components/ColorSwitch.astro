@@ -66,19 +66,21 @@ const defaultColor = Object.entries(colorArray)[new Date().getDay() % Object.key
 </div>
 
 <script is:inline define:vars={{ colorArray, defaultColor }}>
-    function changeAccent() {
-        // Split the color data into an array
-        const newAccent = document.getElementById('colorSwitch').value
-        if (newAccent === 'daily') {
-            document.documentElement.style.setProperty('--ACCENT', defaultColor)
-            localStorage.setItem('accent', 'daily')
-            return
-        } 
-        document.documentElement.style.setProperty('--ACCENT', newAccent)
+    document.addEventListener('astro:after-swap', () => {
+        function changeAccent() {
+            // Split the color data into an array
+            const newAccent = document.getElementById('colorSwitch').value
+            if (newAccent === 'daily') {
+                document.documentElement.style.setProperty('--ACCENT', defaultColor)
+                localStorage.setItem('accent', 'daily')
+                return
+            } 
+            document.documentElement.style.setProperty('--ACCENT', newAccent)
+            
+            // Save the new accent color to local storage
+            localStorage.setItem('accent', newAccent)
+        }
         
-        // Save the new accent color to local storage
-        localStorage.setItem('accent', newAccent)
-    }
-    
-    document.getElementById('colorSwitch').addEventListener('change', changeAccent)
+        document.getElementById('colorSwitch').addEventListener('change', changeAccent)
+    });
 </script>
