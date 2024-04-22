@@ -135,7 +135,44 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"grid": {
+		"blog": {
+"25-mobile-design-principles.md": {
+	id: "25-mobile-design-principles.md";
+  slug: "25-mobile-design-principles";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"android-picross.mdx": {
+	id: "android-picross.mdx";
+  slug: "android-picross";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"design-principles.md": {
+	id: "design-principles.md";
+  slug: "design-principles";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"iOS-triadic-color.mdx": {
+	id: "iOS-triadic-color.mdx";
+  slug: "ios-triadic-color";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"making-my-own-wordle.mdx": {
+	id: "making-my-own-wordle.mdx";
+  slug: "making-my-own-wordle";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+};
+"grid": {
 "about.md": {
 	id: "about.md";
   slug: "about";

@@ -1,25 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Pill from '../components/Pill.astro'
-import {Icon} from 'astro-icon/components'
 ---
 
 <Layout>
 	<div class="flex flex-col gap-4 mx-auto w-full md:w-[750px] h-full justify-center">
-		<div class="font-code text-primary-500">👋🏽 Hello! I'm </div>
+		<div class="font-code text-primary-500">👋🏼 Hello! I'm </div>
 		<div class="font-code font-semibold text-accent text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
 			<span id="typing" class="break-word">Kai Schuyler Gonzalez</span>
 			<span id="cursor" class="absolute">_</span>
 		</div>
 		<div class="font-code text-primary-500">a software engineer 💻 and designer ✏️ based in Boulder, Colorado 🦬 🏔️.</div>
-		<div class="flex justify-end">
-			<a href="/about" class="flex justify-end p-4">
-				<Pill hover={true}>about me <Icon name="bx:right-arrow-alt" /></Pill>
-			</a>
-			<a href="/work" class="flex justify-end p-4">
-				<Pill hover={true}>my work <Icon name="bx:right-arrow-alt" /></Pill>
-			</a>
-		</div>
 	</div>
 </Layout>
 

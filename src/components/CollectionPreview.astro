@@ -3,17 +3,17 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets'
 
 interface Props {
-	project: CollectionEntry<'work'>
+	item: CollectionEntry<'work'>;
 }
 
-const { project } = Astro.props;
+const { item } = Astro.props;
 ---
 
-<a class="grid w-full overflow-hidden aspect-video mx-auto" href={`/work/${project.slug}`}>
-	<span class:list={["absolute z-10 m-2 p-2 font-code text-xl lg:text-2xl font-bold brutalist-outline-accent dark:text-primary-50 text-primary-950 dark:bg-primary-800 bg-primary-200"]}>{project.data.title}</span>
+<a class="grid w-full overflow-hidden aspect-video mx-auto" href={`/work/${item.slug}`}>
+	<span class:list={["absolute z-10 m-2 p-2 font-code text-xl lg:text-2xl font-bold brutalist-outline-accent dark:text-primary-50 text-primary-950 dark:bg-primary-800 bg-primary-200"]}>{item.data.title}</span>
 	<Image 
-		src={project.data.img} 
-		alt={project.data.img_alt || ''}
+		src={item.data.img} 
+		alt={item.data.img_alt || ''}
 		width=1920
 		height=1080
 		loading="lazy" decoding="async" 

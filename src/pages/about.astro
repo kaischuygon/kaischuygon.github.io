@@ -1,5 +1,5 @@
 ---
-import { CollectionKey, getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 
@@ -23,7 +23,7 @@ gridItems.sort(function (a:CollectionEntry<'grid'>, b:CollectionEntry<'grid'>) {
                 class:list={['object-cover h-full mx-auto rounded bg-primary-100 dark:bg-primary-900']}
             />
         </div>
-		{gridItems.map((item:CollectionKey) => (
+		{gridItems.map((item) => (
             item.slug == 'about' ? <GridItem item={item} id="about" order='1' /> : <GridItem item={item} order='2' />
             )
         )}
