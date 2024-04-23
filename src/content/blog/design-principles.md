@@ -4,7 +4,7 @@ publishDate: 2021-09-13 00:00:00
 # img: /assets/choose-your-future.png
 # img_alt: A screenshot of the choose your future application
 description: |
-  Reviewing Apple's video on essential design principles
+  Reviewing Apple's video on essential design principles.
 tags:
   - Design
   - App Dev

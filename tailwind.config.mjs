@@ -20,8 +20,8 @@ export default {
 				'outline-hover': `4px 4px`,
 			},
 			fontFamily: {
-				header: ['Noto Sans Display', defaultTheme.fontFamily.sans],
-				body: ['Noto Sans', defaultTheme.fontFamily.body],
+				header: ['Space Grotesk', defaultTheme.fontFamily.sans],
+				body: ['Poly', defaultTheme.fontFamily.serif],
 				code: ['JetBrains Mono', defaultTheme.fontFamily.mono],
 				system: [defaultTheme.fontFamily.system],
 			},

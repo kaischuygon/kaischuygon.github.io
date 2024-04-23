@@ -4,7 +4,7 @@ publishDate: 2021-10-21 00:00:00
 # img: /assets/choose-your-future.png
 # img_alt: A screenshot of the choose your future application
 description: |
-  Thoughts "Principles of Mobile App Design" by Jenny Gove
+  Thoughts "Principles of Mobile App Design" by Jenny Gove.
 tags:
   - UX design
 ---

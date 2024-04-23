@@ -5,9 +5,9 @@ import { Icon } from 'astro-icon/components';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: '/about', href: '/about' },
-	{ label: '/work', href: '/work' },
-	{ label: '/blog', href: '/blog' },
+	{ label: 'about', href: '/about' },
+	{ label: 'work', href: '/work' },
+	{ label: 'blog', href: '/blog' },
 	// { label: '/recipes', href: '/recipes' },
 ];
 
@@ -35,6 +35,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 		</a>
 		{
 			textLinks.map(({ label, href }) => (
+				<span class="text-primary-300 dark:text-primary-700 font-extralight">/</span>
 				<a aria-current={Astro.url.pathname === href} 
 					class:list={[
 					"flex-0 text-primary-400 dark:text-primary-600 hover:brightness-75",
