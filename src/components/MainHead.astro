@@ -6,21 +6,34 @@ import config from '../../tailwind.config.mjs';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	image: string;
 	keywords?: string | undefined;
 }
 
-const { title, description, keywords } = Astro.props;
+const { title, description, image, keywords } = Astro.props;
 const accent = config.theme.extend.colors.accent;
 ---
 
 <SEO
 	title={title}
 	description={description}
-	canonical="https://kaischuyler.com"
-	charset='UTF-8'
+	openGraph={{
+		basic: {
+			title: `${title} | Kai Schuyler`,
+			type: "website",
+			image: image,
+		},
+		optional: {
+			locale: "en_US",
+			description: description,
+			siteName: "kaischuyler.com",
+		},
+	}}
 	twitter={{
 		creator: "@kaischuyler"
 	}}
+	charset='UTF-8'
+	canonical="https://kaischuyler.com"
 	extend={{
 		// extending the default link tags
 		link: [

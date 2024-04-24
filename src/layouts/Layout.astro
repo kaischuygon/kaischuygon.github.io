@@ -7,18 +7,19 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
-import colors from 'tailwindcss/colors'
 
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	image?: string | undefined;
 	keywords?: string | undefined;
 }
 
 const { 
 	title, 
 	description="The personal site and portfolio of Kai Schuyler Gonzalez",
-	keywords="developer designer web development design computer science portfolio zephy code kai schuyler gonzalez"
+	image="/assets/og-image.png",
+	keywords="developer designer web development dev design computer science portfolio zephy code kai schuyler gonzalez"
 } = Astro.props;
 
 const makeTitle = title ? title : 'Kai Schuyler Gonzalez';
@@ -26,7 +27,7 @@ const makeTitle = title ? title : 'Kai Schuyler Gonzalez';
 
 <html lang="en">
 	<head>
-		<MainHead title={makeTitle} description={description} keywords={keywords} />
+		<MainHead title={makeTitle} image={image} description={description} keywords={keywords} />
 		<ViewTransitions />
 	</head>
 	<body class="font-body bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-200 scroll-smooth leading-6 mx-auto">

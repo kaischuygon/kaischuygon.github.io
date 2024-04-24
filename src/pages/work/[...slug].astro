@@ -21,4 +21,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<SlugLayout entry={entry}>
+<SlugLayout entry={entry} image={entry.data.img}>

@@ -10,14 +10,15 @@ import { Image } from 'astro:assets'
 
 interface Props {
 	entry: CollectionEntry<'work'|'blog'>,
+	image?: string
 }
 
-const { entry } = Astro.props;
+const { entry, image } = Astro.props;
 const isBlog = entry.collection === 'blog';
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title} description={entry.data.description}>
+<Layout title={entry.data.title} description={entry.data.description} image={image ? image : undefined}>
 	<div class="mx-auto">
 		<a href={entry.collection === 'work' ? '/work' : '/blog'} class="flex items-center mb-4 font-header">
 			<Icon name="bx:bx-arrow-back" class="inline-block text-xl mr-2" />	
