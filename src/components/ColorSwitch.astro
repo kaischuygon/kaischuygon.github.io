@@ -26,13 +26,27 @@ const colorArray = {
 const defaultColor = Object.entries(colorArray)[new Date().getDay() % Object.keys(colorArray).length][1]
 ---
 
-<script define:vars={{ defaultColor }}>
+<script is:inline define:vars={{ defaultColor }}>
+    function changeAccent() {
+        // Split the color data into an array
+        const newAccent = document.querySelector('#colorSwitch').value
+        if (newAccent === 'daily') {
+            document.documentElement.style.setProperty('--ACCENT', defaultColor)
+            localStorage.setItem('accent', 'daily')
+            return
+        } 
+        document.documentElement.style.setProperty('--ACCENT', newAccent)
+        
+        // Save the new accent color to local storage
+        localStorage.setItem('accent', newAccent)
+    }
+
 	// set the default color if not in local storage
 	document.addEventListener('astro:page-load', () => {
 		if (!localStorage.getItem('accent')) {
 			localStorage.setItem('accent', 'daily');
 			document.documentElement.style.setProperty('--ACCENT', defaultColor);
-            document.getElementById('colorSwitch').value = defaultColor;
+            document.getElementById('colorSwitch').value = 'daily';
 		} else {
             // load the color from local storage
 			document.documentElement.style.setProperty('--ACCENT', localStorage.getItem('accent'));
@@ -42,16 +56,13 @@ const defaultColor = Object.entries(colorArray)[new Date().getDay() % Object.key
             }
             document.getElementById('colorSwitch').value = localStorage.getItem('accent');
 		}
+        document.querySelector('#colorSwitch').addEventListener('change', changeAccent)
 	});
-	// Add “loaded” class once the document has completely loaded.
-	addEventListener('astro:page-load', () => document.documentElement.classList.add('loaded'));
-</script>
 
-<style define:vars={{ defaultColor }} is:global>
-	:root {
-		--ACCENT: var(--defaultColor)
-	}
-</style>
+    document.addEventListener('astro:after-swap', () => {
+        document.querySelector('#colorSwitch').addEventListener('change', changeAccent)
+    });
+</script>
 
 <div class="inline-flex items-center brutalist-outline-accent brutalist-outline-hover-accent h-full p-2 text-accent">
     <Icon name="bx:bxs-palette" class="text-accent text-xl mr-2" />
@@ -65,23 +76,3 @@ const defaultColor = Object.entries(colorArray)[new Date().getDay() % Object.key
         }
     </select>
 </div>
-
-<script is:inline define:vars={{ colorArray, defaultColor }}>
-    document.addEventListener('astro:after-swap', () => {
-        function changeAccent() {
-            // Split the color data into an array
-            const newAccent = document.getElementById('colorSwitch').value
-            if (newAccent === 'daily') {
-                document.documentElement.style.setProperty('--ACCENT', defaultColor)
-                localStorage.setItem('accent', 'daily')
-                return
-            } 
-            document.documentElement.style.setProperty('--ACCENT', newAccent)
-            
-            // Save the new accent color to local storage
-            localStorage.setItem('accent', newAccent)
-        }
-        
-        document.getElementById('colorSwitch').addEventListener('change', changeAccent)
-    });
-</script>
