@@ -16,11 +16,11 @@ a {
 }
 
 .brutalist-outline-hover:hover {
-	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-primary-950 dark:shadow-primary-50;
+	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-accent border-accent;
 }
 
 .brutalist-outline-hover-accent:hover {
-	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-accent;
+	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-primary-950 dark:shadow-primary-50 border-primary-950 dark:border-primary-50;
 }
 
 option {

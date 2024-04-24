@@ -9,10 +9,11 @@ import Pill from '../components/Pill.astro';
 import { Image } from 'astro:assets'
 
 interface Props {
-	entry: CollectionEntry<'work'|'blog'>;
+	entry: CollectionEntry<'work'|'blog'>,
 }
 
 const { entry } = Astro.props;
+const isBlog = entry.collection === 'blog';
 const { Content } = await entry.render();
 ---
 
@@ -22,15 +23,22 @@ const { Content } = await entry.render();
 			<Icon name="bx:bx-arrow-back" class="inline-block text-xl mr-2" />	
 			Back to {entry.collection === 'work' ? 'work' : 'blog'}
 		</a>
-		<div class=" lg:flex-row gap-4 mb-4 bg-primary-100 dark:bg-primary-900 brutalist-outline-accent max-w-screen-md">
+		<div class=" lg:flex-row gap-4 mb-4 bg-primary-100 dark:bg-primary-900 brutalist-outline-accent w-full md:w-[768px]">
 			<header class="p-4">
+				{isBlog ? <time class="text-primary-600 dark:text-primary-400">{
+					new Date(entry.data.publishDate).toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})
+				}</time> : null}
 				<h2 class="font-header text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-800 dark:text-primary-200">{entry.data.title}</h2>
 				<p class="text-primary-600 dark:text-primary-400">{entry.data.description}</p>
 				<div class="flex gap-4 mt-4">
 					{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 				</div>
 			</header>
-			<div class="p-2 prose prose-zinc dark:prose-invert mx-auto">
+			<div class="p-2 prose prose-zinc dark:prose-invert mx-auto max-w-none">
 				{entry.data.img ?
 					<div class="">
 						<Image 

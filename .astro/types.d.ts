@@ -136,37 +136,44 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"25-mobile-design-principles.md": {
-	id: "25-mobile-design-principles.md";
-  slug: "25-mobile-design-principles";
+"2021/10/25-mobile-design-principles.md": {
+	id: "2021/10/25-mobile-design-principles.md";
+  slug: "2021/10/25-mobile-design-principles";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"android-picross.mdx": {
-	id: "android-picross.mdx";
-  slug: "android-picross";
+"2021/10/iOS-triadic-color.mdx": {
+	id: "2021/10/iOS-triadic-color.mdx";
+  slug: "2021/10/ios-triadic-color";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
-"design-principles.md": {
-	id: "design-principles.md";
-  slug: "design-principles";
+"2021/11/android-picross.mdx": {
+	id: "2021/11/android-picross.mdx";
+  slug: "2021/11/android-picross";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021/9/design-principles.md": {
+	id: "2021/9/design-principles.md";
+  slug: "2021/9/design-principles";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"iOS-triadic-color.mdx": {
-	id: "iOS-triadic-color.mdx";
-  slug: "ios-triadic-color";
+"2024/1/making-my-own-wordle.mdx": {
+	id: "2024/1/making-my-own-wordle.mdx";
+  slug: "2024/1/making-my-own-wordle";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
-"making-my-own-wordle.mdx": {
-	id: "making-my-own-wordle.mdx";
-  slug: "making-my-own-wordle";
+"2024/4/daily-accent-color.mdx": {
+	id: "2024/4/daily-accent-color.mdx";
+  slug: "2024/4/daily-accent-color";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

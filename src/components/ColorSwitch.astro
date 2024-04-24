@@ -34,6 +34,7 @@ const defaultColor = Object.entries(colorArray)[new Date().getDay() % Object.key
 			document.documentElement.style.setProperty('--ACCENT', defaultColor);
             document.getElementById('colorSwitch').value = defaultColor;
 		} else {
+            // load the color from local storage
 			document.documentElement.style.setProperty('--ACCENT', localStorage.getItem('accent'));
             if (localStorage.getItem('accent') === 'daily') {
                 document.getElementById('colorSwitch').value = 'daily';

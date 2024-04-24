@@ -1,0 +1,48 @@
+---
+// Starting point: https://blog.otterlord.dev/posts/astro-search/
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Search | Kai Schuyler Gonzalez" description="Search kaischuyler.com blogs and projects">
+	<div class="flex flex-col gap-4 w-full md:w-[768px] mx-auto items-center mb-4">
+		<h1 class="text-4xl font-header md:text-6xl text-accent font-bold">Search</h1>
+		<p class="text-lg font-body md:text-2xl text-primary-800 dark:text-primary-200 font-light">Search for my work, blog posts, or about me.	</p>
+		
+		<input id="search" type="text" placeholder="Search..." class="p-2 font-header brutalist-outline bg-primary-100 dark:bg-primary-900 focus-visible:outline-none w-full">
+	</div>
+
+	<div id="results" class="flex flex-col gap-2 w-full md:w-[768px] mx-auto" />
+</Layout>
+
+<script is:inline>
+	document.querySelector('#search')?.addEventListener('input', async (e) => {
+	  // only load the pagefind script once
+	  if (e.target.dataset.loaded !== 'true') {
+		e.target.dataset.loaded = 'true'
+		// load the pagefind script
+		window.pagefind = await import("/pagefind/pagefind.js");
+	  }
+  
+	  // search the index using the input value
+	  const search = await window.pagefind.search(e.target.value)
+  
+	  // clear the old results
+	  document.querySelector('#results').innerHTML = ''
+  
+	  // add the new results
+	  for (const result of search.results) {
+		const data = await result.data()
+		document.querySelector('#results').innerHTML += `
+		  <a href="${data.url}" class="p-2 brutalist-outline brutalist-outline-hover text-primary-900 dark:text-primary-100">
+			<h3 class="font-header text-lg text-accent">${data.meta.title}</h3>
+			<p class="font-body text-sm">${data.excerpt}</p>
+		  </a>`
+	  }
+	})
+  </script>
+
+  <style is:inline>
+	mark {
+		background-color: var(--ACCENT);
+	}
+  </style>
