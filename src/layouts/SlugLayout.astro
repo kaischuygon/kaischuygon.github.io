@@ -19,7 +19,7 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title} description={entry.data.description} image={image ? image : undefined}>
-	<div class="mx-auto">
+	<div class="mx-auto md:w-[768px]">
 		<a href={entry.collection === 'work' ? '/work' : '/blog'} class="flex items-center mb-4 font-header">
 			<Icon name="bx:bx-arrow-back" class="inline-block text-xl mr-2" />	
 			Back to {entry.collection === 'work' ? 'work' : 'blog'}

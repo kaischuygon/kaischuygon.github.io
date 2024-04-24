@@ -26,3 +26,7 @@ a {
 option {
 	@apply text-primary-950;
 }
+
+mark {
+	@apply bg-accent;
+}
