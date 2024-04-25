@@ -15,4 +15,6 @@ A picross puzzle, also known as a Nonogram, is a picture logic puzzle in which c
 
 Typicially, this type of puzzle reveals a hidden image once completed. Instead, this version of the game is "endless" because each puzzle is randomly generated.
 
+[View the blogpost](/blog/2021/11/android-picross)
+
 [View on GitHub](https://github.com/kaischuygon/mobile-app-dev/tree/master/EndlessPicross)
