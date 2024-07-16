@@ -222,63 +222,70 @@ declare module 'astro:content' {
   collection: "grid";
   data: InferEntrySchema<"grid">
 } & { render(): Render[".md"] };
+"work.md": {
+	id: "work.md";
+  slug: "work";
+  body: string;
+  collection: "grid";
+  data: InferEntrySchema<"grid">
+} & { render(): Render[".md"] };
 };
-"work": {
+"projects": {
 "choose-our-future.md": {
 	id: "choose-our-future.md";
   slug: "choose-our-future";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "cosmos-pizza.md": {
 	id: "cosmos-pizza.md";
   slug: "cosmos-pizza";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "endless-picross.md": {
 	id: "endless-picross.md";
   slug: "endless-picross";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "glTF-viewer.md": {
 	id: "glTF-viewer.md";
   slug: "gltf-viewer";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "history-through-battleship.md": {
 	id: "history-through-battleship.md";
   slug: "history-through-battleship";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "kino-wtf.mdx": {
 	id: "kino-wtf.mdx";
   slug: "kino-wtf";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".mdx"] };
 "oori-website.md": {
 	id: "oori-website.md";
   slug: "oori-website";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "triadic-color-generator.md": {
 	id: "triadic-color-generator.md";
   slug: "triadic-color-generator";
   body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
 

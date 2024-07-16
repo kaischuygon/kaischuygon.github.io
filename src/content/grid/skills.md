@@ -40,7 +40,7 @@ span: 2
     - C/C++
     - C#/.NET -->
 
-Non-comprehensive list of tools I have professional experience working with. 
+My most list of tools I have professional experience working with. 
 
 <table>
   <tr>
@@ -54,6 +54,10 @@ Non-comprehensive list of tools I have professional experience working with.
   <tr>
     <th>Mobile</th>
     <td>iOS SDK, Swift, Android, Kotlin, Java, React Native, Flutter</td>
+  </tr>
+  <tr>
+    <th>Languages</th>
+    <td>English (fluent), Spanish (fluent), French (B1)
   </tr>
   <tr>
     <th>Additional</th>

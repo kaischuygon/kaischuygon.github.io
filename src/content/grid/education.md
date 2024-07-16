@@ -9,5 +9,5 @@ icon: bx:bxs-graduation
   <dd>B.S. in Computer Science, minor in <a href="https://www.colorado.edu/engineering/academics/degree-programs/creative-technology-design">Creative Technology and Design</a></dd>
 
   <dt>Uppsala University <em class="font-light">2021</em></dt>
-  <dd>Computer Graphics study abroad program</dd>
+  <dd><a href='https://www.uu.se/en/study/course?query=1MD150'>Computer Graphics</a> study abroad program</dd>
 </dl>

@@ -30,3 +30,7 @@ option {
 mark {
 	@apply bg-accent;
 }
+
+.astro-code {
+	@apply !overflow-x-scroll !w-full;
+}
