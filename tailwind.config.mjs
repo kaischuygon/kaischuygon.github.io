@@ -1,21 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from 'tailwindcss/defaultTheme'
 import typography from '@tailwindcss/typography'
-import colors from 'tailwindcss/colors'
-
-const primary = colors.zinc;
+import daisyui from 'daisyui';
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			colors: {
-				primary: primary,
-				accent: 'var(--ACCENT)',
-			},
+			// colors: {
+			// 	primary: primary,
+			// 	accent: 'var(--ACCENT)',
+			// },
 			boxShadow: {
-				'outline': `2px 2px ${primary['950']}`,
-				'outline-dark': `2px 2px ${primary['50']}`,
+				'outline': `2px 2px var(--BASE)`,
 				'outline-accent': '2px 2px var(--ACCENT)',
 				'outline-hover': `4px 4px`,
 			},
@@ -50,5 +47,41 @@ export default {
 		},
 	},
 	darkMode: 'class',
-	plugins: [typography]
+	plugins: [typography, daisyui],
+	daisyui: {
+		themes: [
+			"light",
+			"dark",
+			"cupcake",
+			"bumblebee",
+			"emerald",
+			"corporate",
+			"synthwave",
+			"retro",
+			"cyberpunk",
+			"valentine",
+			"halloween",
+			"garden",
+			"forest",
+			"aqua",
+			"lofi",
+			"pastel",
+			"fantasy",
+			"wireframe",
+			"black",
+			"luxury",
+			"dracula",
+			"cmyk",
+			"autumn",
+			"business",
+			"acid",
+			"lemonade",
+			"night",
+			"coffee",
+			"winter",
+			"dim",
+			"nord",
+			"sunset",
+		],
+	}
 }

@@ -1,6 +1,6 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
-import ColorSwitch from './ColorSwitch.astro';
+// import ThemeToggle from './DarkToggle.astro';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 import { Icon } from 'astro-icon/components';
 
 /** Main menu items */
@@ -24,7 +24,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 	<div class="flex justify-center items-center gap-2 md:gap-4">
 		<a aria-current={Astro.url.pathname === "/"} 
 			class:list={[
-			"flex-0 text-primary-400 dark:text-primary-600 hover:brightness-75",
+			"flex-0 text-primary hover:brightness-75",
 				{
 					active:
 						Astro.url.pathname === "/"
@@ -35,10 +35,10 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 		</a>
 		{
 			textLinks.map(({ label, href }) => (
-				<span class="text-primary-300 dark:text-primary-700 font-extralight">/</span>
+				<span class="text-neutral-content font-extralight">/</span>
 				<a aria-current={Astro.url.pathname === href} 
 					class:list={[
-					"flex-0 text-primary-400 dark:text-primary-600 hover:brightness-75",
+					"flex-0 text-primary hover:brightness-75",
 						{
 							active:
 								Astro.url.pathname === href ||
@@ -63,8 +63,8 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 		}
 	</div>
 	<div class="flex justify-center items-center h-full gap-2 md:gap-4 text-sm md:text-md">
-		<ThemeToggle class="flex-0"/>
-		<ColorSwitch class="flex-0" />
+		<!-- <ThemeToggle class="flex-0"/> -->
+		<ThemeSwitcher class="flex-0" />
 	</div>
 </nav>
 

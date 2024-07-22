@@ -1,0 +1,69 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="inline-flex items-center brutalist-outline-accent brutalist-outline-hover-accent h-full p-2 text-accent">
+	<Icon name="bx:bx-sun" class="text-xl mr-2 hidden" id="sun"/>
+	<Icon name="bx:bx-moon" class="text-xl mr-2 hidden" id="moon"/>
+	<Icon name="bx:bx-laptop" class="text-xl mr-2 hidden" id="laptop"/>
+	<select title="Change color scheme" name="themeSwitch" id="themeSwitch" class="bg-transparent">
+		<option value="system">system</option>
+		<option value="dark">dark</option>
+		<option value="light">light</option>
+	</select>
+</div>
+
+<style>
+  :global(.dark) {
+    color-scheme: dark;
+  }
+</style>
+
+<script is:inline>
+  function updateTheme(value) {
+    switch(value) {
+      case "dark":
+        document.getElementById("moon").classList.replace("hidden", "block");
+        document.getElementById("sun").classList.replace("block", "hidden");
+        document.getElementById("laptop").classList.replace("block", "hidden");
+        break;
+      case "light":
+        document.getElementById("sun").classList.replace("hidden", "block");
+        document.getElementById("moon").classList.replace("block", "hidden");
+        document.getElementById("laptop").classList.replace("block", "hidden");
+        break;
+      case "system":
+        document.getElementById("laptop").classList.replace("hidden", "block");
+        document.getElementById("sun").classList.replace("block", "hidden");
+        document.getElementById("moon").classList.replace("block", "hidden");
+        break;
+    }
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+    const newTheme = value === "system" ? systemTheme : value;
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem("theme", value);
+  }
+  
+  const select = document.getElementById("themeSwitch");
+  const theme = localStorage.getItem("theme");
+  select.value = theme !== null ? theme : "system";
+  updateTheme(select.value);
+
+  select.addEventListener("change", () => {
+    updateTheme(select.value);
+  });
+
+  document.addEventListener('astro:after-swap', () => {
+    const theme = localStorage.getItem("theme");
+    const select = document.getElementById("themeSwitch");
+    select.value = theme !== null ? theme : "system";
+    updateTheme(theme !== null ? theme : "system");
+
+    select.addEventListener("change", () => {
+      updateTheme(select.value);
+    });
+  });
+</script>

@@ -1,0 +1,78 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const themes:string[] = [
+    "light",
+    "dark",
+    "cupcake",
+    "bumblebee",
+    "emerald",
+    "corporate",
+    "synthwave",
+    "retro",
+    "cyberpunk",
+    "valentine",
+    "halloween",
+    "garden",
+    "forest",
+    "aqua",
+    "lofi",
+    "pastel",
+    "fantasy",
+    "wireframe",
+    "black",
+    "luxury",
+    "dracula",
+    "cmyk",
+    "autumn",
+    "business",
+    "acid",
+    "lemonade",
+    "night",
+    "coffee",
+    "winter",
+    "dim",
+    "nord",
+    "sunset"
+]
+---
+
+<script is:inline>
+    function changeTheme() {
+        const newTheme = document.querySelector('#themePicker').value
+        
+        document.documentElement.setAttribute('data-theme', newTheme)
+        
+        // Save the new theme to local storage
+        localStorage.setItem('theme', newTheme)
+    }
+
+	// set the default color if not in local storage
+	document.addEventListener('astro:page-load', () => {
+		if (!localStorage.getItem('theme')) {
+            // Set to light or dark depending on users preference
+            const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+			localStorage.setItem('theme', defaultTheme);
+            document.documentElement.setAttribute('data-theme', defaultTheme)
+            document.getElementById('themePicker').value = defaultTheme;
+		} else {
+            // load the color from local storage
+			document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+            document.getElementById('themePicker').value = localStorage.getItem('theme');
+		}
+        document.querySelector('#themePicker').addEventListener('change', changeTheme)
+	});
+
+    document.addEventListener('astro:after-swap', () => {
+        document.querySelector('#themePicker').addEventListener('change', changeTheme)
+    });
+</script>
+
+<div class="inline-flex items-center brutalist-outline-accent brutalist-outline-hover-accent h-full p-2 text-accent">
+    <Icon name="bx:bxs-palette" class="text-accent text-xl mr-2" />
+    <select title="Change theme" name="themePicker" id="themePicker" class="bg-transparent">
+        {themes.map(theme => (
+            <option value={theme}>{theme}</option>
+        ))}
+    </select>
+</div>

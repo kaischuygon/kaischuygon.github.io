@@ -6,6 +6,6 @@ interface Props {
 const { hover=false } = Astro.props;
 ---
 
-<div class:list={['flex justify-center items-center p-2 gap-1 brutalist-outline bg-accent text-primary-950 font-code', hover ? 'brutalist-outline-hover' : '']}>
+<div class:list={['flex justify-center items-center p-2 gap-1 brutalist-outline-accent bg-neutral text-neutral-content font-code', hover ? 'brutalist-outline-hover' : '']}>
     <slot />
 </div>

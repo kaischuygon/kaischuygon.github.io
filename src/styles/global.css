@@ -4,15 +4,15 @@
 @tailwind utilities;
 /* Global variables */
 a {
-	@apply text-accent fill-accent;
+	@apply text-secondary fill-secondary;
 }
 
 .brutalist-outline {
-	@apply shadow-outline dark:shadow-outline-dark border-[1px] border-primary-950 dark:border-primary-50;
+	@apply shadow-outline border-[1px] border-accent;
 }
 
 .brutalist-outline-accent {
-	@apply shadow-outline-accent border-[1px] border-accent;
+	@apply shadow-outline-accent shadow-accent border-[1px] border-accent;
 }
 
 .brutalist-outline-hover:hover {
@@ -20,17 +20,13 @@ a {
 }
 
 .brutalist-outline-hover-accent:hover {
-	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover shadow-primary-950 dark:shadow-primary-50 border-primary-950 dark:border-primary-50;
+	@apply -translate-x-[2px] -translate-y-[2px] shadow-outline-hover;
 }
 
 option {
-	@apply text-primary-950;
+	@apply text-base;
 }
 
 mark {
 	@apply bg-accent;
-}
-
-.astro-code {
-	@apply !overflow-x-scroll !w-full;
 }

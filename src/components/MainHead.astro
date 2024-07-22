@@ -11,7 +11,6 @@ interface Props {
 }
 
 const { title, description, image, keywords } = Astro.props;
-const accent = config.theme.extend.colors.accent;
 ---
 
 <SEO
@@ -52,7 +51,7 @@ const accent = config.theme.extend.colors.accent;
 		// extending the default meta tags
 		meta: [
 			{ name: "viewport", content: "width=device-width" },
-			{ name: "theme-color", content: accent['400'] },
+			// { name: "theme-color", content: accent['400'] },
 			{ name: "description", content: description },
 			{ name: "author", content: "Kai Schuyler Gonzalez" },
 			{ name: "keywords", content: keywords },
