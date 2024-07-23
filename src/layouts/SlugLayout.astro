@@ -20,21 +20,21 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title} description={entry.data.description} image={image ? image : undefined}>
 	<div class="mx-auto md:w-[768px]">
-		<a href={entry.collection === 'projects' ? '/projects' : '/blog'} class="flex items-center mb-4 font-header">
+		<a href={entry.collection === 'projects' ? '/projects' : '/blog'} class="flex items-center mb-4 font-header text-accent">
 			<Icon name="bx:bx-arrow-back" class="inline-block text-xl mr-2" />	
 			Back to {entry.collection === 'projects' ? 'projects' : 'blog'}
 		</a>
-		<div class=" lg:flex-row gap-4 mb-4 bg-base brutalist-outline-accent w-full md:w-[768px]">
+		<div class=" lg:flex-row gap-4 mb-4 bg-base brutalist-outline w-full md:w-[768px]">
 			<header class="p-4">
-				{isBlog ? <time class="text-neutral-content">{
+				{isBlog ? <time class="text-base-content">{
 					new Date(entry.data.publishDate).toLocaleDateString('en-US', {
 						year: 'numeric',
 						month: 'long',
 						day: 'numeric'
 					})
 				}</time> : null}
-				<h2 class="font-header text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary">{entry.data.title}</h2>
-				<p class="text-neutral-content">{entry.data.description}</p>
+				<h2 class="font-header text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary">{entry.data.title}</h2>
+				<p class="text-base-content">{entry.data.description}</p>
 				<div class="flex gap-4 mt-4">
 					{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 				</div>

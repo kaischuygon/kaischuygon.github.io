@@ -8,7 +8,7 @@ a {
 }
 
 .brutalist-outline {
-	@apply shadow-outline border-[1px] border-accent;
+	@apply shadow-outline border-[1px] border-neutral-content;
 }
 
 .brutalist-outline-accent {
@@ -29,4 +29,8 @@ option {
 
 mark {
 	@apply bg-accent;
+}
+
+prose:a {
+	@apply !text-secondary !fill-secondary;
 }

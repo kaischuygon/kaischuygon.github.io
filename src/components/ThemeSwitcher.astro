@@ -72,7 +72,7 @@ const themes:string[] = [
     <Icon name="bx:bxs-palette" class="text-accent text-xl mr-2" />
     <select title="Change theme" name="themePicker" id="themePicker" class="bg-transparent">
         {themes.map(theme => (
-            <option value={theme}>{theme}</option>
+            <option value={theme} class="text-primary">{theme}</option>
         ))}
     </select>
 </div>

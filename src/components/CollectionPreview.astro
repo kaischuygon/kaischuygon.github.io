@@ -10,7 +10,7 @@ const { item } = Astro.props;
 ---
 
 <a class="grid w-full overflow-hidden aspect-[1.91/1] mx-auto" href={`/projects/${item.slug}`}>
-	<span class:list={["absolute z-10 m-2 p-2 font-code text-xl lg:text-2xl font-bold brutalist-outline-accent dark:text-primary-50 text-primary-950 dark:bg-primary-800 bg-primary-200"]}>{item.data.title}</span>
+	<span class:list={["absolute z-10 m-2 p-2 font-code text-xl lg:text-2xl font-bold brutalist-outline-accent bg-base-100 text-accent"]}>{item.data.title}</span>
 	<Image 
 		src={item.data.img} 
 		alt={item.data.img_alt || ''}

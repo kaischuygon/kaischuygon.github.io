@@ -12,8 +12,8 @@ export default {
 			// 	accent: 'var(--ACCENT)',
 			// },
 			boxShadow: {
-				'outline': `2px 2px var(--BASE)`,
-				'outline-accent': '2px 2px var(--ACCENT)',
+				'outline': `2px 2px var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)))`,
+				'outline-accent': '2px 2px var(--fallback-a, oklch(var(--a) / var(--tw-text-opacity)))',
 				'outline-hover': `4px 4px`,
 			},
 			fontFamily: {
@@ -36,9 +36,9 @@ export default {
 				DEFAULT: {
 				  css: {
 					a: {
-						color: 'var(--ACCENT)',
+						color: 'var(--fallback-p, oklch(var(--p) / var(--tw-text-opacity)))',
 						'&:hover': {
-							color: 'var(--ACCENT)',
+							filter: 'brightness(75%)',
 						},
 					}
 				  },

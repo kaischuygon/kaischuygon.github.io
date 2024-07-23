@@ -16,12 +16,12 @@ let twSpan:string = `custom-span-${item.data.span}`;
 let twOrder:string = `custom-order-${order}`;
 ---
 
-<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline-accent bg-base', twOrder, twSpan]}>
-    <div class="flex-0 flex items-center gap-2 text-neutral">
-        <Icon name={item.data.icon} class="flex-0 text-xl text-accent"/>
-        <h2 class="flex-1 text-xl font-header font-bold text-accent">{item.data.title}</h2>
+<div id={id} class:list={['flex flex-col gap-4 p-4 brutalist-outline bg-base', twOrder, twSpan]}>
+    <div class="flex-0 flex items-center gap-2">
+        <Icon name={item.data.icon} class="flex-0 text-xl text-secondary"/>
+        <h2 class="flex-1 text-xl font-header font-bold text-secondary">{item.data.title}</h2>
     </div>
-    <div class="flex-1 prose prose- max-w-none">
+    <div class="flex-1 prose max-w-none">
         <Content />
     </div>
 </div>

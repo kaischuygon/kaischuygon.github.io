@@ -4,7 +4,7 @@ span: 3
 sortOrder: 1
 icon: bx:bxs-briefcase
 ---
-<div class='container'>
+<div>
     <div class='flex justify-between'>
         <strong>Front-end Software Developer</strong>
         <i>2024 - present</i>
@@ -19,7 +19,7 @@ icon: bx:bxs-briefcase
     </ul>
 </div>
 
-<div class='container'>
+<div>
     <div class='flex justify-between'>
         <strong>Software Engineer</strong>
         <i>2023 - 2024</i>
@@ -41,7 +41,7 @@ icon: bx:bxs-briefcase
     </ul>
 </div>
 
-<div class='container'>
+<div>
     <div class='flex justify-between'>
         <strong>Student Software Developer</strong>
         <i>2021 - 2022</i>
