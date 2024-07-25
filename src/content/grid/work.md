@@ -14,8 +14,8 @@ icon: bx:bxs-briefcase
         <span>Denver, CO</span>
     </div>
     <ul>
-        <li>Lead front-end development efforts of internal applications used across the company for the automation department.</li>
-        <li>Developed and maintained web applications for internal use using Django REST APIs and React. </li>
+        <li>Led front-end development efforts of internal applications used across the company for the automation department.</li>
+        <li>Developed and maintained web applications for internal use using Django and FastAPI REST APIs, React and Angular. </li>
     </ul>
 </div>
 
