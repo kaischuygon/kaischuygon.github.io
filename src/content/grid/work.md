@@ -4,7 +4,7 @@ span: 3
 sortOrder: 1
 icon: bx:bxs-briefcase
 ---
-<div class='container'>
+<div id='charter'>
     <div class='flex justify-between'>
         <strong>Front-end Software Developer</strong>
         <i>2024 - present</i>
@@ -14,12 +14,12 @@ icon: bx:bxs-briefcase
         <span>Denver, CO</span>
     </div>
     <ul>
-        <li>Led front-end development efforts of internal applications used across the company for the automation department.</li>
+        <li>Led front-end development efforts within the automation department of applications used across the company.</li>
         <li>Developed and maintained web applications for internal use using Django and FastAPI REST APIs, React and Angular. </li>
     </ul>
 </div>
 
-<div class='container'>
+<div id='oori'>
     <div class='flex justify-between'>
         <strong>Software Engineer</strong>
         <i>2023 - 2024</i>
@@ -41,7 +41,7 @@ icon: bx:bxs-briefcase
     </ul>
 </div>
 
-<div class='container'>
+<div id='registrar'>
     <div class='flex justify-between'>
         <strong>Student Software Developer</strong>
         <i>2021 - 2022</i>

@@ -2,6 +2,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 import typography from '@tailwindcss/typography'
 import colors from 'tailwindcss/colors'
+import daisyui from 'daisyui';
 
 const primary = colors.zinc;
 
@@ -50,5 +51,5 @@ export default {
 		},
 	},
 	darkMode: 'class',
-	plugins: [typography]
+	plugins: [typography, daisyui]
 }

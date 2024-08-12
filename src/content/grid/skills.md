@@ -40,7 +40,7 @@ span: 2
     - C/C++
     - C#/.NET -->
 
-My most list of tools I have professional experience working with. 
+Some tools I have professional experience working with. 
 
 <table>
   <tr>
